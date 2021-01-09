@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "acc": "gulp acc",
+    "clean": "gulp clean",
     "dev": "gulp dev",
     "dist": "gulp dist",
     "eleventy": "eleventy",

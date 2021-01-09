@@ -161,7 +161,7 @@ gulp.task("deploy-acc", function () {
       " && git add ." +
       ' && git commit -m "deploy"' +
       " && git remote add origin https://github.com/JakubJanowski/acceptance.git" +
-      " && git push --force origin master:" +
+      " && git push --force origin main:" +
       deployBranch +
       " && rimraf .git" +
       " && cd ..",
@@ -178,7 +178,7 @@ gulp.task("deploy", function () {
       " && git add ." +
       ' && git commit -m "deploy"' +
       " && git remote add origin https://github.com/JakubJanowski/patryktrajder.com.git" +
-      " && git push --force origin master:" +
+      " && git push --force origin main:" +
       deployBranch +
       " && rimraf .git" +
       " && cd ..",
