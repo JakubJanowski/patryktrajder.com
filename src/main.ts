@@ -11,7 +11,7 @@ const banners = document.getElementsByClassName("banner");
 for (let i = 0; i < banners.length; i++) new Banner(banners[i] as HTMLElement);
 
 let checkbox = document.querySelector("#super-booster-2000 .checkbox");
-if (checkbox) new Checkbox(checkbox as HTMLElement, 689, 599, 189, 169, true);
+if (checkbox) new Checkbox(checkbox as HTMLElement, 689, 599, 155, 139, true);
 
 const sliders = document.getElementsByClassName("regular slider");
 for (let i = 0; i < sliders.length; i++) new Slider(sliders[i] as HTMLElement);
