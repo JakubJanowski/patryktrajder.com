@@ -1,0 +1,88 @@
+{% extends "templates/layout-de.njk" %}
+{% set tab = "products" %}
+
+{% block meta %}
+    <link rel="canonical" href="https://patryktrajder.com/de/products/"/>
+    <title>Produkte | Patryk Trajder</title>
+{% endblock meta %}
+
+{% block vectors %}
+    {% include "vectors/arrow-right.sym" %}
+    {% include "vectors/home.sym" %}
+{% endblock %}
+
+{% block body %}
+    <div class="banner">
+        <div class="container">
+            <div class="image-placeholder" style="padding-top: 25.104166666%;">
+                <img src="/assets/images/products-banner-w1920.jpg" srcset="/assets/images/products-banner-w768.jpg 768w, /assets/images/products-banner-w1920.jpg 1920w" alt="Werkzeuge an der Werkstattwand"/>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <nav class="breadcrumbs gap-top">
+            <span>
+                <a href="/de/" title="Homepage">
+                    <svg class="home icon">
+                        <use xlink:href="#icon-home"></use>
+                    </svg>
+                </a>
+                <svg class="icon">
+                    <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+            </span>
+            <a href="/de/products/">
+                <b>Produkte</b>
+            </a>
+        </nav>
+        <nav class="categories">
+            <a href="#diy-tools" title="DIY tools">
+                <p>
+                    DIY-Werkzeuge
+                </p>
+            </a>
+            <a href="#gadgets" title="Gadgets">
+                <p>
+                    Gadgets
+                </p>
+            </a>
+        </nav>
+
+        <article id="diy-tools" class="gap-top preview-list">
+            <h1 class="gap-bottom-medium">
+                DIY-Werkzeuge
+            </h1>
+            <section>
+                <h2>
+                    <a href="super-booster-2000/" title="Super Booster 200">Rohrausklinker - Super Booster 2000</a>
+                </h2>
+                <h4>Rohr-/Profil-Lochsäge - Modellbausatz zur Montage</h4>
+                <div class="row gap-top">
+                    <div>
+                        <p>
+                            Sind Sie, wie ich, ein großer Fan der Rohr-/Profilbearbeitung zum Schweißen? Basteln Sie gerne, bauen Sie gerne Buggys, Go-Karts, Geländer oder andere Konstellationen aus Rohren oder Profilen? Wenn ja, dann möchte ich Ihnen ein Gerät vorstellen, das Ihnen die Arbeit wirklich erleichtern kann 😉.
+                        </p>
+                        <p class="single-out-link">
+                            <a href="super-booster-2000/" title="Super Booster 200">Mehr Informationen...</a>
+                        </p>
+                    </div>
+                    <div>
+                        <a class="image-loading" href="super-booster-2000/" title="Super Booster 200">
+                            <img src="/assets/images/super-booster-2000/thumb-w1120.jpg" alt="Super Booster 2000"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article id="gadgets" class="gap-top-large">
+            <h1>
+                Gadgets
+            </h1>
+            <p>
+                Wenn Ihr Tassen oder T-Shirts wollt, lasst es mich wissen unter&#32;<a href="mailto:iwantacup@trajder.com" rel="nofollow noopener" target="_blank" title="iwantacup@trajder.com">iwantacup@trajder.com</a>&#32;xD
+            </p>
+        </article>
+    </main>
+{% endblock %}

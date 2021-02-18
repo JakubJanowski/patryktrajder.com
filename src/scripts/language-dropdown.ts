@@ -22,7 +22,8 @@ export default class LanguageDropdown {
   }
 
   public static getLanguage(): string {
-    if (location.pathname.substr(0, 6) === "/en-gb") return "en-gb";
+    if (location.pathname.substr(0, 7) === "/en-gb/") return "en-gb";
+    else if (location.pathname.substr(0, 4) === "/de/") return "de";
     else return "pl";
   }
 
@@ -31,8 +32,11 @@ export default class LanguageDropdown {
     if (language === "pl") {
       let index = Utils.nthIndex(window.location.pathname, "/", 2);
       url = window.location.pathname.substr(index);
-    } else {
+    } else if (LanguageDropdown.getLanguage() == "pl") {
       url = "/" + language + window.location.pathname;
+    } else {
+      let index = Utils.nthIndex(window.location.pathname, "/", 2);
+      url = "/" + language + window.location.pathname.substr(index);
     }
     window.location.href = url + window.location.search;
   }

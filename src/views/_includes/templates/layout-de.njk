@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="de">
     <head>
         {# <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-165608042-1"></script>
         <script>
@@ -16,7 +16,7 @@
         {% block meta %}{% endblock %}
 
         <link rel="stylesheet" href="/src/main.css"/>
-        <link rel="manifest" href="/manifest_en-gb.json">
+        <link rel="manifest" href="/manifest_de.json">
         <script defer="defer" src="/src/main.js"></script>
         {% block head %}{% endblock %}
     </head>
@@ -38,46 +38,46 @@
         <header>
             <div>
                 <h1>
-                    <a href="/en-gb/" title="Homepage">Patryk Trajder</a>
+                    <a href="/de/" title="Startseite">Patryk Trajder</a>
                 </h1>
                 <h1 class="second-logo">
-                    <a href="/en-gb/" title="Homepage">Patryk Trajder</a>
+                    <a href="/de/" title="Startseite">Patryk Trajder</a>
                 </h1>
                 <div class="menu">
                     <nav>
                         <ul>
                             <li {% if tab === "home" %} class="current" {% endif %}>
-                                <a href="/en-gb/" title="Homepage">Home</a>
+                                <a href="/de/" title="Homepage">Home</a>
                             </li>
                             <li {% if tab === "about" %} class="current" {% endif %}>
-                                <a href="/en-gb/about/" title="Let's get to know each other better!">About me</a>
+                                <a href="/de/about/" title="Lernen wir uns besser kennen!">Über mich</a>
                             </li>
-                            <li {% if tab === "products" %} class="current" {% endif %}>
-                                <a href="/en-gb/products/">Products</a>
+                            <li {% if tab === "Produkte" %} class="aktuell" {% endif %}>
+                                <a href="/de/products/">Produkte</a>
                             </li>
-                            <li {% if tab === "projects" %} class="current" {% endif %}>
-                                <a href="/en-gb/projects/">Projects</a>
+                            <li {% if tab === "projekte" %} class="aktuell" {% endif %}>
+                                <a href="/de/projects/">Projekte</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="#contact">Kontakt</a>
                             </li>
                             <li>
                                 <div class="language-dropdown">
-                                    <button class="current" title="Change language">
+                                    <button class="current" title="Sprache ändern">
                                         <svg class="icon flag">
-                                            <use xlink:href="#icon-flag-en-gb"></use>
+                                            <use xlink:href="#icon-flag-de"></use>
                                         </svg>
                                         <svg class="icon arrow">
                                             <use xlink:href="#icon-arrow-drop-down"></use>
                                         </svg>
                                     </button>
                                     <div class="list">
-                                        <button data-lang="de" title="German">
+                                        <button data-lang="en-gb" title="Englisch">
                                             <svg class="icon">
-                                                <use xlink:href="#icon-flag-de"></use>
+                                                <use xlink:href="#icon-flag-en-gb"></use>
                                             </svg>
                                         </button>
-                                        <button data-lang="pl" title="Polish">
+                                        <button data-lang="pl" title="Polnisch">
                                             <svg class="icon">
                                                 <use xlink:href="#icon-flag-pl"></use>
                                             </svg>
@@ -87,7 +87,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <button class="menu-button" aria-label="Menu">
+                    <button class="menu-button" aria-label="Menü">
                         <span></span>
                     </button>
                 </div>
@@ -99,20 +99,20 @@
         <footer>
             <section id="contact" class="container">
                 <div class="contact row">
-                    <h1>Contact</h1>
+                    <h1>Kontakt</h1>
                     <div class="social-media">
                         <div>
-                            <a href="https://www.youtube.com/patryktrajder" rel="noopener" target="_blank" title="My Youtube channel">
+                            <a href="https://www.youtube.com/patryktrajder" rel="noopener" target="_blank" title="Mein Youtube-Kanal">
                                 <svg class="icon youtube">
                                     <use xlink:href="#icon-youtube"></use>
                                 </svg>
                             </a>
-                            <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="My fanpage on Facebook">
+                            <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="Meine Fanpage auf Facebook">
                                 <svg class="icon facebook">
                                     <use xlink:href="#icon-facebook"></use>
                                 </svg>
                             </a>
-                            <a href="https://www.instagram.com/patryktrajder" rel="noopener" target="_blank" title="My Instagram profile">
+                            <a href="https://www.instagram.com/patryktrajder" rel="noopener" target="_blank" title="Mein Instagram-Profil">
                                 <svg class="icon">
                                     <use xlink:href="#icon-instagram"></use>
                                 </svg>
@@ -122,16 +122,16 @@
                 </div>
                 <div class="links row">
                     <div>
-                        <h3>Purchase enquiries:</h3>
+                        <h3>Kaufanfragen:</h3>
                         <p>
                             <a href="mailto:shop@trajder.com" rel="nofollow noopener" target="_blank" title="shop@trajder.com">shop@trajder.com</a>
                         </p>
                         <p>
-                            <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="My fanpage on Facebook">facebook.com/patryktrajder</a>
+                            <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="Meine Fanpage auf Facebook">facebook.com/patryktrajder</a>
                         </p>
                     </div>
                     <div>
-                        <h3>Collaboration / business questions:</h3>
+                        <h3>Kollaboration / geschäftliche Fragen:</h3>
                         <p>
                             <a href="mailto:patryk@trajder.com" rel="nofollow noopener" target="_blank" title="patryk@trajder.com">patryk@trajder.com</a>
                         </p>
@@ -144,7 +144,7 @@
                         <li>&copy; Patryk Trajder. All rights reserved.</li>
                         <li>
                             Design & development:&#32;
-                            <a href="https://jakubjanowski.com/" rel="noopener" target="_blank" title="Need a website?">Jakub Janowski</a>
+                            <a href="https://jakubjanowski.com/" rel="noopener" target="_blank" title="Brauchen Sie eine Website?">Jakub Janowski</a>
                         </li>
                     </ul>
                 </div>
