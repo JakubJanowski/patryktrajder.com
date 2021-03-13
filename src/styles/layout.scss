@@ -10,6 +10,10 @@ p.indent {
   }
 }
 
+.gap-bottom {
+  margin-bottom: 2rem;
+}
+
 .gap-bottom-medium {
   margin-bottom: 6rem;
 }
@@ -46,6 +50,10 @@ p.indent {
 
   &.gap-top {
     margin-top: -0.5rem;
+  }
+
+  &.gap-bottom {
+    margin-bottom: 4rem;
   }
 }
 

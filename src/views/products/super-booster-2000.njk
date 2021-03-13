@@ -14,6 +14,11 @@
   {% include "vectors/chevron-up.sym" %}
   {% include "vectors/chevron-down.sym" %}
   {% include "vectors/close.sym" %}
+  {% include "vectors/flag-de-rect.sym" %}
+  {% include "vectors/flag-es-rect.sym" %}
+  {% include "vectors/flag-nl-rect.sym" %}
+  {% include "vectors/flag-pl-rect.sym" %}
+  {% include "vectors/flag-us-rect.sym" %}
   {% include "vectors/flat-eye-wrench.sym" %}
   {% include "vectors/flat-eye-wrench-full.sym" %}
   {% include "vectors/home.sym" %}
@@ -21,6 +26,7 @@
   {% include "vectors/messenger.sym" %}
   {% include "vectors/mobile.sym" %}
   {% include "vectors/square.sym" %}
+  {% include "vectors/star.sym" %}
 {% endblock %}
 
 {% block body %}
@@ -68,7 +74,7 @@
         <h1 class="gap-top">Wykrawarka do rur - Super Booster 2000</h1>
       </header>
 
-      <section class="row">
+      <section class="row gap-bottom">
         <div class="gallery">
           <div class="full">
             <div class="container">
@@ -181,221 +187,440 @@
         </div>
       </section>
 
-      <section>
-        <div class="row gap-top">
-          <div>
-            <p>
-              Cały zamysł konstrukcji zaprojektowałem już 5 lat temu, od tego czasu starałem się wprowadzać cały czas modyfikacje, aby był jak najlepszy. Najnowsza wersja jest ulepszona o m.in.
-              <br>
-              hartowany wał (taki sam jakiego używa się do produkcji siłowników w maszynach budowlanych), specjalną końcówkę do szybkiej wymiany otwornic, kątownik z podziałką do łatwego i szybkiego ustawienia przyrządu pod daną pracę, zawleczki (aby docisk materiału zawsze trzymał się na swoim miejscu), blokadę kąta dla powtarzalosci cięć, i kilka innych ulepszeń, które znacząco podnoszą komfort pracy. Jednak zarazem podniosły cenę 😉 Moim celem było stworzenie produktu o jak najlepszych paramatrach oraz w cenie przystępnej dla każdego. Na początku zakładałem sprzedaż zestawu trochę taniej, jednak doszedłem do wniosku, że podniesienie jakości bedzie dobrą decyzją.
-            </p>
-          </div>
-          <div>
-            <div class="image-loading">
-              <img src="/assets/images/super-booster-2000/thumb-w1120.jpg" alt="prezentacja złożonej wykrawarki do rur"/>
-            </div>
-          </div>
+      <div class="tabs">
+        <input id="description-tab-button" type="radio" name="tab-button" checked="checked">
+        <input id="parameters-tab-button" type="radio" name="tab-button">
+        <input id="opinions-tab-button" type="radio" name="tab-button">
+        <div class="buttons">
+          <label for="description-tab-button">Opis</label>
+          <label for="parameters-tab-button">Parametry</label>
+          <label for="opinions-tab-button">Opinie</label>
         </div>
-
-        <div>
-          <p class="single-out">W skład zestawu wchodzi:</p>
-
-          <ul class="dots">
-            <li>
-              <p>
-                11x blachy wycinane Laserem (przygotowane do spawania poprzez obróbkę krawędzi, otworów, gwintowanie itd; dokladność wyciętych elementów to 0,03 MM, wycinane na jednym z najlepszych dostepnych źródeł lasera w polsce)
-              </p>
-            </li>
-            <li>
-              <p>2x podstawka pod łożyska</p>
-            </li>
-            <li>
-              <p>1x słupek z gwintem M20</p>
-            </li>
-            <li>
-              <p>
-                1x komplet śrub (zgodnie ze zdjęciami, łącznie 18 elementów)
-              </p>
-            </li>
-            <li>
-              <p>1x zawleczka - do docisku</p>
-            </li>
-            <li>
-              <p>1x toczony docisk materiału obrabianego M20</p>
-            </li>
-            <li>
-              <p>
-                1x końcówka do szybkiej wymiany otwornic (zakładana na wałek)
-              </p>
-            </li>
-            <li>
-              <p>1x toczony hartowany wał</p>
-            </li>
-            <li>
-              <p>2x łożysko MGK</p>
-            </li>
-            <li>
-              <p>1x podkładka ślizgowa pomiędzy blachy</p>
-            </li>
-            <li>
-              <p>2x wkręt typu&#32;<q>robak</q>&#32;do złożenia wałka</p>
-            </li>
-            <li>
-              <p>
-                1x grawerowany kątownik wraz z logo - aktualnie gratis (cena zakupu 25zł)
-              </p>
-            </li>
-            <li>
-              <p>1x nit do dokładnego odczytu aktualnego kątu</p>
-            </li>
-            <li>
-              <p>1x instrukcje montażu w formie elektronicznej (zdjęcia)</p>
-            </li>
-            <li>
-              <p>1x klucz fajkowy imbusowy (brak na zdjęciu)</p>
-            </li>
-            <li>
-              <p>1x blokada kąta, dla powtarzalności cięć</p>
-            </li>
-          </ul>
-
-          <p class="gap-top">
-            Zestaw kompletny, przygotowany do złożenia. Czas potrzebny na złożenie zestawu to około 30 minut. Poniżej lista z niezbędnymi narzędziami potrzebnymi do budowy. ;)
-          </p>
-        </div>
-
-        <div class="expander materials shrink gap-top">
-          <header>
-            <p>Narzędzia potrzebne do złożenia zestawu</p>
-          </header>
-          <div class="container">
-            <ul class="dots">
-              <li>
-                <p>jakakolwiek spawarka np. TIG, MIG, MAG, MMA (elektrody),</p>
-              </li>
-              <li>
-                <p>szlifierka kątowa (do zabielenia miejsc spawanych),</p>
-              </li>
-              <li>
-                <p>kątownik,
+        <div class="content gap-top">
+          <section>
+            <div class="row">
+              <div>
+                <p>
+                  Cały zamysł konstrukcji zaprojektowałem już 5 lat temu, od tego czasu starałem się wprowadzać cały czas modyfikacje, aby był jak najlepszy. Najnowsza wersja jest ulepszona o m.in.
+                  <br>
+                  hartowany wał (taki sam jakiego używa się do produkcji siłowników w maszynach budowlanych), specjalną końcówkę do szybkiej wymiany otwornic, kątownik z podziałką do łatwego i szybkiego ustawienia przyrządu pod daną pracę, zawleczki (aby docisk materiału zawsze trzymał się na swoim miejscu), blokadę kąta dla powtarzalosci cięć, i kilka innych ulepszeń, które znacząco podnoszą komfort pracy. Jednak zarazem podniosły cenę 😉 Moim celem było stworzenie produktu o jak najlepszych paramatrach oraz w cenie przystępnej dla każdego. Na początku zakładałem sprzedaż zestawu trochę taniej, jednak doszedłem do wniosku, że podniesienie jakości bedzie dobrą decyzją.
                 </p>
-              </li>
-              <li>
-                <p>2× ścisk stolarski,</p>
-              </li>
-              <li>
-                <p>klucz płasko-oczkowy 8 mm,</p>
-              </li>
-              <li>
-                <p>klucz płasko-oczkowy 12 mm,</p>
-              </li>
-              <li>
-                <p>klucz płasko-oczkowy 19 mm,</p>
-              </li>
-              <li>
-                <p>klucz płasko-oczkowy 30 mm,</p>
-              </li>
-              <li>
-                <p>wymiennie do powyższego można użyć szczypiec nastawnych do rur,</p>
-              </li>
-              <li>
-                <p>opcjonalnie młotek (bo bez młota to nie robota xd),
+              </div>
+              <div>
+                <div class="image-loading">
+                  <img src="/assets/images/super-booster-2000/thumb-w1120.jpg" alt="prezentacja złożonej wykrawarki do rur"/>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="single-out">W skład zestawu wchodzi:</p>
+
+              <ul class="dots">
+                <li>
+                  <p>
+                    11x blachy wycinane Laserem (przygotowane do spawania poprzez obróbkę krawędzi, otworów, gwintowanie itd; dokladność wyciętych elementów to 0,03 MM, wycinane na jednym z najlepszych dostepnych źródeł lasera w polsce)
+                  </p>
+                </li>
+                <li>
+                  <p>2x podstawka pod łożyska</p>
+                </li>
+                <li>
+                  <p>1x słupek z gwintem M20</p>
+                </li>
+                <li>
+                  <p>
+                    1x komplet śrub (zgodnie ze zdjęciami, łącznie 18 elementów)
+                  </p>
+                </li>
+                <li>
+                  <p>1x zawleczka - do docisku</p>
+                </li>
+                <li>
+                  <p>1x toczony docisk materiału obrabianego M20</p>
+                </li>
+                <li>
+                  <p>
+                    1x końcówka do szybkiej wymiany otwornic (zakładana na wałek)
+                  </p>
+                </li>
+                <li>
+                  <p>1x toczony hartowany wał</p>
+                </li>
+                <li>
+                  <p>2x łożysko MGK</p>
+                </li>
+                <li>
+                  <p>1x podkładka ślizgowa pomiędzy blachy</p>
+                </li>
+                <li>
+                  <p>2x wkręt typu&#32;<q>robak</q>&#32;do złożenia wałka</p>
+                </li>
+                <li>
+                  <p>
+                    1x grawerowany kątownik wraz z logo - aktualnie gratis (cena zakupu 25zł)
+                  </p>
+                </li>
+                <li>
+                  <p>1x nit do dokładnego odczytu aktualnego kątu</p>
+                </li>
+                <li>
+                  <p>1x instrukcje montażu w formie elektronicznej (zdjęcia)</p>
+                </li>
+                <li>
+                  <p>1x klucz fajkowy imbusowy (brak na zdjęciu)</p>
+                </li>
+                <li>
+                  <p>1x blokada kąta, dla powtarzalności cięć</p>
+                </li>
+              </ul>
+
+              <p class="gap-top">
+                Zestaw kompletny, przygotowany do złożenia. Czas potrzebny na złożenie zestawu to około 30 minut. Poniżej lista z niezbędnymi narzędziami potrzebnymi do budowy. ;)
+              </p>
+            </div>
+
+            <div class="expander materials shrink gap-top">
+              <header>
+                <p>Narzędzia potrzebne do złożenia zestawu</p>
+              </header>
+              <div class="container">
+                <ul class="dots">
+                  <li>
+                    <p>jakakolwiek spawarka np. TIG, MIG, MAG, MMA (elektrody),</p>
+                  </li>
+                  <li>
+                    <p>szlifierka kątowa (do zabielenia miejsc spawanych),</p>
+                  </li>
+                  <li>
+                    <p>kątownik,
+                    </p>
+                  </li>
+                  <li>
+                    <p>2× ścisk stolarski,</p>
+                  </li>
+                  <li>
+                    <p>klucz płasko-oczkowy 8 mm,</p>
+                  </li>
+                  <li>
+                    <p>klucz płasko-oczkowy 12 mm,</p>
+                  </li>
+                  <li>
+                    <p>klucz płasko-oczkowy 19 mm,</p>
+                  </li>
+                  <li>
+                    <p>klucz płasko-oczkowy 30 mm,</p>
+                  </li>
+                  <li>
+                    <p>wymiennie do powyższego można użyć szczypiec nastawnych do rur,</p>
+                  </li>
+                  <li>
+                    <p>opcjonalnie młotek (bo bez młota to nie robota xd),
+                    </p>
+                  </li>
+                  <li>
+                    <p>typowa odzież ochronna: okulary ochronne do szlifierki, rękawice do spawania itp. ;)
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <button>
+                <svg class="icon">
+                  <use xlink:href="#icon-chevron-down"></use>
+                </svg>
+              </button>
+            </div>
+
+            <p class="single-out-link">
+              <a href="instruction/" title="Instrukcja montażu">Instrukcja montażu</a>
+            </p>
+            <div class="row gap-top">
+              <div>
+                <div class="image-loading ratio3to2">
+                  <img src="/assets/images/super-booster-2000/detail2-w1120.jpg" alt="słupek z gwintem"/>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Jak możesz zauwazyć, na zdjęciu obok miejsce, gdzie trzeba przyspawać&#32;<q>słupek z gwintem</q>, zostało natrasowane poprzez grawer laserem z dokładnością do 1 setnej milimetra, co w połączeniu z pasowaniem na wpusty gwarantuje przyjemną pracę bez niespodzianek 😉
                 </p>
-              </li>
-              <li>
-                <p>typowa odzież ochronna: okulary ochronne do szlifierki, rękawice do spawania itp. ;)
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="image-loading">
+                  <img src="/assets/images/super-booster-2000/equipment/metal-sheet/detail2-w1120.jpg" alt="elementy do budowy wykrawarki"/>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Cały zestaw do złożenia zaprojektowałem w taki sposób aby ułatwić jego montaż, tak aby nawet początkujący majsterkowicz nie miał z nim żadnych problemów, a cały proces składania przypominał bardziej zabawę aniżeli pracę. 😉
                 </p>
-              </li>
-            </ul>
-          </div>
-          <button>
-            <svg class="icon">
-              <use xlink:href="#icon-chevron-down"></use>
-            </svg>
-          </button>
-        </div>
-
-        <p class="single-out-link">
-          <a href="instruction/" title="Instrukcja montażu">Instrukcja montażu</a>
-        </p>
-        <div class="row gap-top">
-          <div>
-            <div class="image-loading ratio3to2">
-              <img src="/assets/images/super-booster-2000/detail2-w1120.jpg" alt="słupek z gwintem"/>
+              </div>
             </div>
-          </div>
-          <div>
-            <p>
-              Jak możesz zauwazyć, na zdjęciu obok miejsce, gdzie trzeba przyspawać&#32;<q>słupek z gwintem</q>, zostało natrasowane poprzez grawer laserem z dokładnością do 1 setnej milimetra, co w połączeniu z pasowaniem na wpusty gwarantuje przyjemną pracę bez niespodzianek 😉
-            </p>
-          </div>
-        </div>
 
-        <div class="row">
-          <div>
-            <div class="image-loading">
-              <img src="/assets/images/super-booster-2000/equipment/metal-sheet/detail2-w1120.jpg" alt="elementy do budowy wykrawarki"/>
+            <div class="row">
+              <div>
+                <div class="image-loading ratio3to2">
+                  <img src="/assets/images/super-booster-2000/detail3-w1120.jpg" alt="kątownik do precyzyjnego ustawiania kątu"/>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Specjalnie wyskalowany kątownik będzię waszym najlepszym kumplem podczas pracy, ponieważ zaoszczedzi mase czasu oraz przypilnuję powtarzalności cięć 😉
+                </p>
+              </div>
             </div>
-          </div>
-          <div>
-            <p>
-              Cały zestaw do złożenia zaprojektowałem w taki sposób aby ułatwić jego montaż, tak aby nawet początkujący majsterkowicz nie miał z nim żadnych problemów, a cały proces składania przypominał bardziej zabawę aniżeli pracę. 😉
-            </p>
-          </div>
-        </div>
 
-        <div class="row">
-          <div>
-            <div class="image-loading ratio3to2">
-              <img src="/assets/images/super-booster-2000/detail3-w1120.jpg" alt="kątownik do precyzyjnego ustawiania kątu"/>
+            <div class="row">
+              <div>
+                <div class="image-loading">
+                  <img src="/assets/images/super-booster-2000/detail4-w1120.jpg" alt="metalowe podstawki pod łożyska"/>
+                </div>
+              </div>
+              <div>
+                <p>
+                  W zestawie dokładam wszelkich starań nawet tam gdzie pozornie nie są wymagane, idealnym tego przykładem są szlifowane pod kątem krawędzie m.in. podstawek pod łożyska, czy słupek z gwintemM20, jest to zabieg tylko stylistyczny nie wpływający na pracę przystawki
+                </p>
+              </div>
             </div>
-          </div>
-          <div>
-            <p>
-              Specjalnie wyskalowany kątownik będzię waszym najlepszym kumplem podczas pracy, ponieważ zaoszczedzi mase czasu oraz przypilnuję powtarzalności cięć 😉
-            </p>
-          </div>
-        </div>
 
-        <div class="row">
-          <div>
-            <div class="image-loading">
-              <img src="/assets/images/super-booster-2000/detail4-w1120.jpg" alt="metalowe podstawki pod łożyska"/>
+            <div class="row">
+              <div>
+                <div class="image-loading">
+                  <img src="/assets/images/super-booster-2000/detail5-w1120.jpg" alt="blacha z otworami fasolkowymi do montażu łożysk"/>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Dzięki zastosowaniu fasolek do mocowania łożysk mamy możliwość bardzo szybkiej regulacji, a co najważniejsze bezstopniowej. Ma to szczególne znaczenie, gdy chcemy często zmieniać rozmiar obrabianej rury czy profilu.
+                </p>
+              </div>
             </div>
-          </div>
-          <div>
-            <p>
-              W zestawie dokładam wszelkich starań nawet tam gdzie pozornie nie są wymagane, idealnym tego przykładem są szlifowane pod kątem krawędzie m.in. podstawek pod łożyska, czy słupek z gwintemM20, jest to zabieg tylko stylistyczny nie wpływający na pracę przystawki
-            </p>
-          </div>
-        </div>
 
-        <div class="row">
-          <div>
-            <div class="image-loading">
-              <img src="/assets/images/super-booster-2000/detail5-w1120.jpg" alt="blacha z otworami fasolkowymi do montażu łożysk"/>
+            <div class="row">
+              <div>
+                <div class="image-loading">
+                  <img src="/assets/images/super-booster-2000/detail6-w1120.jpg" alt="Wałek z adapterem do montażu otwornic"/>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Połączenie walka z otwornica było dla mnie największym wyzwaniem. Początkowo gwintowałem sam pręt jednak to połączenie nie sprawdzało się w przypadku używania większych otwornic. Postanowiłem nie wyważać otwartych drzwi i zastosowałem orginalny adapter do mocowania otwornic. Posiada on specjalne trzpienie które przejmują na siebie cała energię zapobiegając uszkodzeniu gwintu.
+                </p>
+              </div>
             </div>
-          </div>
-          <div>
-            <p>
-              Dzięki zastosowaniu fasolek do mocowania łożysk mamy możliwość bardzo szybkiej regulacji, a co najważniejsze bezstopniowej. Ma to szczególne znaczenie, gdy chcemy często zmieniać rozmiar obrabianej rury czy profilu.
-            </p>
-          </div>
+          </section>
+          <section>
+            <table class="specification">
+              <tr>
+                <th>Parametr</th>
+                <th>Wartość</th>
+              </tr>
+              <tr>
+                <td>Minimalna średnica mocowanej rury</td>
+                <td>27 mm</td>
+              </tr>
+              <tr>
+                <td>Maksymalna średnica mocowanej rury</td>
+                <td>91 mm</td>
+              </tr>
+              <tr>
+                <td>Minimalna długość mocowanej rury</td>
+                <td>240 mm</td>
+              </tr>
+              <tr>
+                <td>Możliwość mocowania otwornic w zakresie</td>
+                <td>29-95 mm</td>
+              </tr>
+              <tr>
+                <td>Możliwość mocowania otwornic</td>
+                <td>14-30 mm (wymagany dodatkowy adapter + 20 zł)</td>
+              </tr>
+              <tr>
+                <td>Możliwy zakres kątów</td>
+                <td>0-60°</td>
+              </tr>
+              <tr>
+                <td>Gatunek stali</td>
+                <td>S355</td>
+              </tr>
+              <tr>
+                <td>Gatunek/twardość śrub</td>
+                <td>8.8</td>
+              </tr>
+              <tr>
+                <td>Waga</td>
+                <td>20 kg</td>
+              </tr>
+              <tr>
+                <td>Kolor</td>
+                <td>Stalowy, bez pokrycia farbą</td>
+              </tr>
+              <tr>
+                <td>Wymiary opakowania do wysyłki</td>
+                <td>35×25×15 cm</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <div class="opinion">
+              <div class="header">
+                <span>Rafał (Polska)</span>
+                <svg class="flag icon">
+                  <use xlink:href="#icon-flag-pl-rect"></use>
+                </svg>
+                <span class="rating">
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <span class="points">5/5</span>
+                </span>
+              </div>
+              <p>Panie Patryku ostatnio złożyłem zakupiona wykrawarke i muszę przyznać robi robotę fajnie się na niej pracuje, jestem naprawde zadowolony. Pozdrawiam</p>
+              {# <div class="attachments">
+                <div>Zdjęcia (kliknij aby powiększyć):</div>
+                <div class="items">
+                  <img src="http://placekitten.com/g/82/54?v=1" alt="">
+                  <img src="http://placekitten.com/g/82/54?v=2" alt="">
+                  <img src="http://placekitten.com/g/82/54?v=3" alt="">
+                </div>
+              </div> #}
+            </div>
+            <div class="opinion">
+              <div class="header">
+                <span>Jesse (USA)</span>
+                <svg class="flag icon">
+                  <use xlink:href="#icon-flag-us-rect"></use>
+                </svg>
+                <span class="rating">
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <span class="points">5/5</span>
+                </span>
+              </div>
+              <p>My package of the tubing notcher has arrived. I thank you for shipping it to me as it arrived in good shape and the box was not damaged. I will get this welded together and painted similar to the way you have shown yours. Thank you again.</p>
+            </div>
+            <div class="opinion">
+              <div class="header">
+                <span>Ben (Holandia)</span>
+                <svg class="flag icon">
+                  <use xlink:href="#icon-flag-nl-rect"></use>
+                </svg>
+                <span class="rating">
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <span class="points">5/5</span>
+                </span>
+              </div>
+              <p>Good morning Patryk, Thank you for sending me the parcel. Received it last week and was very well packed and presented. The parts look very professional, especially the spindle for the drillbit looks super!! Ik can't wait to put it all together and start working with it but right now it's a little bit cold in the shed. I'm sure it's the same in Poland? Once again thank you and I'll keep you posted when i have put it together. Cheers. Ben</p>
+            </div>
+            <div class="opinion">
+              <div class="header">
+                <span>D. Düsentrieb (Niemcy)</span>
+                <svg class="flag icon">
+                  <use xlink:href="#icon-flag-de-rect"></use>
+                </svg>
+                <span class="rating">
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <span class="points">5/5</span>
+                </span>
+              </div>
+              <p>
+                Wirklich ein sehr gutes Produkt der Shop ist absolut vertrauenswürdig ich habe es vor Weihnachten bestellt im neuen Jahr bekommen jetzt vor kurzem zusammengeschweißt und es ist alles 100% für den Preis vor allen Dingen immer netter Kontakt das Puzzle ist echt sehr genau gearbeitet ein Traum<br>
+                <br>
+                English:<br>
+                Really a very good product the shop is absolutely trustworthy I ordered it before Christmas in the new year now got welded together recently and it's all 100% for the price above all always nice contact the puzzle is really very accurate a dream
+              </p>
+            </div>
+            <div class="opinion">
+              <div class="header">
+                <span>Fernando (Hiszpania)</span>
+                <svg class="flag icon">
+                  <use xlink:href="#icon-flag-es-rect"></use>
+                </svg>
+                <span class="rating">
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <span class="points">5/5</span>
+                </span>
+              </div>
+              <p>Compre la maquina a patryk y me llego en 5 dias desde polonia a españa, un placer tratar con Patryk</p>
+            </div>
+            <div class="centered-text">
+              <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
+              <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)</p>
+            </div>
+          </section>
         </div>
+      </div>
 
-        <div class="row">
-          <div>
-            <div class="image-loading">
-              <img src="/assets/images/super-booster-2000/detail6-w1120.jpg" alt="Wałek z adapterem do montażu otwornic"/>
-            </div>
-          </div>
-          <div>
-            <p>
-              Połączenie walka z otwornica było dla mnie największym wyzwaniem. Początkowo gwintowałem sam pręt jednak to połączenie nie sprawdzało się w przypadku używania większych otwornic. Postanowiłem nie wyważać otwartych drzwi i zastosowałem orginalny adapter do mocowania otwornic. Posiada on specjalne trzpienie które przejmują na siebie cała energię zapobiegając uszkodzeniu gwintu.
-            </p>
-          </div>
-        </div>
-      </section>
       <section id="presentation" class="gap-top-medium">
         <h1>Prezentacja możliwości</h1>
 
