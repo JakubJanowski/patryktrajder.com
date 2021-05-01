@@ -3,14 +3,18 @@
 .product-details {
   .assembly-difficulty {
     margin-top: 1.5rem;
+      margin-right: -1rem;
 
     > * {
       display: inline-block;
       margin-top: 0.5rem;
+      margin-right: 1rem;
     }
 
-    > p {
-      margin-right: 1rem;
+    > span:first-of-type {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      text-align: justify;
     }
 
     svg {
@@ -179,5 +183,10 @@
         font-size: 0.8em;
       }
     }
+  }
+
+  .tip {
+    color: $grey;
+    margin-top: 1rem;
   }
 }
