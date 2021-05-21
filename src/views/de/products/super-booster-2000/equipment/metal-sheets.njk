@@ -18,6 +18,7 @@
     {% include "vectors/home.sym" %}
     {% include "vectors/mail.sym" %}
     {% include "vectors/messenger.sym" %}
+    {% include "vectors/mobile.sym" %}
 {% endblock %}
 
 {% block body %}
@@ -108,6 +109,7 @@
                         <h3>
                             <span class="value">69</span>.<span class="cents">00</span>&#32;euro (Brutto)</h3>
                     </div>
+                    <p class="tip">Sie können das Produkt bestellen über:</p>
                     <div class="contact">
                         <a class="messenger option" href="https://www.messenger.com/t/patryktrajder" rel="noopener" target="_blank" title="Schreib mir im Messenger">
                             <svg class="icon messenger">
@@ -117,6 +119,20 @@
                             <svg class="icon">
                                 <use xlink:href="#icon-mail"></use>
                             </svg>Email</a>
+                        <div class="phone" href="tel:+48602106170" rel="nofollow noopener" target="_blank" title="Calls only in English or Polish language">
+                            <div class="hold-on-click option">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-mobile"></use>
+                                </svg>
+                                <span class="text">Telefon*</span>
+                                <span class="number">+48 602 106 170</span>
+                            </div>
+                            <div class="invisible option">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-mobile"></use>
+                                </svg>+48 602 106 170
+                            </div>
+                        </div>
                     </div>
                     <div class="availability">
                         <p>Verfügbar ab&#32;<s>Bestand</s>&#32;Werkstatt.</p>
@@ -142,10 +158,11 @@
                             <svg class="icon">
                                 <use xlink:href="#icon-flat-eye-wrench"></use>
                             </svg>
-                            <span class="note-asterisk">*</span>
+                            <span class="note-asterisk">**</span>
                         </span>
                     </div>
-                    <p class="note">* Schwierigkeitsgrad um einen Punkt höher im Vergleich zu einem kompletten Stanzmaschinen-Set, da mehrere Elemente von Hand gefertigt werden müssen (sie sind nicht im Set enthalten)</p>
+                    <p class="note">* Anrufe nur in englischer oder polnischer Sprache.</p>
+                    <p class="note">** Schwierigkeitsgrad um einen Punkt höher im Vergleich zu einem kompletten Stanzmaschinen-Set, da mehrere Elemente von Hand gefertigt werden müssen (sie sind nicht im Set enthalten).</p>
                 </div>
             </section>
 

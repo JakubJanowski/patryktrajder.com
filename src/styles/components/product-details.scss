@@ -136,6 +136,10 @@
   .note {
     margin-top: 2rem;
     font-size: 1rem;
+
+    & + .note {
+      margin-top: 0.75rem;
+    }
   }
 
   .options {
