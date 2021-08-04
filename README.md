@@ -6,7 +6,9 @@
 
 ## General info
 
-A static website for Youtuber's portfolio ([patryktrajder.com](https://patryktrajder.com)).
+A static website for Youtuber's portfolio. 
+
+Development on this repository has been discontinued and project has been moved to private repository because it contains backend code now. Website is available at [patryktrajder.com](https://patryktrajder.com).
 
 ## Technologies
 
