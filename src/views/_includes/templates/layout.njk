@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        {# <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-165608042-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'UA-165608042-1');
-        </script> #}
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="theme-color" content="#007cf0">
@@ -19,6 +10,8 @@
         <link rel="manifest" href="/manifest_pl.json">
         <script defer="defer" src="/src/main.js"></script>
         {% block head %}{% endblock %}
+
+        <script defer="defer" src="https://www.googletagmanager.com/gtag/js?id=UA-165608042-1"></script>
     </head>
     <body>
         <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -100,27 +93,22 @@
 
         <footer>
             <section id="contact" class="container">
-                <div class="contact row">
-                    <h1>Kontakt</h1>
-                    <div class="social-media">
-                        <div>
-                            <a href="https://www.youtube.com/patryktrajder" rel="noopener" target="_blank" title="Mój kanał na Youtubie">
-                                <svg class="icon youtube">
-                                    <use xlink:href="#icon-youtube"></use>
-                                </svg>
-                            </a>
-                            <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="Mój fanpage na Facebooku">
-                                <svg class="icon facebook">
-                                    <use xlink:href="#icon-facebook"></use>
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/patryktrajder" rel="noopener" target="_blank" title="Mój profil na Instagramie">
-                                <svg class="icon">
-                                    <use xlink:href="#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                <div class="social-media">
+                    <a href="https://www.youtube.com/patryktrajder" rel="noopener" target="_blank" title="Mój kanał na Youtubie">
+                        <svg class="icon youtube">
+                            <use xlink:href="#icon-youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="Mój fanpage na Facebooku">
+                        <svg class="icon facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/patryktrajder" rel="noopener" target="_blank" title="Mój profil na Instagramie">
+                        <svg class="icon">
+                            <use xlink:href="#icon-instagram"></use>
+                        </svg>
+                    </a>
                 </div>
                 <div class="links row">
                     <div>
@@ -140,7 +128,7 @@
                             </svg>602 106 170</p>
                     </div>
                     <div>
-                        <h3>Współpraca / zapytania biznesowe:</h3>
+                        <h3>Współpraca:</h3>
                         <p>
                             <a href="mailto:patryk@trajder.com" rel="nofollow noopener" target="_blank" title="patryk@trajder.com">patryk@trajder.com</a>
                         </p>
@@ -149,6 +137,12 @@
                                 <use xlink:href="#icon-mobile"></use>
                             </svg>
                             <a href="tel:+48602106170" rel="nofollow noopener" target="_blank">602 106 170</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Regulaminy:</h3>
+                        <p>
+                            <a href="/privacy-policy.pdf" target="_blank">Polityka prywatności</a>
                         </p>
                     </div>
                 </div>
@@ -165,5 +159,15 @@
                 </div>
             </div>
         </footer>
+        <template id="cookies-notice-template">
+            <div id="cookies-notice">
+                <div class="heading">Strona korzysta z plików cookies</div>
+                <p>Strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz funkcjonalnych zgodnie z&#32;<a href="/privacy-policy.pdf" target="_blank">Polityką prywatności</a>. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne informacje. Dowiedz się więcej jak je wyłączyć klikając&#32;<a href="/privacy-policy.pdf#how-to-disable-cookies" title="Jak wyłączyć ciasteczka" target="_blank">tutaj</a>.</p>
+                <div class="row">
+                    <button class="reject secondary">Nie akceptuję</button>
+                    <button class="accept primary">Akceptuję</button>
+                </div>
+            </div>
+        </template>
     </body>
 </html>

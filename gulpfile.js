@@ -92,6 +92,10 @@ function packagesReminder(done) {
   done();
 }
 
+function privacyPolicy() {
+  return gulp.src("privacy-policy.pdf").pipe(gulp.dest(distDir));
+}
+
 function replaceSpace() {
   return gulp
     .src(distDir + "/**/*.html")
@@ -187,7 +191,10 @@ gulp.task("deploy", function () {
   );
 });
 
-gulp.task("rootfiles", gulp.parallel(cname, googleYTAuth, robots, sitemap));
+gulp.task(
+  "rootfiles",
+  gulp.parallel(cname, googleYTAuth, privacyPolicy, robots, sitemap)
+);
 
 gulp.task(
   "src",
@@ -211,11 +218,18 @@ gulp.task(
   )
 );
 
-gulp.task("dev", gulp.series("clean", gulp.parallel("assets", "srcDev")));
+gulp.task(
+  "dev",
+  gulp.series("clean", gulp.parallel("assets", privacyPolicy, "srcDev"))
+);
 
 gulp.task(
   "acc",
-  gulp.series("clean", gulp.parallel("assets", cnameAcc, "src"), "deploy-acc")
+  gulp.series(
+    "clean",
+    gulp.parallel("assets", cnameAcc, privacyPolicy, "src"),
+    "deploy-acc"
+  )
 );
 
 gulp.task(

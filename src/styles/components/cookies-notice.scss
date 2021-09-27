@@ -1,0 +1,46 @@
+@import "../variables.scss";
+
+#cookies-notice {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px -1px 5px $silverSand;
+  color: $onyx;
+  font-size: 12px;
+  max-width: 560px;
+  padding: 24px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  > p {
+    margin: 32px 0;
+  }
+
+  button {
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px $silverSand;
+    font-size: 1.2rem;
+    padding: 16px;
+
+    &.primary {
+      background: $azure;
+      color: white;
+      font-weight: 600;
+    }
+
+    &.secondary {
+      border: 1px solid $azure;
+      color: $azure;
+    }
+  }
+
+  > .heading {
+    color: $azure;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  > .row {
+    margin-bottom: 0;
+  }
+}

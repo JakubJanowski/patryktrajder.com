@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
-        {# <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-165608042-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'UA-165608042-1');
-        </script> #}
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="theme-color" content="#007cf0">
@@ -19,6 +10,8 @@
         <link rel="manifest" href="/manifest_en-gb.json">
         <script defer="defer" src="/src/main.js"></script>
         {% block head %}{% endblock %}
+
+        <script defer="defer" src="https://www.googletagmanager.com/gtag/js?id=UA-165608042-1"></script>
     </head>
     <body>
         <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -100,27 +93,22 @@
 
         <footer>
             <section id="contact" class="container">
-                <div class="contact row">
-                    <h1>Contact</h1>
-                    <div class="social-media">
-                        <div>
-                            <a href="https://www.youtube.com/patryktrajder" rel="noopener" target="_blank" title="My Youtube channel">
-                                <svg class="icon youtube">
-                                    <use xlink:href="#icon-youtube"></use>
-                                </svg>
-                            </a>
-                            <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="My fanpage on Facebook">
-                                <svg class="icon facebook">
-                                    <use xlink:href="#icon-facebook"></use>
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/patryktrajder" rel="noopener" target="_blank" title="My Instagram profile">
-                                <svg class="icon">
-                                    <use xlink:href="#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                <div class="social-media">
+                    <a href="https://www.youtube.com/patryktrajder" rel="noopener" target="_blank" title="My Youtube channel">
+                        <svg class="icon youtube">
+                            <use xlink:href="#icon-youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/patryktrajder" rel="noopener" target="_blank" title="My fanpage on Facebook">
+                        <svg class="icon facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/patryktrajder" rel="noopener" target="_blank" title="My Instagram profile">
+                        <svg class="icon">
+                            <use xlink:href="#icon-instagram"></use>
+                        </svg>
+                    </a>
                 </div>
                 <div class="links row">
                     <div>
@@ -142,9 +130,15 @@
                             <span class="small">&#32;(Calls only in English or Polish language).</span></p>
                     </div>
                     <div>
-                        <h3>Collaboration / business questions:</h3>
+                        <h3>Collaboration:</h3>
                         <p>
                             <a href="mailto:patryk@trajder.com" rel="nofollow noopener" target="_blank" title="patryk@trajder.com">patryk@trajder.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Regulations:</h3>
+                        <p>
+                            <a href="/privacy-policy.pdf" target="_blank">Privacy policy</a>
                         </p>
                     </div>
                 </div>
@@ -161,5 +155,15 @@
                 </div>
             </div>
         </footer>
+        <template id="cookies-notice-template">
+            <div id="cookies-notice">
+                <div class="heading">This website uses cookies</div>
+                <p>This website uses cookies for statistical, advertising and functional purposes in accordance with&#32;<a href="/privacy-policy.pdf" target="_blank">Privacy policy</a>. Thanks to them we can individually adjust the site to your needs. Everyone can accept cookies, or you have the option to disable them in your browser so that no information is collected. Learn more about how to disable them by clicking&#32;<a href="/privacy-policy.pdf#how-to-disable-cookies" title="How to disable cookies" target="_blank">here</a>.</p>
+                <div class="row">
+                    <button class="reject secondary">Dismiss</button>
+                    <button class="accept primary">Accept</button>
+                </div>
+            </div>
+        </template>
     </body>
 </html>

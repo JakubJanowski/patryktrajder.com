@@ -2,6 +2,8 @@ export default class Constants {
   public static readonly abortClickDistance: number = 3; // px
   public static readonly autoPlaySlideDuration: number = 5000; // s
   public static readonly bodyOverflow = document.body.style.overflow;
+  public static readonly consentCookieName = "consent";
+  public static readonly consentMaxAge: number = 60 * 60 * 24 * 30; // 30 days in seconds
   public static readonly expanderMinHeight = 5.5; // rem
   public static readonly dragSlideThreshold: number = 0.2; // [0, 1]
   public static readonly galleryPreviewHeight: number = 400; // px
