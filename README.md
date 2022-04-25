@@ -6,7 +6,7 @@
 
 ## General info
 
-A static website for Youtuber's portfolio. 
+A static website for Youtuber's portfolio.
 
 Development on this repository has been discontinued and project has been moved to private repository because it contains backend code now. Website is available at [patryktrajder.com](https://patryktrajder.com).
 
@@ -22,7 +22,8 @@ The following tools are used for compilation:
 
 - eleventy (version: 0.11.0),
 - gulp (version: 4.0.2),
-- webpack (version: 4.42.1).
+- webpack (version: 4.42.1),
+- rimraf (version 3.0.2) - installed globally.
 
 ## Setup
 
