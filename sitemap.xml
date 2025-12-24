@@ -201,6 +201,30 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://patryktrajder.com/de/products/super-booster-2000/equipment/metal-sheets/"/>
     </url>
     <url>
+        <loc>https://patryktrajder.com/products/WeldingTable_2400x1200_MateuszDoniec/</loc>
+        <lastmod>2025-12-23T2:30:00+00:00</lastmod>
+        <priority>1</priority>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://patryktrajder.com/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://patryktrajder.com/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://patryktrajder.com/de/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+    </url>
+    <url>
+        <loc>https://patryktrajder.com/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/</loc>
+        <lastmod>2025-12-23T2:30:00+00:00</lastmod>
+        <priority>1</priority>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://patryktrajder.com/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://patryktrajder.com/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://patryktrajder.com/de/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+    </url>
+    <url>
+        <loc>https://patryktrajder.com/de/products/WeldingTable_2400x1200_MateuszDoniec/</loc>
+        <lastmod>2025-12-23T2:30:00+00:00</lastmod>
+        <priority>1</priority>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://patryktrajder.com/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://patryktrajder.com/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://patryktrajder.com/de/products/WeldingTable_2400x1200_MateuszDoniec/"/>
+    </url>
+    <url>
         <loc>https://patryktrajder.com/projects/hydraulic-power-pack/</loc>
         <lastmod>2021-09-27T20:04:00+00:00</lastmod>
         <priority>0.8</priority>
