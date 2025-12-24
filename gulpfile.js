@@ -2,7 +2,7 @@ const { spawn, spawnSync } = require("child_process");
 const gulp = require("gulp");
 const merge = require("merge-stream");
 const readlineSync = require("readline-sync");
-const rename = require("gulp-rename");
+// const rename = require("gulp-rename");
 const replace = require("gulp-replace");
 const sass = require("gulp-sass");
 const webpack = require("webpack-stream");
@@ -15,10 +15,11 @@ function cname() {
 }
 
 function cnameAcc() {
-  return gulp
-    .src("CNAME-acceptance")
-    .pipe(rename("CNAME"))
-    .pipe(gulp.dest(distDir));
+  // No acceptance domain is currently configured
+  // return gulp
+  //   .src("CNAME-acceptance")
+  //   .pipe(rename("CNAME"))
+  //   .pipe(gulp.dest(distDir));
 }
 
 function cursors() {
@@ -160,15 +161,15 @@ gulp.task("clean", function () {
 gulp.task("deploy-acc", function () {
   return spawn(
     "cd " +
-      distDir +
-      " && git init" +
-      " && git add ." +
-      ' && git commit -m "deploy"' +
-      " && git remote add origin https://github.com/JakubJanowski/acceptance.git" +
-      " && git push --force origin main:" +
-      deployBranch +
-      " && rimraf .git" +
-      " && cd ..",
+    distDir +
+    " && git init" +
+    " && git add ." +
+    ' && git commit -m "deploy"' +
+    " && git remote add origin https://github.com/JakubJanowski/acceptance.git" +
+    " && git push --force origin main:" +
+    deployBranch +
+    " && rimraf .git" +
+    " && cd ..",
     [],
     { shell: true, stdio: "inherit" }
   );
@@ -177,15 +178,15 @@ gulp.task("deploy-acc", function () {
 gulp.task("deploy", function () {
   return spawn(
     "cd " +
-      distDir +
-      " && git init" +
-      " && git add ." +
-      ' && git commit -m "deploy"' +
-      " && git remote add origin https://github.com/JakubJanowski/patryktrajder.com.git" +
-      " && git push --force origin main:" +
-      deployBranch +
-      " && rimraf .git" +
-      " && cd ..",
+    distDir +
+    " && git init" +
+    " && git add ." +
+    ' && git commit -m "deploy"' +
+    " && git remote add origin https://github.com/JakubJanowski/patryktrajder.com.git" +
+    " && git push --force origin main:" +
+    deployBranch +
+    " && rimraf .git" +
+    " && cd ..",
     [],
     { shell: true, stdio: "inherit" }
   );
