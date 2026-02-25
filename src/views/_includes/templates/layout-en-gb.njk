@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="theme-color" content="#007cf0">
         {% block meta %}{% endblock %}
-
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/src/main.css"/>
         <link rel="manifest" href="/manifest_en-gb.json">
         <script defer="defer" src="/src/main.js"></script>
@@ -33,10 +33,10 @@
         <header>
             <div>
                 <h1>
-                    <a href="/en-gb/" title="Homepage">Patryk Trajder</a>
+                    <a href="/en-gb/" title="Homepage"><span class="logo-blue">Patryk</span><span class="logo-orange">Trajder</span></a>
                 </h1>
                 <h1 class="second-logo">
-                    <a href="/en-gb/" title="Homepage">Patryk Trajder</a>
+                    <a href="/en-gb/" title="Homepage"><span class="logo-blue">Patryk</span><span class="logo-orange">Trajder</span></a>
                 </h1>
                 <div class="menu">
                     <nav>
@@ -48,7 +48,7 @@
                                 <a href="/en-gb/about/" title="Let's get to know each other better!">About me</a>
                             </li>
                             <li {% if tab === "products" %} class="current" {% endif %}>
-                                <a href="/en-gb/products/">Products</a>
+                                <a href="/en-gb/products/">Shop</a>
                             </li>
                             <li {% if tab === "projects" %} class="current" {% endif %}>
                                 <a href="/en-gb/projects/">Projects</a>

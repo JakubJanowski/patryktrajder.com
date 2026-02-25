@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="theme-color" content="#007cf0">
         {% block meta %}{% endblock %}
-
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/src/main.css"/>
         <link rel="manifest" href="/manifest_de.json">
         <script defer="defer" src="/src/main.js"></script>
         {% block head %}{% endblock %}
+        
 
         <script defer="defer" src="https://www.googletagmanager.com/gtag/js?id=UA-165608042-1"></script>
     </head>
@@ -33,10 +34,10 @@
         <header>
             <div>
                 <h1>
-                    <a href="/de/" title="Startseite">Patryk Trajder</a>
+                <a href="/de/" title="Startseite"><span class="logo-blue">Patryk</span><span class="logo-orange">Trajder</span></a>
                 </h1>
                 <h1 class="second-logo">
-                    <a href="/de/" title="Startseite">Patryk Trajder</a>
+                    <a href="/de/" title="Startseite"><span class="logo-blue">Patryk</span><span class="logo-orange">Trajder</span></a>
                 </h1>
                 <div class="menu">
                     <nav>
@@ -48,7 +49,7 @@
                                 <a href="/de/about/" title="Lernen wir uns besser kennen!">Über mich</a>
                             </li>
                             <li {% if tab === "Produkte" %} class="aktuell" {% endif %}>
-                                <a href="/de/products/">Produkte</a>
+                                <a href="/de/products/">Geschäft</a>
                             </li>
                             <li {% if tab === "projekte" %} class="aktuell" {% endif %}>
                                 <a href="/de/projects/">Projekte</a>
