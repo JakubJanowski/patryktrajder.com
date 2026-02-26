@@ -12,13 +12,13 @@
 {% endblock %}
 
 {% block body %}
-  <div class="banner">
+  {# <div class="banner">
     <div class="container">
       <div class="image-placeholder" style="padding-top: 25.104166666%;">
         <img src="/assets/images/products-banner-w1920.jpg" srcset="/assets/images/products-banner-w768.jpg 768w, /assets/images/products-banner-w1920.jpg 1920w" alt="Narzędzia na ścianie warsztatu"/>
       </div>
     </div>
-  </div>
+  </div> #}
 
   <main>
     <nav class="breadcrumbs gap-top">
@@ -36,6 +36,7 @@
         <b>Produkty</b>
       </a>
     </nav>
+    {#
     <nav class="categories">
       <a href="#diy-tools" title="Narzędzia DIY">
         <p>
@@ -48,11 +49,12 @@
         </p>
       </a>
     </nav>
+    #}
 
     <article id="diy-tools" class="gap-top preview-list">
-      <h1 class="gap-bottom-medium">
-        Narzędzia DIY
-      </h1>
+      <h1 class="gap-bottom-medium centered-text">Sklep</h1>
+
+      {#
       <section>
         <h2>
           <a href="super-booster-2000/" title="Super Booster 2000">Wykrawarka do rur - Super Booster 2000</a>
@@ -74,9 +76,39 @@
           </div>
         </div>
       </section>
-    </article>
+      #}
 
-    <article id="diy-projects" class="gap-top-large">
+
+
+ <div class="product-cards-container">
+  <div class="product-card">
+           <a href="super-booster-2000/" class="product-image-link">
+              <img src="/assets/images/super-booster-2000/thumb-w320.0.jpg" alt="Super Booster 2000"/></a>
+        <div class="product-card-content">
+           <a href="super-booster-2000/" class="product-title">Wykrawarka do rur - Super Booster 2000</a>
+        <div class="product-price">889,01 PLN</div>
+           <a href="super-booster-2000/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+           <a href="super-booster-2000/" class="btn-dwt">Sprawdź</a>
+        </div>
+   </div>
+ </div>
+
+ <div class="product-card">
+        <a href="WeldingTable_2400x1200_MateuszDoniec/" class="product-image-link">
+          <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/thumb-w320h180.jpg" alt="projekt stołu spawalniczego"/></a>
+        <div class="product-card-content">
+         <a href="WeldingTable_2400x1200_MateuszDoniec/" class="product-title">Plany Budowy Stołu Spawalniczego 2400x1200 (System 16/28 | Blat 12/15mm)</a>
+        <div class="product-price">129,00 PLN</div>
+         <a href="WeldingTable_2400x1200_MateuszDoniec/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="WeldingTable_2400x1200_MateuszDoniec/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+  </article>
+
+    {# <article id="diy-projects" class="gap-top-large">
       <h1>
         Projekty DIY
       </h1>
@@ -101,6 +133,7 @@
           </div>
         </div>
       </section>
-    </article>
+      </article> #}
+
   </main>
 {% endblock %}

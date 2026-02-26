@@ -116,3 +116,100 @@ p.indent {
 .logo-orange {
     color: #F98525;
 }
+
+.product-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Karty równają do lewej strony */
+  gap: 40px; /* Wyliczony idealny odstęp między kartami */
+  margin-top: 3rem; 
+  margin-bottom: 64px;
+  width: 100%; 
+}
+
+.product-card {
+  width: 284px !important; 
+  max-width: 284px !important;
+  flex: 0 0 284px !important; /* Sztywna blokada szerokości na 284px */
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important; 
+  overflow: hidden; /* Ucina wszystko, co wychodzi poza kartę */
+  
+  img {
+    width: 100%;
+    height: 160px; /* Wysokość zdjęcia ze zrzutów */
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .product-card-content {
+    padding: 2px 8px 12px; /* Marginesy wewnętrzne ze zrzutów */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 274px;
+
+    .product-title {
+      font-size: 16px;
+      color: #707070;
+      font-weight: 400; 
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+      min-height: 45px; /* Równa tytuły do jednej linii */
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 10px;
+      
+      &:hover { 
+        color: #007CF0; 
+      }
+    }
+
+    .product-price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00a650; 
+      margin-top: auto; /* Zawsze dopycha cenę i przycisk do samego dołu */
+      padding-top: 10px;
+    }
+
+    .product-link {
+      font-size: 14px;
+      color: #007CF0;
+      margin: 15px 0 15px 0;
+      display: inline-block;
+      text-decoration: none;
+      
+      &:hover { 
+        text-decoration: underline; 
+      }
+    }
+
+ .cart-action-row {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 5px;
+    }
+  }
+}
+
+.product-image-link {
+  display: block; // Ważne, żeby link zajmował całą przestrzeń zdjęcia
+  overflow: hidden;
+  line-height: 0; // Usuwa dziwną szparę pod obrazkiem
+
+  img {
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.85; // Delikatne przygaśnięcie po najechaniu
+    }
+  }
+}
