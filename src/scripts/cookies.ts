@@ -90,7 +90,7 @@ export default class Cookies {
       analytics_storage: grantStatus,
       ad_storage: grantStatus
     });
-    gtag("config", "UA-165608042-1", { anonymize_ip: true });
+    gtag("config", "G-ZYTND6L39E", { anonymize_ip: true });
   }
 
   private updateConsent(consent: boolean) {
