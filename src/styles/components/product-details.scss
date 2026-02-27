@@ -175,21 +175,33 @@
     }
   }
 
-  .price {
-    margin-top: 0.5rem;
+ .price {
+  h3 {
     color: #007CF0;
     font-weight: 600;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: baseline;
 
-    > * {
-      display: inline;
+     span.cents {
+      font-size: 0.8em;
     }
 
-    h3 {
-      span.cents {
-        font-size: 0.8em;
-      }
+    .currency {
+      font-weight: 400;
+      font-size: 0.9em;
+      margin-left: 8px; /* Zwiększamy odstęp z lewej strony (od groszy) */
+      margin-right: 6px;
+    }
+
+    .tax-info {
+      color: #777;
+      font-weight: 400;
+      font-size: 0.65em;
+      margin-left: 8px;
     }
   }
+}
 
   .tip {
     color: $grey;
