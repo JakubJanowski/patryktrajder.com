@@ -97,6 +97,10 @@ function privacyPolicy() {
   return gulp.src("privacy-policy.pdf").pipe(gulp.dest(distDir));
 }
 
+function terms() {
+  return gulp.src(["terms-of-service.pdf", "terms-of-service-en.pdf", "impressum-de.pdf", "terms-of-service-de.pdf", "privacy-policy-de.pdf", "privacy-policy-en.pdf"]).pipe(gulp.dest(distDir));
+}
+
 function replaceSpace() {
   return gulp
     .src(distDir + "/**/*.html")
@@ -194,7 +198,7 @@ gulp.task("deploy", function () {
 
 gulp.task(
   "rootfiles",
-  gulp.parallel(cname, googleYTAuth, privacyPolicy, robots, sitemap)
+  gulp.parallel(cname, googleYTAuth, privacyPolicy, terms, robots, sitemap)
 );
 
 gulp.task(
@@ -221,14 +225,14 @@ gulp.task(
 
 gulp.task(
   "dev",
-  gulp.series("clean", gulp.parallel("assets", privacyPolicy, "srcDev"))
+  gulp.series("clean", gulp.parallel("assets", privacyPolicy, terms, "srcDev"))
 );
 
 gulp.task(
   "acc",
   gulp.series(
     "clean",
-    gulp.parallel("assets", cnameAcc, privacyPolicy, "src"),
+    gulp.parallel("assets", cnameAcc, privacyPolicy, terms, "src"),
     "deploy-acc"
   )
 );
