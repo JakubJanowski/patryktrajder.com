@@ -74,6 +74,7 @@ ul.dots {
     margin-bottom: 1rem;
   }
 
+  
   .icon {
     color: slategrey;
     font-size: 1rem;
@@ -85,7 +86,27 @@ ul.dots {
       margin: 0 0 -5px;
     }
   }
-}
+
+  .breadcrumb-full {
+    display: inline; 
+  }
+
+  .breadcrumb-short {
+    display: none; 
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumb-full {
+      display: none; 
+    }
+    .breadcrumb-short {
+      display: inline; 
+    }
+    
+    // To doda odrobinę miejsca pod okruszkami na telefonie
+    padding-bottom: 0.25rem; 
+  }
+} // Ta klamra zamyka teraz poprawnie całe .breadcrumbs
 
 .categories {
   margin: -1rem 0 0 -1rem;
