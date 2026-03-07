@@ -3,7 +3,7 @@
 
 {% block meta %}
   <link rel="canonical" href="https://patryktrajder.com/projects/"/>
-  <title>Bazy Wiedzy | Patryk Trajder</title>
+  <title>Poradniki | Patryk Trajder</title>
 {% endblock meta %}
 
 {% block vectors %}
@@ -12,16 +12,38 @@
 {% endblock %}
 
 {% block body %}
-  <section class="banner">
+   {# <section class="banner"> 
     <div class="container centered-text">
       <div class="image-placeholder" style="padding-top: 41.666666666%;">
         <img src="/assets/images/projects-banner-w1920.jpg" srcset="/assets/images/projects-banner-w768.jpg 768w, /assets/images/projects-banner-w1920.jpg 1920w" sizes="100vw" alt="Blacha cięta szlifierką"/>
       </div>
       <h1>Poznaj lepiej moje projekty</h1>
     </div>
-  </section>
+  </section>  #}
+
+<section class="parallax-section gap-bottom" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/projects-banner-w1920.jpg'); 
+background-position: 90% center;"> {# jak ma skalowac sie zdjecie 0 idzie w prawo 100 idzie w lewo / 50% centruje do srodka #} 
+  
+        {# INSTRUKCJA
+            --h2-pc: 80px;     Tytuł na PC #}
+        {#  --p-pc: 32px;      Podpis na PC (wcześniej 2rem) #}
+        {#  --h2-mob: 40px;    Tytuł na telefonie #}
+        {#  --p-mob: 24px;     Podpis na telefonie #}
+       <div class="parallax-content" 
+       style="
+         --h2-pc: 80px;
+         --p-pc: 32px;
+         --h2-mob: 40px;
+         --p-mob: 24px;
+       ">
+      <h2>Poznaj lepiej moje projekty</h2> 
+    <p></p>
+  </div>
+</section> 
+
+
   <main>
-    <nav class="breadcrumbs gap-top">
+     <nav class="breadcrumbs gap-top"> 
       <span>
         <a href="/" title="Strona główna">
           <svg class="home icon">
@@ -33,10 +55,10 @@
         </svg>
       </span>
       <a href="/projects/">
-        <b>Bazy Wiedzy</b>
+        <b>Poradniki</b>
       </a>
-    </nav>
-    <nav class="categories">
+    </nav> 
+    {#  <nav class="categories">
       <a href="#my-projects" title="Moje projekty">
         <p>
           Moje projekty
@@ -47,12 +69,12 @@
           Wasze projekty
         </p>
       </a>
-    </nav>
+    </nav> #}
 
     <article id="my-projects" class="gap-top preview-list">
-      <h1 class="gap-bottom-medium">
+       {# <h1 class="gap-bottom-medium">
         Moje projekty
-      </h1>
+      </h1> #}
       <section>
         <h2>
           <a href="hydraulic-cylinder/" title="Siłownik hydrauliczny">Siłownik hydrauliczny - Budowa</a>
@@ -101,7 +123,7 @@
         Wasze projekty
       </h1>
       <p>
-        Jeśli chcesz pochwalić się swoim projektem wyślij go na&#32;<a href="mailto:chwalipieta@trajder.com" rel="nofollow noopener" target="_blank" title="chwalipieta@trajder.com">chwalipieta@trajder.com</a>&#32;xD
+        Jeśli chcesz pochwalić się swoim projektem wyślij go na&#32;<a href="mailto:patryk@trajder.com" rel="nofollow noopener" target="_blank" title="chwalipieta@trajder.com">patryk@trajder.com</a>&#32;
       </p>
     </article>
   </main>

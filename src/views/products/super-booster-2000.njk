@@ -45,7 +45,7 @@
             </svg>
           </span>
           <span>
-            <a href="/products/">Produkty</a>
+            <a href="/products/">Sklep</a>
             <svg class="icon">
               <use xlink:href="#icon-arrow-right"></use>
             </svg>
@@ -126,16 +126,72 @@
               <span class="tax-info">(brutto)</span>
              </h3>
               </div>
+
+
+{#  
+
+          <style>
+  /* Styl dla wyszarzonego i zablokowanego przycisku */
+  .btn-dwt.disabled-btn {
+    background-color: #d3d3d3 !important; /* Jasnoszary */
+    color: #888 !important; /* Ciemniejszy szary tekst */
+    cursor: not-allowed !important; /* Kursor zakazu */
+   /* pointer-events: none;  Całkowicie blokuje możliwość kliknięcia */
+    box-shadow: none !important;
+  }
+</style>
+
+<div class="delivery-options gap-bottom">
+  <p id="delivery-label" class="tip" style="margin-top: 2rem;">Wybierz kraj i sposób dostawy:</p>
+  
+  <div style="margin-top: 0.5rem; max-width: 300px;">
+    <select id="delivery-country" onchange="updateDeliveryCost()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #555; cursor: pointer; outline: none;">
+      <option value="none" selected disabled>Wybierz państwo z listy</option>
+      <option value="pl">Polska: Kurier InPost (przedpłata) — 30 zł</option>
+      <option value="pl2">Polska: Kurier InPost (pobranie) — 20 zł</option>
+      <option value="de">Niemcy: Kurier (przedpłata) — 75 zł</option>
+    </select>
+  </div>
+  
+  <div id="delivery-result" style="display: none; margin-top: 1rem; font-size: 1.1rem; color: #404041; font-weight: 600;">
+  </div>
+
+ <div style="display: flex; justify-content: flex-end; max-width: 300px; margin-top: 15px;">
+  <a id="buy-now-btn" 
+     href="javascript:void(0)" 
+     class="btn-dwt disabled-btn" 
+     onclick="handleDisabledClick()" 
+     style="margin: 0; font-size: 20px; padding: 0 24px; height: 44px; display: inline-flex;">
+     Kup Teraz
+  </a>
+</div> #}
+
+
+  {# <p class="tip">Inny kraj lub opcja? Napisz do mnie:</p> #}
+
           <p class="tip">Produkt zamówić możesz za pomocą:</p>
           <div class="contact">
             <a class="messenger option" href="https://www.messenger.com/t/patryktrajder" rel="noopener" target="_blank" title="Napisz do mnie na Messengerze">
               <svg class="icon messenger">
                 <use xlink:href="#icon-messenger"></use>
               </svg>Messenger</a>
-            <a class="email option" href="mailto:sklep@trajder.com" rel="nofollow noopener" target="_blank" title="sklep@trajder.com">
-              <svg class="icon">
-                <use xlink:href="#icon-mail"></use>
-              </svg>Email</a>
+
+        <div class="phone">
+  <div class="hold-on-click option" title="Kliknij, aby skopiować adres" onclick="copyEmail(this)">
+    <svg class="icon">
+      <use xlink:href="#icon-mail"></use>
+    </svg>
+    <span class="text">Email</span>
+    <span class="number" style="cursor: copy;">sklep@trajder.com</span>
+  </div>
+  <div class="invisible option">
+    <svg class="icon">
+      <use xlink:href="#icon-mail"></use>
+    </svg>sklep@trajder.com
+  </div>
+</div>
+
+
             <div class="phone" href="tel:+48602106170" rel="nofollow noopener" target="_blank">
               <div class="hold-on-click option">
                 <svg class="icon">
@@ -189,6 +245,30 @@
         </div>
       </section>
 
+
+<section class="parallax-section gap-bottom gap-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/super-booster-2000/thumb-w1120.jpg'); 
+background-position: 50% center;"> {# jak ma skalowac sie zdjecie 0 idzie w prawo 100 idzie w lewo / 50% centruje do srodka #} 
+  
+        {# INSTRUKCJA
+            --h2-pc: 80px;     Tytuł na PC #}
+        {#  --p-pc: 32px;      Podpis na PC (wcześniej 2rem) #}
+        {#  --h2-mob: 40px;    Tytuł na telefonie #}
+        {#  --p-mob: 24px;     Podpis na telefonie #}
+       <div class="parallax-content" 
+       style="
+         --h2-pc: 80px;
+         --p-pc: 32px;
+         --h2-mob: 40px;
+         --p-mob: 24px;
+       ">
+    <h2>PIRANHA NOTCHER</h2>
+    <p>Zero kompromisów.</p>
+  </div>
+  
+</section>
+
+
+
       <div class="tabs">
         <input id="description-tab-button" type="radio" name="tab-button" checked="checked">
         <input id="parameters-tab-button" type="radio" name="tab-button">
@@ -208,11 +288,11 @@
                   hartowany wał (taki sam jakiego używa się do produkcji siłowników w maszynach budowlanych), specjalną końcówkę do szybkiej wymiany otwornic, kątownik z podziałką do łatwego i szybkiego ustawienia przyrządu pod daną pracę, zawleczki (aby docisk materiału zawsze trzymał się na swoim miejscu), blokadę kąta dla powtarzalosci cięć, i kilka innych ulepszeń, które znacząco podnoszą komfort pracy. Jednak zarazem podniosły cenę 😉 Moim celem było stworzenie produktu o jak najlepszych paramatrach oraz w cenie przystępnej dla każdego. Na początku zakładałem sprzedaż zestawu trochę taniej, jednak doszedłem do wniosku, że podniesienie jakości bedzie dobrą decyzją.
                 </p>
               </div>
-              <div>
+              {# <div> 
                 <div class="image-loading">
                   <img src="/assets/images/super-booster-2000/thumb-w1120.jpg" alt="prezentacja złożonej wykrawarki do rur"/>
-                </div>
-              </div>
+                </div 
+              </div>>  #}
             </div>
 
             <div>
@@ -697,5 +777,73 @@
       </section>
 
     </article>
+
+<script>
+function updateDeliveryCost() {
+  const select = document.getElementById('delivery-country');
+  const resultDiv = document.getElementById('delivery-result');
+  const buyBtn = document.getElementById('buy-now-btn');
+  const label = document.getElementById('delivery-label');
+  const selectedValue = select.value;
+
+  // Resetujemy ostrzeżenie do normy
+  label.style.color = '#707070'; 
+  label.style.fontWeight = '400';
+  label.innerHTML = 'Wybierz kraj i sposób dostawy:';
+
+  const deliveryCosts = {
+    'pl': 'Koszt dostawy: <strong style="color: #007cf0;">30,00 zł</strong>',
+    'pl2': 'Koszt dostawy: <strong style="color: #007cf0;">20,00 zł</strong>',
+    'de': 'Koszt dostawy: <strong style="color: #007cf0;">75,00 zł</strong>',
+  };
+
+  const easyCartLinks = {
+    'pl': 'https://app.easycart.pl/twoj-link-pl-przedplata',
+    'pl2': 'https://app.easycart.pl/twoj-link-pl-pobranie',
+    'de': 'https://app.easycart.pl/twoj-link-de',
+  };
+
+  if (deliveryCosts[selectedValue]) {
+    resultDiv.innerHTML = deliveryCosts[selectedValue];
+    resultDiv.style.display = 'block'; 
+    buyBtn.href = easyCartLinks[selectedValue]; 
+    buyBtn.classList.remove('disabled-btn');    
+  } else {
+    resultDiv.style.display = 'none'; 
+    buyBtn.href = 'javascript:void(0)'; // Przywracamy bezpieczny pusty link
+    buyBtn.classList.add('disabled-btn');    
+  }
+}
+
+function handleDisabledClick() {
+  const buyBtn = document.getElementById('buy-now-btn');
+  const label = document.getElementById('delivery-label');
+  
+  // Jeśli przycisk ma klasę disabled, blokujemy akcję i zmieniamy napis
+  if (buyBtn.classList.contains('disabled-btn')) {
+    label.style.color = 'red';
+    label.style.fontWeight = 'bold';
+    if (!label.innerHTML.includes('❗')) {
+      label.innerHTML = 'Wybierz kraj i sposób dostawy:';
+    }
+  }
+}
+
+// Funkcja maila (zostaje bez zmian)
+function copyEmail(element) {
+  navigator.clipboard.writeText('sklep@trajder.com').then(function() {
+    const numberSpan = element.querySelector('.number');
+    numberSpan.innerHTML = '<span style="color: #00a650;">Skopiowano! ✓</span>';
+    setTimeout(function() {
+      numberSpan.innerHTML = 'sklep@trajder.com';
+    }, 2000);
+  });
+}
+</script>
+
+
+
+
+
   </main>
 {% endblock %}

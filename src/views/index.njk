@@ -12,7 +12,47 @@
 {% endblock %}
 
 {% block body %}
-  <div class="banner sliding-banner">
+
+<div class="banner sliding-banner">
+  <div class="container slider">
+    <div class="wrapper">
+      <div class="items">
+        
+        <div class="parallax-section" 
+             style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/images/banner1-h730.jpg'); 
+                    height: 550px; 
+                    width: 100vw; 
+                    background-position: 90% center;">
+          <div class="parallax-content" style="--h2-pc: 70px; --p-pc: 28px; --h2-mob: 35px; --p-mob: 18px;">
+            <h2>TRAJDER<sup>&copy;</sup></h2>
+            <p>Stół, który trzyma kąty za Ciebie</p>
+          </div>
+        </div>
+
+        <div class="parallax-section" 
+             style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/images/super-booster-2000/thumb-w1120.jpg'); 
+                    height: 550px; 
+                    width: 100vw; 
+                    background-position: 50% center;">
+          <div class="parallax-content" style="--h2-pc: 70px; --p-pc: 28px; --h2-mob: 35px; --p-mob: 22px;">
+            <h2>PIRANHA NOTCHER</h2>
+            <p>Precyzyjne wycięcia w rurach w kilka sekund</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <ul></ul>
+    <button class="arrow left" aria-label="Previous slide">
+      <svg class="icon"><use xlink:href="#icon-arrow-left"></use></svg>
+    </button>
+    <button class="arrow right" aria-label="Next slide">
+      <svg class="icon"><use xlink:href="#icon-arrow-right"></use></svg>
+    </button>
+  </div>
+</div>
+  {# <div class="banner sliding-banner"> 
     <div class="container slider">
       <div class="wrapper">
         <div class="items">
@@ -36,7 +76,7 @@
         </svg>
       </button>
     </div>
-  </div>
+  </div> #}
 
   <main>
     <article class="centered-text gap-top-medium">
@@ -55,7 +95,7 @@
         </p>
       </section>
       <section class="gap-top-medium">
-        <h1>Najnowsze produkty</h1>
+        <h1>Najnowsze Produkty</h1>
         <div class="regular slider">
           <div class="wrapper">
             <div class="items">
@@ -96,7 +136,7 @@
         </div>
       </section>
       <section class="gap-top-medium">
-        <h1>Najnowsze projekty</h1>
+        <h1>Najnowsze Poradniki</h1>
         <div class="regular slider">
           <div class="wrapper">
             <div class="items">

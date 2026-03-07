@@ -3,7 +3,7 @@
 
 {% block meta %}
   <link rel="canonical" href="https://patryktrajder.com/en-gb/projects/"/>
-  <title>Knowledge Base | Patryk Trajder</title>
+  <title>Guides | Patryk Trajder</title>
 {% endblock meta %}
 
 {% block vectors %}
@@ -12,14 +12,36 @@
 {% endblock %}
 
 {% block body %}
-  <section class="banner">
+
+<section class="parallax-section gap-bottom" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/projects-banner-w1920.jpg'); 
+background-position: 80% center;"> {# jak ma skalowac sie zdjecie 0 idzie w prawo 100 idzie w lewo / 50% centruje do srodka #} 
+  
+        {# INSTRUKCJA
+            --h2-pc: 80px;     Tytuł na PC #}
+        {#  --p-pc: 32px;      Podpis na PC (wcześniej 2rem) #}
+        {#  --h2-mob: 40px;    Tytuł na telefonie #}
+        {#  --p-mob: 24px;     Podpis na telefonie #}
+       <div class="parallax-content" 
+       style="
+         --h2-pc: 80px;
+         --p-pc: 32px;
+         --h2-mob: 40px;
+         --p-mob: 24px;
+       ">
+      <h2>Get to know my projects better</h2> 
+    <p></p>
+  </div>
+</section> 
+
+
+  {#  <section class="banner"> 
     <div class="container centered-text">
       <div class="image-placeholder" style="padding-top: 41.666666666%;">
         <img src="/assets/images/projects-banner-w1920.jpg" srcset="/assets/images/projects-banner-w768.jpg 768w, /assets/images/projects-banner-w1920.jpg 1920w" alt="Sheet metal being cut with a grinder."/>
       </div>
       <h1>Get to know my projects better</h1>
     </div>
-  </section>
+  </section> #}
   <main>
     <nav class="breadcrumbs gap-top">
       <span>
@@ -33,10 +55,10 @@
         </svg>
       </span>
       <a href="/en-gb/projects/">
-        <b>Knowledge Base</b>
+        <b>Guides</b>
       </a>
     </nav>
-    <nav class="categories">
+    {#  <nav class="categories"> 
       <a href="#my-projects" title="My projects">
         <p>
           My projects
@@ -47,7 +69,7 @@
           Your projects
         </p>
       </a>
-    </nav>
+    </nav> #}
 
     <article id="my-projects" class="gap-top preview-list">
       <h1 class="gap-bottom-medium">
