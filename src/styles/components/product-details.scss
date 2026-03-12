@@ -24,10 +24,31 @@
     }
   }
 
-  .availability {
+.availability p {
+    text-align: left !important; 
+    margin: 0.5rem 0 0 0 !important;
+    line-height: 1.4;
+}
+
+.green-text {
     color: #289b38;
-    margin-top: 0.5rem;
-  }
+    font-weight: 700;
+}
+
+.nobreak-block {
+    display: inline-block;
+    color: #333;
+}
+
+.green-text {
+    color: #289b38;
+    font-weight: 600;
+}
+
+.nowrap-text {
+    color: #333;
+    white-space: nowrap !important;
+}
 
   .contact {
     margin-left: -1rem;
