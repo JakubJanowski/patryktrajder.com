@@ -107,29 +107,19 @@
     </h3>
   </div>
 
-  <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 15px;">
-  <a href="https://cart.easy.tools/checkout/patryktrajder/akcesoria-en?lang=en" class="btn-dwt" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
-    Buy Now
-  </a>
-</div>
-          
-          <style>
-  .btn-dwt.disabled-btn {
-    background-color: #d3d3d3 !important;
-    color: #888 !important;
-    cursor: not-allowed !important;
-    box-shadow: none !important;
-  }
-</style>
+  
 
 {#
-<div class="product-selection gap-bottom">
+ 
+ <div class="product-selection gap-bottom">
   <p id="config-label" class="tip">Select table version:</p>
   
   <div style="margin-top: 0.5rem; max-width: 400px;">
    <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
       <option value="none" selected disabled>Select System & Thickness:</option>
-      <option value="s28_15">System 28 | Blat 15mm — €35</option>
+      <option value="s28_15">System 28 | Top 15mm — €35</option>
+      <option value="s28_12">System 28 | Top 12mm — €35</option>
+      <option value="s16_12">System 16 | Top 12mm — €35</option>
     </select>
   </div>
 
@@ -159,49 +149,22 @@
            
           </ul>
         </div>
-        <a href="/produkty/oprzyrzadowanie" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500; display: inline-block;">
+        <a href="/en-gb/products/welding-table-tooling-kit-plans-dwta01/" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500; display: inline-block;">
           Full project description &rarr;
         </a>
       </div>
     </details>
   </div>
+  
+  #}
 
-  <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 15px;">
-  <a id="buy-table-btn" href="javascript:void(0)" class="btn-dwt disabled-btn" onclick="handleTableDisabledClick()" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center;">Buy Now</a>
-</div>
-</div>
-#}
-
-
-          <p class="tip">You can order the product using:</p>
-          <div class="contact">
-            <a class="messenger option" href="https://www.messenger.com/t/patryktrajder" rel="noopener" target="_blank" title="Write to me on Messenger">
-              <svg class="icon messenger">
-                <use xlink:href="#icon-messenger"></use>
-              </svg>Messenger</a>
-            <a class="email option" href="mailto:shop@trajder.com" rel="nofollow noopener" target="_blank" title="shop@trajder.com">
-              <svg class="icon">
-                <use xlink:href="#icon-mail"></use>
-              </svg>Email</a>
-            <div class="phone" href="tel:+48602106170" rel="nofollow noopener" target="_blank" title="Calls only in English or Polish language">
-              <div class="hold-on-click option">
-                <svg class="icon">
-                  <use xlink:href="#icon-mobile"></use>
-                </svg>
-                <span class="text">Phone*</span>
-                <span class="number">+48 602 106 170</span>
-              </div>
-              <div class="invisible option">
-                <svg class="icon">
-                  <use xlink:href="#icon-mobile"></use>
-                </svg>+48 602 106 170
-              </div>
-            </div>
-          </div>
-          <div class="availability">
+       <br>
+ <div class="availability">
           <p><span class="green-text">Instant&nbsp;Email</span>&nbsp;|&#32;<span style="color: #333; white-space: nowrap;">24/7</span></p>
        </div>
-          <div class="assembly-difficulty">
+
+
+ <div class="assembly-difficulty">
             <p>Difficulty of assembly</p>
             <span>
               <svg class="icon">
@@ -224,8 +187,34 @@
               </svg>
             </span>
           </div>
-          <p class="note">* Calls only in English or Polish language.</p>
+
+
+        <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 48px; margin-bottom: 32px;">
+           <a href="https://cart.easy.tools/checkout/patryktrajder/akcesoria-en?lang=en" class="btn-dwt" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">Buy Now
+            </a>
+             </div>
+       
+ 
+
+  <p class="tip" style="text-align: left;">Can't find the right project? Get in touch:</p>
+          <div class="contact">
+            <div class="phone">
+             <div class="hold-on-click option" title="Click to copy email" onclick="copyEmail(this)">
+             <svg class="icon">
+             <use xlink:href="#icon-mail"></use>
+             </svg>
+               <span class="text">Email</span>
+              <span class="number" style="cursor: copy;">shop@trajder.com</span>
+              </div>
+               <div class="invisible option">
+              <svg class="icon">
+             <use xlink:href="#icon-mail"></use>
+           </svg>shop@trajder.com
+         </div>
+       </div>
+      </div>
         </div>
+         
       </section>
 
       <div class="tabs">
@@ -483,21 +472,23 @@ function updateTableLink() {
 
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt0101-gotowy-projekt-dokumentacji-technicznej?lang=en',
-    
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-2?lang=en',
+    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-4?lang=en',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-3?lang=en'
     
   };
 
   const bundleLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt02-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej?lang=en',
-    
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej?lang=en',
+    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej-2?lang=en',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej-3?lang=en'
   };
 
   // --- LOGIKA PRZYCISKU (Tu jest blokada zakupu) ---
   if (config !== "none") {
     // Jeśli stół jest wybrany: odblokuj przycisk i przypisz odpowiedni link
     buyBtn.href = isAddon ? bundleLinks[config] : soloLinks[config];
-    buyBtn.classList.remove('disabled-btn');
+    // buyBtn.classList.remove('disabled-btn');
     
     // Zdejmij ewentualne czerwone ostrzeżenie
     label.style.color = '#707070';
@@ -511,7 +502,7 @@ function updateTableLink() {
   } else {
     // Jeśli stół NIE jest wybrany: przycisk zablokowany (nawet jeśli dodatek jest zaznaczony)
     buyBtn.href = 'javascript:void(0)';
-    buyBtn.classList.add('disabled-btn');
+   // buyBtn.classList.add('disabled-btn');
   }
 }
 
@@ -519,18 +510,22 @@ function updateTableLink() {
  * 2. FUNKCJA: Obsługa kliknięcia w zablokowany przycisk
  */
 function handleTableDisabledClick() {
-  const buyBtn = document.getElementById('buy-table-btn');
+  const config = document.getElementById('table-config').value; // Teraz sprawdzamy wybór, a nie klasę
   const label = document.getElementById('config-label');
-  const selectBox = document.getElementById('table-config'); // To jest ważne!
+  const selectBox = document.getElementById('table-config');
   
-  if (buyBtn.classList.contains('disabled-btn')) {
+  if (config === "none") {
     label.style.color = 'red';
     label.style.fontWeight = 'bold';
-    label.innerHTML = 'Wybierz konfigurację planów:';
+    label.style.textAlign = 'left';
+    label.innerHTML = 'Please select table configuration:';
     
-    // Zapal ramkę na czerwono
     selectBox.style.borderColor = 'red';
     selectBox.style.boxShadow = '0 0 5px rgba(255, 0, 0, 0.4)';
+    selectBox.focus({ preventScroll: true });
+    selectBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Opcjonalnie zostawiamy focus, żeby po przewinięciu lista była "aktywna"
+    setTimeout(() => selectBox.focus(), 500);
   }
 }
 
@@ -538,12 +533,12 @@ function handleTableDisabledClick() {
  * 3. TWOJA FUNKCJA: Kopiowanie adresu e-mail
  */
 function copyEmail(element) {
-  navigator.clipboard.writeText('sklep@trajder.com').then(function() {
+  navigator.clipboard.writeText('shop@trajder.com').then(function() {
     const numberSpan = element.querySelector('.number');
-    numberSpan.innerHTML = '<span style="color: #00a650;">Skopiowano! ✓</span>';
+    numberSpan.innerHTML = '<span style="color: #00a650;">Copied! ✓</span>';
     
     setTimeout(function() {
-      numberSpan.innerHTML = 'sklep@trajder.com';
+      numberSpan.innerHTML = 'shop@trajder.com';
     }, 2000);
   });
 }

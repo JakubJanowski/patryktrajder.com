@@ -107,14 +107,6 @@
   </h3>
 </div>
           
-          <style>
-  .btn-dwt.disabled-btn {
-    background-color: #d3d3d3 !important;
-    color: #888 !important;
-    cursor: not-allowed !important;
-    box-shadow: none !important;
-  }
-</style>
 
 <div class="product-selection gap-bottom">
   <p id="config-label" class="tip">Wybierz konfigurację planów:</p>
@@ -159,49 +151,11 @@
     </details>
   </div>
 
-  <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 15px;">
-  <a id="buy-table-btn" href="javascript:void(0)" class="btn-dwt disabled-btn" onclick="handleTableDisabledClick()" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center;">Kup Teraz</a>
-</div>
-</div>
-          
-          <p class="tip">Produkt zamówić możesz za pomocą:</p>
-          <div class="contact">
-            <a class="messenger option" href="https://www.messenger.com/t/patryktrajder" rel="noopener" target="_blank" title="Napisz do mnie na Messengerze">
-              <svg class="icon messenger">
-                <use xlink:href="#icon-messenger"></use>
-              </svg>Messenger</a>
-           <div class="phone">
-  <div class="hold-on-click option" title="Kliknij, aby skopiować adres" onclick="copyEmail(this)">
-    <svg class="icon">
-      <use xlink:href="#icon-mail"></use>
-    </svg>
-    <span class="text">Email</span>
-    <span class="number" style="cursor: copy;">sklep@trajder.com</span>
-  </div>
-  <div class="invisible option">
-    <svg class="icon">
-      <use xlink:href="#icon-mail"></use>
-    </svg>sklep@trajder.com
-  </div>
-</div>
-            <div class="phone" href="tel:+48602106170" rel="nofollow noopener" target="_blank">
-              <div class="hold-on-click option">
-                <svg class="icon">
-                  <use xlink:href="#icon-mobile"></use>
-                </svg>
-                <span class="text">Telefon</span>
-                <span class="number">602 106 170</span>
-              </div>
-              <div class="invisible option">
-                <svg class="icon">
-                  <use xlink:href="#icon-mobile"></use>
-                </svg>602 106 170
-              </div>
-            </div>
-          </div>
-         <div class="availability">
+  <br>
+ <div class="availability">
           <p><span class="green-text">Dostawa&nbsp;natychmiast</span>&nbsp;|&#32;<span style="color: #333; white-space: nowrap;">E-mail 24/7</span></p>
        </div>
+
           <div class="assembly-difficulty">
             <p>Trudność złożenia</p>
             <span>
@@ -225,6 +179,32 @@
               </svg>
             </span>
           </div>
+
+
+<div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 48px; margin-bottom: 32px;">
+  <a id="buy-table-btn" href="javascript:void(0)" class="btn-dwt" onclick="handleTableDisabledClick()" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center;">Kup Teraz</a>
+</div>
+
+
+          <p class="tip">Nie znalazłeś projektu dla siebie? Napisz:</p>
+          <div class="contact">
+            <div class="phone">
+             <div class="hold-on-click option" title="Kliknij, aby skopiować adres" onclick="copyEmail(this)">
+             <svg class="icon">
+             <use xlink:href="#icon-mail"></use>
+             </svg>
+               <span class="text">Email</span>
+              <span class="number" style="cursor: copy;">sklep@trajder.com</span>
+              </div>
+               <div class="invisible option">
+              <svg class="icon">
+             <use xlink:href="#icon-mail"></use>
+           </svg>sklep@trajder.com
+         </div>
+       </div>
+      </div>
+
+       
         </div>
       </section>
 
@@ -471,7 +451,7 @@ function updateTableLink() {
   if (config !== "none") {
     // Jeśli stół jest wybrany: odblokuj przycisk i przypisz odpowiedni link
     buyBtn.href = isAddon ? bundleLinks[config] : soloLinks[config];
-    buyBtn.classList.remove('disabled-btn');
+   //  buyBtn.classList.remove('disabled-btn');
     
     // Zdejmij ewentualne czerwone ostrzeżenie
     label.style.color = '#707070';
@@ -485,7 +465,7 @@ function updateTableLink() {
   } else {
     // Jeśli stół NIE jest wybrany: przycisk zablokowany (nawet jeśli dodatek jest zaznaczony)
     buyBtn.href = 'javascript:void(0)';
-    buyBtn.classList.add('disabled-btn');
+   //  buyBtn.classList.add('disabled-btn');
   }
 }
 
@@ -493,18 +473,21 @@ function updateTableLink() {
  * 2. FUNKCJA: Obsługa kliknięcia w zablokowany przycisk
  */
 function handleTableDisabledClick() {
-  const buyBtn = document.getElementById('buy-table-btn');
+  const config = document.getElementById('table-config').value; // Teraz sprawdzamy wybór, a nie klasę
   const label = document.getElementById('config-label');
-  const selectBox = document.getElementById('table-config'); // To jest ważne!
+  const selectBox = document.getElementById('table-config');
   
-  if (buyBtn.classList.contains('disabled-btn')) {
+  if (config === "none") {
     label.style.color = 'red';
     label.style.fontWeight = 'bold';
     label.innerHTML = 'Wybierz konfigurację planów:';
     
-    // Zapal ramkę na czerwono
     selectBox.style.borderColor = 'red';
     selectBox.style.boxShadow = '0 0 5px rgba(255, 0, 0, 0.4)';
+    selectBox.focus({ preventScroll: true });
+    selectBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Opcjonalnie zostawiamy focus, żeby po przewinięciu lista była "aktywna"
+    setTimeout(() => selectBox.focus(), 500);
   }
 }
 
