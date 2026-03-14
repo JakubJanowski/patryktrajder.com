@@ -118,15 +118,22 @@ p.indent {
 }
 
 .product-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* Karty równają do lewej strony */
-  gap: 40px; /* Wyliczony idealny odstęp między kartami */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  justify-content: center;
+  gap: 40px;
   margin-top: 3rem; 
   margin-bottom: 64px;
   width: 100%; 
 }
 
+/* NOWY BEZPIECZNIK DLA TELEFONÓW I MAŁYCH EKRANÓW: */
+@media (max-width: 720px) {
+  .product-cards-container {
+    grid-template-columns: 100%; /* Jedna kolumna na pełną szerokość ekranu */
+    justify-items: center; /* Twarde centrowanie karty wewnątrz kolumny */
+  }
+}
 .product-card {
   width: 284px !important; 
   max-width: 284px !important;
