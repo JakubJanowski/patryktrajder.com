@@ -80,10 +80,10 @@
           <div class="slider">
             <div class="wrapper">
               <div class="items">
-                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery1-h100.jpg" alt="wszystkie elementy do budowy wykrawarki"/>
-                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery2-h100.jpg" alt="zbliżenie na części zestawu"/>
-                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery3-h100.jpg" alt="zmontowana i pomalowana wykrawarka do rur"/>
-                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery4-h100.jpg" alt="zmontowany i pomalowany zestaw od przodu"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery1-h100.jpg" alt="tooling-kit"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery2-h100.jpg" alt="tooling-kit"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery3-h100.jpg" alt="tooling-kit"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/dwta02/gallery4-h100.jpg" alt="tooling-kit"/>
               </div>
             </div>
             <button class="arrow left" aria-label="Previous">
@@ -109,17 +109,18 @@
 
   
 
-{#
+
+
+
+
  
  <div class="product-selection gap-bottom">
-  <p id="config-label" class="tip">Select table version:</p>
+  <p id="config-label" class="tip">Select system & thickness:</p>
   
   <div style="margin-top: 0.5rem; max-width: 400px;">
    <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
       <option value="none" selected disabled>Select System & Thickness:</option>
-      <option value="s28_15">System 28 | Top 15mm — €35</option>
-      <option value="s28_12">System 28 | Top 12mm — €35</option>
-      <option value="s16_12">System 16 | Top 12mm — €35</option>
+      <option value="s28_15">System 28 | Thickness 15mm — €30</option>
     </select>
   </div>
 
@@ -130,9 +131,9 @@
     <label style="display: flex; align-items: flex-start; cursor: pointer; gap: 12px; margin-bottom: 0;">
       <input type="checkbox" id="addon-checkbox" onchange="updateTableLink()" style="margin-top: 4px; transform: scale(1.3);">
       <span style="flex: 1;">
-        <span style="display: block; color: #374151; font-weight: 600; font-size: 1.05rem;">Accessory Plans (-50% OFF)</span>
+        <span style="display: block; color: #374151; font-weight: 600; font-size: 1.05rem;">Under-Table Storage Drawer Plans (-17% OFF)</span>
         <span style="display: block; color: #00a650; font-weight: 600; margin-top: 8px; font-size: 1.1rem;">
-          + €15 <s style="color: #555555; font-weight: 500; font-size: 0.95rem; margin-left: 4px;">€30</s>
+          + €10 <s style="color: #555555; font-weight: 500; font-size: 0.95rem; margin-left: 4px;">€12</s>
         </span>
       </span>
     </label>
@@ -143,20 +144,24 @@
       </summary>
       <div style="margin-top: 12px;">
         <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 12px;">
-          <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/ZESTAWIENIE_2_800x600.jpg" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px; border: 1px solid #e5e7eb;" alt="Podgląd">
+          <img src="/assets/images/dwta03/card.jpg" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px; border: 1px solid #e5e7eb;" alt="Podgląd">
           <ul style="margin: 0; padding-left: 15px; list-style: disc; color: #4b5563; line-height: 1.5;">
-            <li>WTA Tooling Kit (dWTA01): Professional plans for precision squares, stops, and positioning pins — 50% OFF in this bundle!</li>
+            <li>Professional Under-Table Storage Drawer Plans — 17% OFF in this bundle!</li>
            
           </ul>
         </div>
-        <a href="/en-gb/products/welding-table-tooling-kit-plans-dwta01/" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500; display: inline-block;">
+        <a href="/en-gb/products/welding-table-tooling-kit-plans-dwta03/" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500; display: inline-block;">
           Full project description &rarr;
         </a>
       </div>
     </details>
   </div>
   
-  #}
+  
+
+
+
+
 
        <br>
  <div class="availability">
@@ -190,11 +195,32 @@
 
 
         <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 48px; margin-bottom: 32px;">
-           <a href="https://cart.easy.tools/checkout/patryktrajder/akcesoria-en?lang=en" class="btn-dwt" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">Buy Now
-            </a>
-             </div>
-       
+           <a id="buy-table-btn" href="javascript:void(0)" class="btn-dwt" onclick="handleTableDisabledClick()" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center;">Buy Now</a>
+           </div>
  
+     <div class="payment-icons" style="text-align: center; margin-top: 25px; opacity: 0.85;">
+  <span style="font-size: 10px; display: block; margin-bottom: 12px; color: #888; letter-spacing: 1px; font-weight: 600;">SECURE PAYMENT VIA:</span>
+  
+  <div style="display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap;">
+    
+    <img src="/assets/icons/revolut.svg?v=3" alt="Revolut" title="Secure payment with Revolut" style="height: 12px; width: auto; border-radius: 0 !important; border: none !important; box-shadow: none !important;">
+
+    <img src="/assets/icons/apple-pay.svg" alt="Apple Pay" title="Pay with Apple Pay" style="height: 32px; width: auto;">
+
+    <img src="/assets/icons/google-pay.svg" alt="Google Pay" title="Pay with Google Pay" style="height: 20px; width: auto;">
+
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <img src="/assets/icons/visa.svg" alt="Visa" title="International Visa payment" style="height: 12px; width: auto;">
+        <img src="/assets/icons/mastercard.svg" alt="Mastercard" title="International Mastercard payment" style="height: 14px; width: auto;">
+    </div>
+
+    <span style="font-size: 10px; color: #aaa; font-weight: 600; margin-left: 5px;">& MORE</span>
+    
+  </div>
+</div>
+
+<hr style="border: 0; border-top: 1px solid #ddd; margin: 25px 0 15px 0;">
+
 
   <p class="tip" style="text-align: left;">Can't find the right project? Get in touch:</p>
           <div class="contact">
@@ -486,8 +512,8 @@ function updateTableLink() {
 
   // --- AKTUALIZACJA CENY NA STRONIE ---
   // Pozwalamy klientowi klikać checkbox w dowolnym momencie
-  let basePrice = 35;
-  let finalPrice = isAddon ? (basePrice + 15) : basePrice;
+  let basePrice = 30;
+  let finalPrice = isAddon ? (basePrice + 10) : basePrice;
   
   if (priceDisplay) {
     priceDisplay.innerText = finalPrice;
@@ -495,16 +521,11 @@ function updateTableLink() {
 
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-2?lang=en',
-    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-4?lang=en',
-    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-3?lang=en'
-    
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dxf-pdf-dwta02-gotowe-plany-oprzyrzadowania?lang=en',
   };
 
   const bundleLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej?lang=en',
-    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej-2?lang=en',
-    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej-3?lang=en'
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dwta02-under-table-storage-drawer-plans-dwta03-gotowe-plany-oprzyrzadowania-dxf-pdf?lang=en',
   };
 
   // --- LOGIKA PRZYCISKU (Tu jest blokada zakupu) ---
