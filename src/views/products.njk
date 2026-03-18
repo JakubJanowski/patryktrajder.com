@@ -80,12 +80,75 @@
 
 
 
+
+
+
+
+<!--
+BADGE / PLAKIETKI NA ZDJĘCIACH PRODUKTÓW
+
+CO ROBIĄ:
+- pokazują typ produktu
+- opcjonalnie pokazują wyróżnienie marketingowe
+
+GDZIE WKLEJAĆ:
+- wewnątrz <a class="product-image-link">
+- nad <img>
+
+POZYCJE:
+- product-badge-wrap--right = prawa strona
+- product-badge-wrap--left = lewa strona
+
+DOSTĘPNE BADGE:
+- product-badge--physical   = produkt fizyczny
+- product-badge--pdf        = PDF
+- product-badge--pdf-dxf    = PDF + DXF
+- product-badge--bestseller = Bestseller
+
+PRZYKŁAD 1: PHYSICAL PRODUCT
+<span class="product-badge-wrap product-badge-wrap--right">
+  <span class="product-badge product-badge--physical">Physical product</span>
+</span>
+
+PRZYKŁAD 2: PDF
+<span class="product-badge-wrap product-badge-wrap--right">
+  <span class="product-badge product-badge--pdf">PDF</span>
+</span>
+
+PRZYKŁAD 3: PDF + DXF
+<span class="product-badge-wrap product-badge-wrap--right">
+  <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+</span>
+
+PRZYKŁAD 4: BESTSELLER
+<span class="product-badge-wrap product-badge-wrap--left">
+  <span class="product-badge product-badge--bestseller">Bestseller</span>
+</span>
+
+PRZYKŁAD 5: BESTSELLER + PHYSICAL PRODUCT
+<span class="product-badge-wrap product-badge-wrap--left">
+  <span class="product-badge product-badge--bestseller">Bestseller</span>
+</span>
+<span class="product-badge-wrap product-badge-wrap--right">
+  <span class="product-badge product-badge--physical">Physical product</span>
+</span>
+-->
+
+
+
+
+
+
+
  <div class="product-cards-container">
     <div class="product-card">
            <a href="super-booster-2000/" class="product-image-link">
+           <span class="product-badge-wrap product-badge-wrap--right">
+      <span class="product-badge product-badge--physical">Produkt fizyczny</span>
+    </span>
               <img src="/assets/images/super-booster-2000/thumb-w320.0.jpg" alt="Super Booster 2000"/></a>
           <div class="product-card-content">
-           <a href="super-booster-2000/" class="product-title">Wykrawarka do rur - Super Booster 2000</a>
+           <a href="super-booster-2000/" class="product-title"><strong>Wykrawarka do rur i profili</strong>&nbsp;(Tube Notcher) – Otwornica TN01</a>
             <div class="product-price">
           
           <div class="price">
@@ -101,11 +164,17 @@
      </div>
  </div>
 
+
+
+
  <div class="product-card">
         <a href="WeldingTable_2400x1200_MateuszDoniec/" class="product-image-link">
-          <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/thumb-w320h180.jpg" alt="projekt stołu spawalniczego"/></a>
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/thumb640.jpg" alt="projekt stołu spawalniczego"/></a>
         <div class="product-card-content">
-         <a href="WeldingTable_2400x1200_MateuszDoniec/" class="product-title">Plany Budowy Stołu Spawalniczego &nbsp;<strong>2400x1200</strong>&nbsp;(System 16/28 | Blat 12/15mm)</a>
+         <a href="WeldingTable_2400x1200_MateuszDoniec/" class="product-title">Plany DXF:<br>Stół spawalniczy&nbsp;<strong>2400x1200</strong>&nbsp;(System 16/28 | Blat 12/15mm)</a>
        <div class="product-price">
           
           <div class="price">
@@ -122,11 +191,17 @@
     </div>
   </div>
 
+
+
+
   <div class="product-card">
         <a href="WeldingTable_2000x1000_MateuszDoniec/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
           <img src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/thumb-w320.jpg" alt="projekt stołu spawalniczego"/></a>
         <div class="product-card-content">
-         <a href="WeldingTable_2000x1000_MateuszDoniec/" class="product-title">Plany Budowy Stołu Spawalniczego &nbsp;<strong>2000x1000</strong>&nbsp;(System 28 | Blat 15mm)</a>
+         <a href="WeldingTable_2000x1000_MateuszDoniec/" class="product-title">Plany DXF:<br>Stół spawalniczy&nbsp;<strong>2000x1000</strong>&nbsp;(System 28 | Blat 15mm)</a>
        <div class="product-price">
           
           <div class="price">
@@ -146,9 +221,12 @@
 
     <div class="product-card">
         <a href="welding-table-tooling-kit-plans-dwta01/" class="product-image-link">
-          <img src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/thumb-w3202.jpg" alt="projekt stołu spawalniczego"/></a>
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dwta01/thumb/thumb640.png" alt="akcesoria do stołu spawalniczego pdf + dxf"/></a>
         <div class="product-card-content">
-         <a href="welding-table-tooling-kit-plans-dwta01/" class="product-title">Plany Budowy Oprzyrządowania dWTA01</a>
+         <a href="welding-table-tooling-kit-plans-dwta01/" class="product-title">Plany DXF:<br>Zestaw&nbsp;<strong>podstawowych&nbsp;</strong>akcesoriów do stołu spawalniczego – dWTA01</a>
        <div class="product-price">
           
           <div class="price">
@@ -164,12 +242,70 @@
         </div>
     </div>
   </div>
+
+
+
+
+
+
+   <div class="product-card">
+        <a href="welding-table-tooling-kit-plans-dwta02/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dwta02/thumb640.png" alt="akcesoria do stołu spawalniczego pdf + dxf"/></a>
+        <div class="product-card-content">
+         <a href="welding-table-tooling-kit-plans-dwta02/" class="product-title">Plany DXF:<br>Zestaw&nbsp;<strong>profesjonalnych&nbsp;</strong>akcesoriów do stołu spawalniczego – dWTA02</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">127</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="welding-table-tooling-kit-plans-dwta02/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="welding-table-tooling-kit-plans-dwta02/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+     <div class="product-card">
+        <a href="welding-table-tooling-kit-plans-dwta03/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dwta03/card.jpg" alt="Szuflada pod stół spawalniczy"/></a>
+        <div class="product-card-content">
+         <a href="welding-table-tooling-kit-plans-dwta03/" class="product-title">Plany DXF:<br>Szuflada pod stół spawalniczy – dWTA03</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">47</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="welding-table-tooling-kit-plans-dwta03/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="welding-table-tooling-kit-plans-dwta03/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
 </div>
-
-
-  
-
-  </article>
+</article>
 
     {# <article id="diy-projects" class="gap-top-large">
       <h1>
