@@ -178,7 +178,135 @@
                 </div>
             </div>
         </footer>
-        <template id="cookies-notice-template">
+
+     
+
+
+
+
+
+<style>
+  #cookies-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.18);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 9998;
+    pointer-events: none;
+  }
+
+  #cookies-backdrop.cookies-backdrop-hidden {
+    opacity: 0;
+  }
+
+  #cookies-notice {
+    position: fixed;
+    left: 32px;
+    bottom: 32px;
+    max-width: 430px;
+    width: calc(100vw - 64px);
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease;
+    z-index: 9999;
+    box-sizing: border-box;
+  }
+
+  #cookies-notice.cookies-hidden {
+    transform: translateY(100%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #cookies-notice .heading {
+    color: #0b74e5;
+    font-size: 32px;
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  #cookies-notice p {
+    margin: 0 0 18px;
+    line-height: 1.5;
+  }
+
+  #cookies-notice .cookies-actions {
+    display: flex;
+    gap: 12px;
+    margin: 0;
+  }
+
+  #cookies-notice .cookies-actions button {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 601px) {
+    #cookies-backdrop {
+      background: transparent;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #cookies-notice {
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      width: auto;
+      max-width: none;
+      padding: 20px;
+    }
+
+    #cookies-notice .heading {
+      font-size: 28px;
+    }
+
+    #cookies-notice .cookies-actions {
+      flex-direction: column-reverse;
+      gap: 10px;
+      margin: 0;
+    }
+
+    #cookies-notice .cookies-actions button {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
+  }
+</style>
+
+<template id="cookies-notice-template">
+  <div id="cookies-backdrop" class="cookies-backdrop-hidden"></div>
+
+  <div id="cookies-notice" class="cookies-hidden">
+    <div class="heading">Szanujemy Twoją prywatność</div>
+    <p>
+      Strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych,
+      reklamowych oraz funkcjonalnych zgodnie z
+      <a href="/privacy-policy.pdf" target="_blank" rel="noopener">Polityką prywatności</a>.
+      Dzięki nim możemy indywidualnie dostosować stronę do Twoich potrzeb. Każdy może
+      zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki
+      czemu nie będą zbierane żadne informacje. Dowiedz się więcej jak je wyłączyć klikając
+      <a href="/privacy-policy.pdf#how-to-disable-cookies" title="Jak wyłączyć ciasteczka" target="_blank" rel="noopener">tutaj</a>.
+    </p>
+    <div class="cookies-actions">
+      <button class="reject secondary" type="button">Nie akceptuję</button>
+      <button class="accept primary" type="button">Akceptuję</button>
+    </div>
+  </div>
+</template>
+
+
+
+
+        {# <template id="cookies-notice-template">
             <div id="cookies-notice">
                 <div class="heading">Strona korzysta z plików cookies</div>
                 <p>Strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz funkcjonalnych zgodnie z&#32;<a href="/privacy-policy.pdf" target="_blank">Polityką prywatności</a>. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne informacje. Dowiedz się więcej jak je wyłączyć klikając&#32;<a href="/privacy-policy.pdf#how-to-disable-cookies" title="Jak wyłączyć ciasteczka" target="_blank">tutaj</a>.</p>
@@ -187,6 +315,6 @@
                     <button class="accept primary">Akceptuję</button>
                 </div>
             </div>
-        </template>
+        </template> #}
     </body>
 </html>

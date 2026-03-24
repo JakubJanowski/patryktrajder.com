@@ -3,15 +3,17 @@ import { gtag } from "./gtag";
 
 export default class Cookies {
   private readonly container: HTMLDivElement;
+  private readonly backdrop: HTMLDivElement;
   private readonly acceptButton: HTMLButtonElement;
   private readonly rejectButton: HTMLButtonElement;
 
   constructor(private readonly template: HTMLTemplateElement) {
-    this.container = template.content.firstChild as HTMLDivElement;
-    this.acceptButton =
-      this.container.querySelector<HTMLButtonElement>(".accept")!;
-    this.rejectButton =
-      this.container.querySelector<HTMLButtonElement>(".reject")!;
+    const fragment = this.template.content.cloneNode(true) as DocumentFragment;
+
+    this.backdrop = fragment.querySelector("#cookies-backdrop") as HTMLDivElement;
+    this.container = fragment.querySelector("#cookies-notice") as HTMLDivElement;
+    this.acceptButton = this.container.querySelector(".accept") as HTMLButtonElement;
+    this.rejectButton = this.container.querySelector(".reject") as HTMLButtonElement;
 
     const consentCookie = Cookies.getCookie(Constants.consentCookieName);
     this.initAnalytics(consentCookie === "1");
@@ -22,7 +24,12 @@ export default class Cookies {
 
     this.acceptButton.addEventListener("click", this.accept);
     this.rejectButton.addEventListener("click", this.reject);
-    document.body.append(template.content);
+
+    document.body.appendChild(fragment);
+
+    window.setTimeout(() => {
+      this.show();
+    }, 500);
   }
 
   public static getCookie(name: string): string | null {
@@ -61,7 +68,22 @@ export default class Cookies {
     document.cookie = `${name}=${value}; Max-Age=${maxAge}; Path=${path}; SameSite=Strict; Secure`;
   }
 
-  private accept = () => {
+  private show(): void {
+    this.container.classList.remove("cookies-hidden");
+    this.backdrop.classList.remove("cookies-backdrop-hidden");
+  }
+
+  private hide(): void {
+    this.container.classList.add("cookies-hidden");
+    this.backdrop.classList.add("cookies-backdrop-hidden");
+
+    window.setTimeout(() => {
+      this.backdrop.remove();
+      this.container.remove();
+    }, 400);
+  }
+
+  private accept = (): void => {
     Cookies.setCookie(
       Constants.consentCookieName,
       "1",
@@ -69,10 +91,10 @@ export default class Cookies {
       "/"
     );
     this.updateConsent(true);
-    this.container.remove();
+    this.hide();
   };
 
-  private reject = () => {
+  private reject = (): void => {
     Cookies.setCookie(
       Constants.consentCookieName,
       "0",
@@ -80,24 +102,30 @@ export default class Cookies {
       "/"
     );
     this.updateConsent(false);
-    this.container.remove();
+    this.hide();
   };
 
-  private initAnalytics(consent: boolean) {
+  private initAnalytics(consent: boolean): void {
     const grantStatus = consent ? "granted" : "denied";
+
     gtag("js", new Date());
     gtag("consent", "default", {
       analytics_storage: grantStatus,
-      ad_storage: grantStatus
+      ad_storage: grantStatus,
+      ad_user_data: grantStatus,
+      ad_personalization: grantStatus
     });
     gtag("config", "G-ZYTND6L39E", { anonymize_ip: true });
   }
 
-  private updateConsent(consent: boolean) {
+  private updateConsent(consent: boolean): void {
     const grantStatus = consent ? "granted" : "denied";
+
     gtag("consent", "update", {
       analytics_storage: grantStatus,
-      ad_storage: grantStatus
+      ad_storage: grantStatus,
+      ad_user_data: grantStatus,
+      ad_personalization: grantStatus
     });
   }
 }

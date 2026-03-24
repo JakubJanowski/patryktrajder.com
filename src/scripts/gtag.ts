@@ -111,6 +111,8 @@ declare namespace Gtag {
   interface ConsentParams {
     ad_storage?: GrantStatus;
     analytics_storage?: GrantStatus;
+    ad_user_data?: GrantStatus;
+    ad_personalization?: GrantStatus;
     functionality_storage?: GrantStatus;
     personalization_storage?: GrantStatus;
     security_storage?: GrantStatus;
