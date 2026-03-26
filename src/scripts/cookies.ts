@@ -29,7 +29,7 @@ export default class Cookies {
 
     window.setTimeout(() => {
       this.show();
-    }, 500);
+    }, 100);
   }
 
   public static getCookie(name: string): string | null {

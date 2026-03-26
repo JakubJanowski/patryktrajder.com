@@ -175,15 +175,28 @@
                 </div>
             </div>
         </footer>
-        <template id="cookies-notice-template">
-            <div id="cookies-notice">
-                <div class="heading">This website uses cookies</div>
-                <p>This website uses cookies for statistical, advertising and functional purposes in accordance with&#32;<a href="/privacy-policy.pdf" target="_blank">Privacy policy</a>. Thanks to them we can individually adjust the site to your needs. Everyone can accept cookies, or you have the option to disable them in your browser so that no information is collected. Learn more about how to disable them by clicking&#32;<a href="/privacy-policy.pdf#how-to-disable-cookies" title="How to disable cookies" target="_blank">here</a>.</p>
-                <div class="row">
-                    <button class="reject secondary">Dismiss</button>
-                    <button class="accept primary">Accept</button>
-                </div>
-            </div>
-        </template>
+
+
+
+       
+<template id="cookies-notice-template">
+  <div id="cookies-backdrop" class="cookies-backdrop-hidden"></div>
+
+  <div id="cookies-notice" class="cookies-hidden">
+    <div class="heading">We respect your privacy</div>
+<p>
+  We use cookies for statistical, advertising and functional purposes.
+  You can accept their use or refuse it. Detailed information can be found in our&nbsp;
+  <a href="/privacy-policy-en.pdf" target="_blank" rel="noopener">Privacy Policy</a>.
+</p>
+    <div class="cookies-actions">
+      <button class="reject secondary" type="button">Decline</button>
+      <button class="accept primary" type="button">Accept</button>
+    </div>
+  </div>
+</template>
+
+
+
     </body>
 </html>

@@ -166,15 +166,24 @@
                 </div>
             </div>
         </footer>
-        <template id="cookies-notice-template">
-            <div id="cookies-notice">
-                <div class="heading">Die Website verwendet Cookies</div>
-                <p>Unsere Website verwendet Cookies für statistische, werbetechnische und funktionale Zwecke in Übereinstimmung mit der&#32;<a href="/privacy-policy.pdf" target="_blank">Datenschutzrichtlinie</a>. Dank ihnen können wir die Website individuell an Ihre Bedürfnisse anpassen. Jeder kann Cookies akzeptieren, oder Sie haben die Möglichkeit, sie in Ihrem Browser zu deaktivieren, damit keine Informationen gesammelt werden. Erfahren Sie mehr darüber, wie Sie sie deaktivieren können, indem Sie&#32;<a href="/privacy-policy.pdf#how-to-disable-cookies" title="So deaktivieren Sie Cookies" target="_blank">hier</a>&#32;klicken.</p>
-                <div class="row">
-                    <button class="reject secondary">Zurückweisen</button>
-                    <button class="accept primary">Ich nehme an</button>
-                </div>
-            </div>
-        </template>
+
+     
+<template id="cookies-notice-template">
+  <div id="cookies-backdrop" class="cookies-backdrop-hidden"></div>
+
+  <div id="cookies-notice" class="cookies-hidden">
+    <div class="heading">Wir schätzen Ihre Privatsphäre</div>
+     <p>
+        Wir verwenden Cookies für statistische, werbliche und funktionale Zwecke.
+        Sie können deren Verwendung akzeptieren oder ablehnen. Detaillierte Informationen finden Sie in unserer&nbsp;
+         <a href="/privacy-policy-de.pdf" target="_blank" rel="noopener">Datenschutzerklärung</a>.
+      </p>
+    <div class="cookies-actions">
+      <button class="reject secondary" type="button">Ablehnen</button>
+      <button class="accept primary" type="button">Akzeptieren</button>
+    </div>
+  </div>
+</template>
+
     </body>
 </html>

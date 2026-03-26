@@ -1,19 +1,57 @@
 @import "../variables.scss";
 
-#cookies-notice {
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0px -1px 5px $silverSand;
-  color: $onyx;
-  font-size: 12px;
-  max-width: 560px;
-  padding: 24px;
+#cookies-backdrop {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+  pointer-events: none;
 
-  > p {
-    margin: 32px 0;
+  &.cookies-backdrop-hidden {
+    opacity: 0;
+  }
+}
+
+#cookies-notice {
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+  max-width: 430px;
+  width: calc(100vw - 64px);
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  color: $onyx;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    opacity 0.3s ease;
+  z-index: 9999;
+  box-sizing: border-box;
+  font-size: 12px;
+
+  &.cookies-hidden {
+    transform: translateY(100%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .heading {
+    color: $azure;
+    font-size: 32px;
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 0 0 18px;
+    line-height: 1.5;
+    text-align: left;
   }
 
   button {
@@ -34,13 +72,48 @@
     }
   }
 
-  > .heading {
-    color: $azure;
-    font-size: 32px;
-    font-weight: bold;
-  }
+  .cookies-actions {
+    display: flex;
+    gap: 12px;
+    margin: 0;
 
-  > .row {
-    margin-bottom: 0;
+    button {
+      flex: 1;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (min-width: 601px) {
+  #cookies-backdrop {
+    background: transparent;
+  }
+}
+
+@media (max-width: 600px) {
+  #cookies-notice {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+    max-width: none;
+    padding: 20px;
+
+    .heading {
+      font-size: 28px;
+    }
+
+    .cookies-actions {
+      flex-direction: column-reverse;
+      gap: 10px;
+      margin: 0;
+
+      button {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
   }
 }
