@@ -12,7 +12,58 @@
 {% endblock %}
 
 {% block body %}
-    <div class="banner sliding-banner">
+
+ <div class="banner sliding-banner">
+  <div class="container slider">
+    <div class="wrapper">
+      <div class="items">
+        
+       <div class="image-placeholder" style="padding-top: 38%; ">   {# pierwszy sklajd #}
+          <img draggable="false" src="/assets/images/super-booster-2000/thumb-w1120.jpg"
+               alt="Wykrawarka Piranha Notcher" 
+               style="object-position: 50% 90%;" />
+           <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0) 100%); pointer-events: none;"></div>
+          
+          <div class="banner-content" style="--text-bottom: 5%;">
+            <h1>PERFECT TUBE NOTCHING</h1>
+            <a href="/products/super-booster-2000" class="btn-cta">START BUILDING</a>
+          </div>
+        </div>
+
+        {# drugi sklajd #}
+        <div class="image-placeholder" style="padding-top: 38.020833333%;"> 
+          <img draggable="false" 
+               src="/assets/images/banner2-h730.jpg" 
+               alt="Patryk Trajder" 
+               style="object-position: 60% 50%;" />
+          
+          {# <div class="banner-content">
+            <h1></h1>
+            <a href="/products/super-booster-2000/" class="btn-cta"></a>
+          </div> #}
+        </div>
+
+      </div>
+    </div>
+
+    <ul></ul>
+    <button class="arrow left" aria-label="Previous slide">
+      <svg class="icon">
+        <use xlink:href="#icon-arrow-left"></use>
+      </svg>
+    </button>
+    <button class="arrow right" aria-label="Next slide">
+      <svg class="icon">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+  
+
+
+
+    {# <div class="banner sliding-banner">
         <div class="container slider">
             <div class="wrapper">
                 <div class="items">
@@ -36,11 +87,55 @@
                 </svg>
             </button>
         </div>
-    </div>
+    </div> #}
 
-    <main>
-        <article class="centered-text gap-top-medium">
-            <section>
+
+
+
+    <main>       
+  <article class="centered-text gap-top-medium">
+      <section>
+        <h1>What is TRAJDER all about?</h1>
+        <p>
+        Hi, I'm Patryk. My journey—like many of yours—started in a backyard garage. I was 14, my head was full of ideas, and... I had almost no tools. As a young inventor, I wanted to create prototypes that made life easier, but the market quickly brought me back to reality. Professional equipment was unaffordable, and the "budget" stuff literally fell apart in my hands.
+        </p>
+        <br>
+        <h3>That's when I made a decision: I'll build it myself.</h3>
+                <p>Years of experience and running a YouTube channel opened my eyes to the hard truth. The market is flooded with low-quality tools, and "local brands" are often the same mass-produced shells, just painted in a different color.</p>
+            <br>
+            <h3>I decided to break away from the pack.</h3>
+            <p>The TRAJDER brand was born out of a rebellion against mediocrity. I design tools the way they used to be made—using solid, heavy-duty materials, built for a lifetime of use, not just until the warranty expires.</p>
+            <br>
+            <h3>I share knowledge, not just hardware.</h3>
+            <p>I turn my passion for design into professional build plans (DXF and PDF files) that you can find in my shop. I help hobbyists bypass the barrier of expensive gear, and I provide large companies with customized, heavy-duty solutions.</p>
+            <br>
+            <h3>TRAJDER is more than just designs and tools. It's a new workshop culture where quality meets your passion for creating.</h3>
+            <div class="yt-video">
+                    <div>
+                        <iframe src="https://www.youtube-nocookie.com/embed/a3s6aUMMPb8?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" title="Hydraulic power pack - DIY"></iframe>
+                    </div>
+                </div>
+                <p>
+                    When it comes to&#32;<q>crazy inventions</q>, my head is full of ideas, but so far I have spent all my free time on learning how to record, assemble and build tools. What I do is a combination of my two biggest passions, namely recording and DIY in every issue (both more and less needed by the world 😉). If you want to know more about me&#32;<a href="about/" title="About me">click here</a>.
+                </p>
+      </section>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            {# <section>
                 <h1>Shortly about the channel</h1>
                 <p>
                     The main idea of the channel is to run a series with crazy inventions and experiments. I wanted to create a cool workshop, but I couldn't afford to buy expensive equipment at such a young age (I started at 14). So I decided to build it myself. You could say it's a bit of a half-measure to the point. However, I liked creating my own tools so much that I'm not going to leave it behind and on my channel you will find both crazy inventions and building tools that I use in other series. You can see the series from tool building here:
@@ -53,7 +148,13 @@
                 <p>
                     When it comes to&#32;<q>crazy inventions</q>, my head is full of ideas, but so far I have spent all my free time on learning how to record, assemble and build tools. What I do is a combination of my two biggest passions, namely recording and DIY in every issue (both more and less needed by the world 😉). If you want to know more about me&#32;<a href="about/" title="About me">click here</a>.
                 </p>
-            </section>
+            </section> #}
+
+
+
+
+
+
             <section class="gap-top-medium">
                 <h1>Latest Products</h1>
                 <div class="regular slider">

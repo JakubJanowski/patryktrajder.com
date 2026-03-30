@@ -13,31 +13,62 @@
 
 {% block body %}
 
-  {# <div class="banner sliding-banner">
+
+{# 
+ - pierwsza wartosc (X%): Steruje kadrem w poziomie. 0% to maksymalnie lewa krawędź zdjęcia, 50% to środek, a 100% to maksymalnie prawa krawędź.
+ - druga wartosc    (Y%): Steruje kadrem w pionie. 0% to góra zdjęcia, 50% to środek, a 100% to dół. #}
+
+{# co wpiszesz w div class="banner-content" style=" ma zawsze ostatnie słowo i nadpisuje ustawienia z CSS.
+
+Oto gotowiec do wklejenia:
+
+Krótka ściąga dla inżyniera:
+Chcę obniżyć teks i przycisk: Zmień --text-bottom na mniejszą liczbę (np. 5%).
+Chcę powiększyć napis: Zmień --h1-size na większą liczbę (np. 4.5rem).
+Chcę, żeby przycisk był dalej od tekstu: Zmień --gap na większą liczbę (np. 5rem).
+Chcę cienkie, eleganckie litery: Zmień --h1-weight na 300.
+przyklad:   --text-bottom: 10%; --h1-size: 4rem; --h1-weight: 300; --gap: 5rem; #}
+
+
+{# PRZYCIEMNIENIE:
+Początek (0%): rgba(0,0,0,0.9) 0% – tu ustalasz moc na samym dole zdjęcia.
+Środek (45%): rgba(0,0,0,0.5) 45% – to jest tzw. "punkt kontrolny". Mówi on: „W połowie wysokości cienia trzymaj jeszcze 50% przyciemnienia”. Jeśli zmienisz 45% na 10%, cień bardzo szybko zniknie. Jeśli na 80% – cień będzie "twardy" i wysoki.
+Koniec (100%): rgba(0,0,0,0) 100% – tu cień musi stać się przezroczysty, żeby nie było widać ostrej krawędzi.
+0.9 – bardzo ciemno (jak smoła), tekst będzie super czytelny.
+0.5 – delikatny szary dymek, maszyna będzie bardziej widoczna.
+0.0 – całkowicie przezroczyste (brak filtra).
+height: 30%; – cień będzie niski, tylko pod przyciskiem.
+height: 60%; – cień wyjdzie wyżej, zakrywając większą część maszyny.
+height: 100%; – całe zdjęcie będzie pokryte płynnym przejściem od czerni na dole do jasności na samej górze. #}
+ 
+ <div class="banner sliding-banner">
   <div class="container slider">
     <div class="wrapper">
       <div class="items">
         
-        <div class="parallax-section" 
-             style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/images/banner1-h730.jpg'); 
-                    height: 550px; 
-                    width: 100vw; 
-                    background-position: 90% center;">
-          <div class="parallax-content" style="--h2-pc: 70px; --p-pc: 28px; --h2-mob: 35px; --p-mob: 18px;">
-            <h2>TRAJDER<sup>&copy;</sup></h2>
-            <p>Stół, który trzyma kąty za Ciebie</p>
+       <div class="image-placeholder" style="padding-top: 38%; ">   {# pierwszy sklajd #}
+          <img draggable="false" src="/assets/images/super-booster-2000/thumb-w1120.jpg"
+               alt="Wykrawarka Piranha Notcher" 
+               style="object-position: 50% 90%;" />
+           <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0) 100%); pointer-events: none;"></div>
+          
+          <div class="banner-content" style="--text-bottom: 5%;">
+            <h1>IDEALNE PASOWANIE RUR</h1>
+            <a href="/products/super-booster-2000" class="btn-cta">ZBUDUJ SAM</a>
           </div>
         </div>
 
-        <div class="parallax-section" 
-             style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/images/super-booster-2000/thumb-w1120.jpg'); 
-                    height: 550px; 
-                    width: 100vw; 
-                    background-position: 50% center;">
-          <div class="parallax-content" style="--h2-pc: 70px; --p-pc: 28px; --h2-mob: 35px; --p-mob: 22px;">
-            <h2>PIRANHA NOTCHER</h2>
-            <p>Precyzyjne wycięcia w rurach w kilka sekund</p>
-          </div>
+        {# drugi sklajd #}
+        <div class="image-placeholder" style="padding-top: 38.020833333%;"> 
+          <img draggable="false" 
+               src="/assets/images/banner2-h730.jpg" 
+               alt="Patryk Trajder" 
+               style="object-position: 60% 50%;" />
+          
+          {# <div class="banner-content">
+            <h1></h1>
+            <a href="/products/super-booster-2000/" class="btn-cta"></a>
+          </div> #}
         </div>
 
       </div>
@@ -45,14 +76,21 @@
 
     <ul></ul>
     <button class="arrow left" aria-label="Previous slide">
-      <svg class="icon"><use xlink:href="#icon-arrow-left"></use></svg>
+      <svg class="icon">
+        <use xlink:href="#icon-arrow-left"></use>
+      </svg>
     </button>
     <button class="arrow right" aria-label="Next slide">
-      <svg class="icon"><use xlink:href="#icon-arrow-right"></use></svg>
+      <svg class="icon">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
     </button>
   </div>
-</div> #}
-  <div class="banner sliding-banner">
+</div>
+  
+  
+  
+  {# <div class="banner sliding-banner">
     <div class="container slider">
       <div class="wrapper">
         <div class="items">
@@ -76,10 +114,106 @@
         </svg>
       </button>
     </div>
-  </div>
+  </div> #}
+  
+<main>
+<article class="content gap-top-medium" style="max-width: 880px; margin: 0 auto; text-align: left;">
+   
+   
+    {# <section>
+      <h1 style="text-align: center; margin-bottom: 30px;">Buduj lub Zdobądź profesjonalny sprzęt bez wydawania fortuny.</h1>
+      
+      <p style="font-size: 1.05rem; line-height: 1.6;">
+        Wierzę, że <b>brak budżetu nie może być barierą dla pasji</b>. Gdy zaczynałem, szybko zrozumiałem, że zamiast marzyć o drogim sprzęcie, mogę go po prostu zbudować. 
+        <br><br>
+        Moja przygoda zaczęła się, gdy miałem 14 lat. Dziś, po <b>16 latach intensywnego doświadczenia</b> i milionach widzów na YouTube, mój warsztat ewoluował w profesjonalne centrum projektowe. Razem z zespołem specjalistów tworzymy dokumentację, która wyznacza nowe standardy w Europie.
+      </p>
 
-  <main>
-    <article class="centered-text gap-top-medium">
+      <div style="background: #fdfdfd; padding: 25px; border: 1px solid #eee; border-left: 6px solid #f98525; border-radius: 8px; margin: 35px 0;">
+        <p><b>Wybierz swoją drogę do profesjonalnego warsztatu:</b></p>
+        <p style="margin-bottom: 20px;">Wiemy, że każdy warsztat ma inne potrzeby i możliwości techniczne. Nasze rozwiązania dostarczamy w trzech modelach:</p>
+
+        <ul class="dots" style="list-style: none; padding-left: 0;">
+          <li style="margin-bottom: 15px; padding: 10px 15px; background: white; border: 1px solid #f0f0f0; border-radius: 4px;">
+            <p><b>POZIOM 1: Pełna Niezależność (Plany i Dokumentacja)</b>&nbsp;– Idealny wybór dla tych, którzy chcą zbudować maszynę od zera. Otrzymujesz kompletną dokumentację (PDF, pliki DXF, modele 3D). To najtańsza droga do profesjonalnego sprzętu.</p>
+          </li>
+          <li style="margin-bottom: 15px; padding: 10px 15px; background: white; border: 1px solid #f0f0f0; border-radius: 4px;">
+            <p><b>POZIOM 2: Skrócony Czas (Zestawy do Montażu)</b>&nbsp;– Dostarczamy Ci precyzyjnie wykonane komponenty. Ty zajmujesz się montażem i finalnym wykończeniem.&nbsp;<b>Oszczędzasz dziesiątki godzin pracy.</b></p>
+          </li>
+          <li style="margin-bottom: 0; padding: 10px 15px; background: white; border: 1px solid #f0f0f0; border-radius: 4px;">
+            <p><b>POZIOM 3: Gotowość do Pracy</b>&nbsp;– Dla profesjonalistów. Otrzymujesz w pełni zmontowane, przetestowane i pomalowane urządzenie z&nbsp;<b>certyfikatem CE</b>. Wyjmujesz z pudełka i zarabiasz.</p>
+          </li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 30px;">
+        <b>Dlaczego to, co robimy, zmienia zasady gry?</b>
+      </p>
+
+      <ul class="dots">
+        <li>
+          <p><b>Jakość bez kompromisów:</b>&nbsp;Dostarczamy plany na poziomie legendarnych amerykańskich firm, skupione na realnych potrzebach Twojego warsztatu.</p>
+        </li>
+        <li>
+          <p><b>Garażowa prostota:</b>&nbsp;Dzięki inżynierskiej precyzji, składasz maszynę <b>jak klocki Lego</b> – bez specjalistycznych narzędzi.</p>
+        </li>
+        <li>
+          <p><b>Realne oszczędności:</b>&nbsp;Budujesz sprzęt, na który inni odkładają latami, za ułamek ceny rynkowej.</p>
+        </li>
+      </ul>
+
+      <p style="margin-top: 30px; line-height: 1.6;">
+        Dziś łączymy dwie pasje:&nbsp;<b>solidne narzędzia</b>, które realnie na siebie zarabiają, oraz&nbsp;<b>szalone wynalazki</b>, czyli wolność tworzenia rzeczy, których świat jeszcze nie widział.
+        <br><br>
+        Jeśli widziałeś moje początki, wiesz, jaką drogę przeszedłem. Dzisiejsze projekty to efekt tysięcy godzin testów. Tu nie ma miejsca na półśrodki –&nbsp;<b>tu buduje się sprzęt, który ma służyć pokoleniom.</b>
+        <br><br>
+        Jeśli chcesz dowiedzieć się więcej o mnie&nbsp;<a href="/about/" title="O mnie" style="color: #f98525; font-weight: bold; text-decoration: underline;">kliknij tutaj</a>.
+      </p>
+
+      <div class="yt-video" style="margin-top: 40px;">
+        <div>
+          <iframe src="https://www.youtube-nocookie.com/embed/a3s6aUMMPb8?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" title="Mobilny agregat hydrauliczny - budowa"></iframe>
+        </div>
+      </div>
+    </section> #}
+
+
+
+
+<article class="centered-text gap-top-medium">
+      <section>
+        <h1>Czym jest marka TRAJDER?</h1>
+        <p>
+        Cześć, jestem Patryk. Moja droga – jak wielu z Was – zaczęła się w przydomowym garażu. Miałem 14 lat, głowę pełną pomysłów i... prawie żadnych narzędzi. Jako młody wynalazca chciałem tworzyć prototypy, które ułatwiają życie, ale rynek szybko sprowadził mnie na ziemię. Profesjonalny sprzęt był nieosiągalny cenowo, a ten „budżetowy” rozpadał się w rękach.
+        </p>
+        <br>
+        <h3>Wtedy podjąłem decyzję: zacznę budować go sam.</h3>
+               <p>Lata doświadczeń i prowadzenie kanału na YouTube otworzyły mi oczy na smutną prawdę. Rynek zalewają narzędzia niskiej jakości, a „lokalne marki” to często te same masowe wydmuszki, tylko pomalowane na inny kolor.</p>
+            <br>
+            <h3>Postanowiłem wyjść przed szereg.</h3>
+            <p>Marka TRAJDER powstała z buntu przeciwko bylejakości. Projektuję narzędzia tak, jak robiło się to kiedyś – z porządnych, grubych materiałów, z myślą o całym życiu użytkowania, a nie tylko o okresie gwarancji.</p>
+            <br>
+            <h3>Dzielę się wiedzą, nie tylko żelastwem.</h3>
+            <p>Swoją pasję do projektowania przekuwam w profesjonalne plany budowy (pliki DXF i PDF), które znajdziesz w moim sklepie. Pomagam hobbystom przeskoczyć barierę drogiego sprzętu, a dużym firmom dostarczam spersonalizowane, pancerne rozwiązania.</p>
+            <br>
+            <h3>TRAJDER to nie tylko projekty i narzędzia. To nowa kultura warsztatowa, gdzie jakość spotyka się z Twoją pasją tworzenia.</h3>
+
+
+        <div class="yt-video">
+          <div>
+            <iframe src="https://www.youtube-nocookie.com/embed/a3s6aUMMPb8?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" title="Mobilny agregat hydrauliczny - budowa"></iframe>
+          </div>
+        </div>
+        <p>
+         Jeśli chcesz dowiedzieć się więcej o mnie&#32;<a href="/about/" title="O mnie">kliknij tutaj</a>.
+        </p>
+      </section>
+
+
+
+
+
+     {# <article class="centered-text gap-top-medium">
       <section>
         <h1>Pokrótce o kanale</h1>
         <p>
@@ -93,7 +227,8 @@
         <p>
           Jeśli chodzi o&#32;<q>szalone wynalazki</q>, to głowa jest pełna pomysłów, jednak dotychczas cały swój wolny czas poświęcałem na naukę nagrywania, montażu oraz budowy narzędzi. To co robię jest połączeniem moich dwóch największych pasji, czyli nagrywania oraz majsterkowania w każdym wydaniu (zarówno tym bardziej jak i mniej potrzebnym światu 😉). Jeśli chcesz dowiedzieć się więcej o mnie&#32;<a href="/about/" title="O mnie">kliknij tutaj</a>.
         </p>
-      </section>
+      </section>  #}
+
       <section class="gap-top-medium">
         <h1>Najnowsze Produkty</h1>
         <div class="regular slider">
