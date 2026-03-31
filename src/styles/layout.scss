@@ -312,3 +312,16 @@ p.indent {
     }
   }
 }
+
+
+
+.homepage-products .regular.slider .items {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.homepage-products .regular.slider .product-card {
+  flex: 0 0 280px;
+  max-width: 280px;
+}

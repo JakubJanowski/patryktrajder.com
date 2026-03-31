@@ -141,7 +141,7 @@
     </span>
     <span class="product-review-jump__score">5.0</span>
     <span class="product-review-jump__dot">·</span>
-    <span class="product-review-jump__count">1 reviews</span>
+    <span class="product-review-jump__count">(1 opinia)</span>
   </a>
 
 
@@ -405,7 +405,13 @@
         </p>
       </section> #}
 
-      <section id="opinions-section" class="product-anchor-section">
+
+
+
+
+
+
+      <section id="opinions-section" class="product-anchor-section product-reviews-section">
         <h1>Opinie</h1>
 
         <div class="product-opinions-summary">
@@ -435,18 +441,34 @@
             <svg class="icon"><use xlink:href="#icon-star"></use></svg>
             <svg class="icon"><use xlink:href="#icon-star"></use></svg>
           </div>
-
           <p>
             bardzo duzy porzadek w plikach na plus, poczatkowo nie chcualem brac zestawu bo potrzebowalem tylko polowe rzeczy ale po wycieciu i zlozeniu szybko sie przyzwyczailem do nowych narzedzi i uzywam ich rowniez. ogolnie spoko wszystko 
           </p>
-        </div>
+            {#<div class="product-opinion-gallery">
+           <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/opinia1.jpg">
+          <img src="/assets/images/reviews/opinia1.jpg" alt="Photo from customer review - Arek">
+        </button> #}
+      </div>
+      </div>
 
-        <div class="centered-text">
+<div class="centered-text">
           <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
           <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)
           </p>
         </div>
+      <div class="product-review-lightbox" id="product-review-lightbox" hidden>
+        <div class="product-review-lightbox__backdrop" data-close-review-lightbox></div>
+        <div class="product-review-lightbox__dialog">
+        <button class="product-review-lightbox__close" type="button" aria-label="Close image" data-close-review-lightbox>
+            ×
+        </button>
+          <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
+     </div>
+    </div>
       </section>
+
+
+
 
 
       <section class="gap-top-medium">
@@ -606,6 +628,54 @@ function copyEmail(element) {
     }, 2000);
   });
 }
+
+
+
+
+
+
+
+/** OPINIE - zdjecia w opiniach  */
+document.addEventListener('DOMContentLoaded', function () {
+  const reviewsSection = document.querySelector('.product-reviews-section');
+  if (!reviewsSection) return;
+
+  const lightbox = reviewsSection.querySelector('#product-review-lightbox');
+  const lightboxImage = reviewsSection.querySelector('#product-review-lightbox-image');
+
+  if (!lightbox || !lightboxImage) return;
+
+  reviewsSection.querySelectorAll('.product-opinion-gallery__item').forEach((button) => {
+    button.addEventListener('click', function () {
+      const fullImage = this.getAttribute('data-full');
+      if (!fullImage) return;
+
+      lightboxImage.src = fullImage;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  lightbox.querySelectorAll('[data-close-review-lightbox]').forEach((element) => {
+    element.addEventListener('click', function () {
+      lightbox.hidden = true;
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !lightbox.hidden) {
+      lightbox.hidden = true;
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+});
+/** OPINIE  */
+
+
+
       </script>
     </article>
   </main>
