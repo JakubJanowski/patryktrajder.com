@@ -133,7 +133,7 @@
 
 
   <div class="product-selection gap-bottom">
-            <p id="config-label" class="tip">Select system & thickness:</p>
+            <p id="config-label" class="tip">Select plan configuration:</p>
 
             <div style="margin-top: 0.5rem; max-width: 400px;">
               <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
@@ -533,7 +533,7 @@ const isAddon = addonCheckbox ? addonCheckbox.checked : false;
     // Zdejmij ewentualne czerwone ostrzeżenie
     label.style.color = '#707070';
     label.style.fontWeight = '400';
-    label.innerHTML = 'Select table configuration:';
+    label.innerHTML = 'Select plan configuration:';
 
     // Zgaś czerwoną ramkę
     const selectBox = document.getElementById('table-config');
