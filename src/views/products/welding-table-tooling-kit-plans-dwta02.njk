@@ -51,7 +51,7 @@
             <b class="breadcrumb-short">Zestaw profesjonalnych akcesoriów – dWTA02</b>
           </a>
         </nav>
-        <h1 class="gap-top">Plany DXF: Zestaw profesjonalnych akcesoriów do stołu spawalniczego (System 28 | Grubość 12/15) – dWTA02</h1>
+        <h1 class="gap-top">Plany DXF: Zestaw profesjonalnych akcesoriów do stołu spawalniczego (System 16/28 | Grubość 10/12/15) – dWTA02</h1>
       </header>
 
       <section class="row gap-bottom product-top-section">
@@ -154,6 +154,9 @@
             <div style="margin-top: 0.5rem; max-width: 400px;">
               <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
                 <option value="none" selected disabled>Wybierz System i Grubość:</option>
+                <option value="s16_10">System 16 | Grubość 10mm — 127 zł</option>
+                <option value="s16_12">System 16 | Grubość 12mm — 127 zł</option>
+                <option value="s28_10">System 28 | Grubość 10mm — 127 zł</option>
                 <option value="s28_12">System 28 | Grubość 12mm — 127 zł</option>
                 <option value="s28_15">System 28 | Grubość 15mm — 127 zł</option>
               </select>
@@ -564,11 +567,17 @@ function updateTableLink() {
 
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/gotowy-zestaw-profesjonalnych-planow-akcesoriow-do-stolu-spawalniczego-dxf-pdf-dwta021?lang=pl',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/gotowy-zestaw-profesjonalnych-planow-akcesoriow-do-stolu-spawalniczego-dxf-pdf-dwta023?lang=pl',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/gotowy-zestaw-profesjonalnych-planow-akcesoriow-do-stolu-spawalniczego-dxf-pdf-dwta022?lang=pl',
     's28_12': 'https://cart.easy.tools/checkout/patryktrajder/gotowy-zestaw-profesjonalnych-planow-akcesoriow-do-stolu-spawalniczego-dxf-pdf-dwta024?lang=pl',
     's28_15': 'https://cart.easy.tools/checkout/patryktrajder/gotowy-zestaw-planow-profesjonalnych-akcesoriow-do-stolu-spawalniczego-dxf-pdf-dwta02?lang=pl',
   };
 
   const bundleLinks = {
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dwta021-dwta03-profesjonalne-akcesoria-do-stolu-spawalniczego-szuflada-podblatowa-dxf-pdf?lang=pl',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dwta023-dwta03-profesjonalne-akcesoria-do-stolu-spawalniczego-szuflada-podblatowa-dxf-pdf?lang=pl',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dwta022-dwta03-profesjonalne-akcesoria-do-stolu-spawalniczego-szuflada-podblatowa-dxf-pdf?lang=pl',
     's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dwta02-dwta03-profesjonalne-akcesoria-do-stolu-spawalniczego-szuflada-podblatowa-dxf-pdf-2?lang=pl',
     's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-dwta02-dwta03-profesjonalne-akcesoria-do-stolu-spawalniczego-szuflada-podblatowa-dxf-pdf?lang=pl',
   };
@@ -582,7 +591,7 @@ function updateTableLink() {
     // Zdejmij ewentualne czerwone ostrzeżenie
     label.style.color = '#707070';
     label.style.fontWeight = '400';
-    label.innerHTML = 'Select table configuration:';
+    label.innerHTML = 'Wybierz konfigurację planów:';
 
     // Zgaś czerwoną ramkę
     const selectBox = document.getElementById('table-config');

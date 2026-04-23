@@ -52,7 +52,7 @@
           </a>
         </nav>
 
-        <h1 class="gap-top">Professional Welding Table Accessory Set Plans (System 28 | Thickness 12/15) dWTA02</h1>
+        <h1 class="gap-top">Professional Welding Table Accessory Set Plans (System 16/28 | Thickness 10/12/15) dWTA02</h1>
       </header>
 
       <section class="row gap-bottom product-top-section">
@@ -162,6 +162,9 @@
   <div style="margin-top: 0.5rem; max-width: 400px;">
    <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
       <option value="none" selected disabled>Select System & Thickness:</option>
+      <option value="s16_10">System 16 | Thickness 10mm — €35</option>
+      <option value="s16_12">System 16 | Thickness 12mm — €35</option>
+      <option value="s28_10">System 28 | Thickness 10mm — €35</option>
       <option value="s28_12">System 28 | Thickness 12mm — €35</option>
       <option value="s28_15">System 28 | Thickness 15mm — €35</option>
     </select>
@@ -542,12 +545,18 @@ function updateTableLink() {
 
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dxf-pdf-dwta021-gotowe-plany-oprzyrzadowania?lang=en',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dxf-pdf-dwta023-gotowe-plany-oprzyrzadowania?lang=en',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dxf-pdf-dwta022-gotowe-plany-oprzyrzadowania?lang=en',
     's28_12': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dxf-pdf-dwta024-gotowe-plany-oprzyrzadowania?lang=en',
     's28_15': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dxf-pdf-dwta02-gotowe-plany-oprzyrzadowania?lang=en',
   };
 
   const bundleLinks = {
-    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plans-dwta024-dwta03-welding-table-accessories-storage-gotowe-plany-oprzyrzadowania-dxf-pdf?lang=pl',
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plans-dwta024-dwta03-welding-table-accessories-storage-gotowe-plany-oprzyrzadowania-dxf-pdf-2?lang=en',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plans-dwta023-dwta03-welding-table-accessories-storage-gotowe-plany-oprzyrzadowania-dxf-pdf?lang=en',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plans-dwta022-dwta03-welding-table-accessories-storage-gotowe-plany-oprzyrzadowania-dxf-pdf?lang=en',
+    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plans-dwta024-dwta03-welding-table-accessories-storage-gotowe-plany-oprzyrzadowania-dxf-pdf?lang=en',
     's28_15': 'https://cart.easy.tools/checkout/patryktrajder/professional-welding-table-accessory-set-plans-dwta02-under-table-storage-drawer-plans-dwta03-gotowe-plany-oprzyrzadowania-dxf-pdf?lang=en',
   };
 
@@ -560,7 +569,7 @@ function updateTableLink() {
     // Zdejmij ewentualne czerwone ostrzeżenie
     label.style.color = '#707070';
     label.style.fontWeight = '400';
-    label.innerHTML = 'Select table configuration:';
+    label.innerHTML = 'Select plan configuration:';
 
     // Zgaś czerwoną ramkę
     const selectBox = document.getElementById('table-config');
