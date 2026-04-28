@@ -26,7 +26,7 @@
 {% endblock %}
 
 {% block body %}
-  <main id="WeldingTable_2000x1000_MateuszDoniec">
+  <main id="WeldingTable_3000x1500_MateuszDoniec" class="product-page-anchor-nav">
     <article>
       <header class="gap-top">
         <nav class="breadcrumbs">
@@ -47,12 +47,12 @@
             </svg>
           </span>
           <a href="/products/WeldingTable_2000x1000_MateuszDoniec/">
-            <b class="breadcrumb-full">Plany Budowy Stołu Spawalniczego 2000x1000 (System Ø28)</b>
+            <b class="breadcrumb-full">Plany Budowy Stołu Spawalniczego 2000x1000 (System Ø16/28 | Blat 10/15mm)</b>
             <b class="breadcrumb-short">Stół Spawalniczy 2000x1000</b>
              </a>
              </nav>
              
-        <h1 class="gap-top">Plany Budowy Stołu Spawalniczego 2000x1000 (System Ø28 Blat 15)</h1>
+        <h1 class="gap-top">Plany Budowy Stołu Spawalniczego 2000x1000 (System Ø16/28 | Blat 10/15mm)</h1>
       </header>
 
       <section class="row gap-bottom">
@@ -108,13 +108,38 @@
 </div>
           
 
+  <a href="#opinions-section" class="product-review-jump" aria-label="Jump to opinions">
+    <span class="product-review-jump__stars" aria-hidden="true">
+      <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+      <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+      <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+      <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+      <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+    </span>
+    <span class="product-review-jump__score">5.0</span>
+    <span class="product-review-jump__dot">·</span>
+    <span class="product-review-jump__count">(2 opinie)</span>
+  </a>
+
+
+
+
+
+            
+
 <div class="product-selection gap-bottom">
   <p id="config-label" class="tip">Wybierz konfigurację planów:</p>
   
   <div style="margin-top: 0.5rem; max-width: 400px;">
    <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
       <option value="none" selected disabled>Wybierz System i Grubość blatu</option>
+      <option value="s16_10">System 16 | Blat 10mm — 129 zł</option>
+      <option value="s28_10">System 28 | Blat 10mm — 129 zł</option>
       <option value="s28_15">System 28 | Blat 15mm — 129 zł</option>
+
+
+
+
     </select>
   </div>
 
@@ -229,145 +254,151 @@
          </div>
        </div>
       </div>
+    </div>
+      </section>
 
-       
+
+
+
+
+
+
+
+
+
+
+
+<section class="parallax-section gap-bottom gap-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/WeldingTable_2400x1200_MateuszDoniec/table-paralaksa.jpg');
+         background-position: 90% center;">
+        {# jak ma skalowac sie zdjecie 0 idzie w prawo 100 idzie w lewo #}
+        {# INSTRUKCJA
+            --h2-pc: 80px;     Tytuł na PC #}
+        {#  --p-pc: 32px;      Podpis na PC #}
+        {#  --h2-mob: 40px;    Tytuł na telefonie #}
+        {#  --p-mob: 24px;     Podpis na telefonie #}
+        <div class="parallax-content"
+          style="
+            --h2-pc: 80px;
+            --p-pc: 32px;
+            --h2-mob: 52px;
+            --p-mob: 24px;
+          ">
+          <h2>TRAJDER<sup>&copy;</sup></h2>
+          <p>Koniec z krzywym spawaniem</p>
         </div>
       </section>
 
-      <div class="tabs">
-        <input id="description-tab-button" type="radio" name="tab-button" checked="checked">
-        <input id="parameters-tab-button" type="radio" name="tab-button">
-        <input id="opinions-tab-button" type="radio" name="tab-button">
-        <div class="buttons">
-          <label for="description-tab-button">Opis</label>
-          <label for="parameters-tab-button">Parametry</label>
-          <label for="opinions-tab-button">Opinie</label>
-        </div>
-        <div class="content gap-top">
-          <section>
-            <div>
-              <p>
-                Zbuduj stół spawalniczy, który odmieni Twój warsztat. To oficjalna dokumentacja techniczna stołu, który znasz z kanału Mateusz Doniec. Projekt nie jest tylko "rysunkiem" – to owoc połączenia praktyki warsztatowej Mateusza oraz 20-letniego doświadczenia naszego technologa. Otrzymujesz sprawdzoną, stabilną i niezwykle precyzyjną konstrukcję, którą wykonasz za ułamek ceny rynkowej.
+
+
+
+
+     <nav class="product-section-nav" aria-label="Product section navigation">
+        <a href="#description-section" class="product-section-nav__link">Opis</a>
+        <a href="#specifications-section" class="product-section-nav__link">Parametry</a>
+        {# <a href="#support-section" class="product-section-nav__link">Support</a> #}
+        <a href="#opinions-section" class="product-section-nav__link">Opinie</a>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="description-section" class="product-anchor-section">
+        <h1>Opis</h1>
+        <div>
+          <p>Zbuduj stół spawalniczy, który odmieni Twój warsztat. To oficjalna dokumentacja techniczna stołu, który znasz z kanału Mateusz Doniec. Projekt nie jest tylko "rysunkiem" – to owoc połączenia praktyki warsztatowej Mateusza oraz 20-letniego doświadczenia naszego technologa. Otrzymujesz sprawdzoną, stabilną i niezwykle precyzyjną konstrukcję, którą wykonasz za ułamek ceny rynkowej.
                 </p>
-                <br>
-                <br>
-                <br>
-                <b>Co zawiera pakiet?</b>
-                <br>
-                <br>
-                Kupując ten produkt, otrzymujesz komplet dokumentacji cyfrowej:
-                <br>
-                <br></p>
-              <ul class="dots">
-                <li>
-                  <p>​Precyzyjne pliki DXF – Gotowe do wysłania do firm zajmujących się cięciem laserowym lub plazmowym. Zoptymalizowane tak, aby zminimalizować odpad materiału.</p>
+
+<h3>Dlaczego warto postawić na projekt dWT02?</h3>
+<p>Kupując ten produkt, otrzymujesz kompletną dokumentację (pliki DXF oraz PDF):</p>
+
+<ul class="dots">
+    <li>
+        <p><b>Wymiar 2000x1000 mm:</b>&nbsp;Idealna powierzchnia pod średniej długości profile, ramy i konstrukcje bramowe.</p>
+    </li>
+    <li>
+        <p><b>Pełna mobilność:</b>&nbsp;Dzięki własnemu układowi jezdnemu, po skończonej pracy możesz odjechać stołem pod ścianę, odzyskując miejsce w garażu.</p>
+    </li>
+    <li>
+        <p><b>Kompatybilność System 16/28:</b>&nbsp;Do wyboru plany dla obu standardów – dopasuj projekt do swoich narzędzi.</p>
+    </li>
+    <li>
+        <p><b>Elastyczność materiałowa:</b>&nbsp;Projekt przygotowany pod blachy o grubości 10,15 mm. (12 mm wkrótce) Sam decydujesz o sztywności i budżecie.</p>
+    </li> 
+    <li>
+        <p><b>Montaż "jak klocki":</b>&nbsp;Precyzyjne pliki DXF pod laser sprawiają, że budowa jest prosta, szybka i nie wymaga specjalistycznych maszyn.</p>
+    </li>
+</ul>
+
+            <h3>Co zawiera ten projekt?</h3>
+
+          <ul class="dots">
+                 <li>
+                  <p><b>Precyzyjne pliki DXF:</b>&nbsp;Gotowe do cięcia laserowego, opracowane tak, aby ograniczyć odpad materiału do minimum.</p>
                 </li>
                 <li>
-                  <p>​Szczegółowa instrukcja montażu (PDF) – Cały proces budowy rozpisany krok po kroku.</p>
+                  <p><b>Szczegółową instrukcję montażu (PDF):</b>&nbsp;Czytelny przewodnik krok po kroku, który ułatwi przygotowanie i złożenie wszystkich elementów.</p>
                 </li>
                 <li>
-                  <p>​Pełna lista materiałowa – Zestawienie profili, blach i akcesoriów. Idziesz na skład stali z gotową listą i kupujesz tylko to, co niezbędne.</p>
+                  <p><b>Pełną listę materiałową:</b>&nbsp;Dokładne zestawienie grubości blach oraz gatunków stali potrzebnych do wykonania całego zestawu.</p>
                 </li>
                 <li>
-                  <p>Dokumentacja techniczna i widoki 3D – Czytelne rysunki złożeniowe oraz przejrzyste wizualizacje 3D.</p>
+                  <p><b>Dokumentację techniczną i widoki 3D:</b>&nbsp;Przejrzyste rysunki złożeniowe, które ułatwiają wykonanie i montaż akcesoriów.</p>
                 </li>
                 <li>
                   <p>​BONUS: Zdjęcia "zza kulis" z budowy stołu u Mateusza Dońca.</p>
                 </li>
+          </ul>
+
+          <h3>Dlaczego warto wybrać ten zestaw?</h3>
+
+          <ul class="dots">
+                <li>
+                  <p><b>Projekt zweryfikowany w praktyce:</b>&nbsp;Każdy z tych elementów "robi robotę" w warsztacie Mateusza Dońca.</p>
+                </li>
+                <li>
+                  <p><b>Sprawdzone rozwiązania warsztatowe:</b>&nbsp;Projekt powstał na bazie realnych potrzeb i doświadczeń z pracy przy stole spawalniczym.</p>
+                </li>
+                <li>
+                  <p><b>Kompletny projekt w jednym miejscu:</b>&nbsp;DXF, PDF, lista materiałowa i rysunki techniczne — wszystko, czego potrzebujesz do wykonania zestawu.</p>
+                </li>
+                <li>
+                  <p><b>Ułamek ceny rynkowej:</b>&nbsp;Samodzielne wykonanie tych narzędzi to oszczędność tysięcy złotych względem gotowych produktów.</p>
+                </li>
+                 <li>
+                  <p><b>Oszczędność czasu:</b>&nbsp;Otrzymujesz gotową dokumentację, dzięki której szybciej przygotujesz elementy do produkcji i montażu.</p>
+                </li>
               </ul>
-              <p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <b>Dlaczego warto wybrać ten projekt?</b>
-                <br>
-                <br>
-              </p>
+               </div>
 
-              <ul class="dots">
-                <li>
-                  <p>System otworów Ø28 jest w pełni kompatybilny ze standardowymi ściskami i akcesoriami na rynku.</p>
-                </li>
-                <li>
-                  <p>​Oszczędność tysięcy złotych. Samodzielna budowa to najtańsza droga do profesjonalnego stołu tej klasy.</p>
-                </li>
-                <li>
-                  <p>Projekt zweryfikowany pod kątem wytrzymałości i ergonomii przez technologa z wieloletnim stażem.</p>
-                </li>
-              </ul>
-
-              <p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>⚠️ Ważna informacja:</p>
-              <p>Produkt jest dokumentacją cyfrową (plany budowy). Nie jest to fizyczny stół. Do realizacji projektu wymagane są podstawowe umiejętności spawalnicze oraz zlecenie wycięcia elementów stalowych zgodnie z załączonymi plikami DXF.</p>
-
-              <p>
-                <br>
-                 <section class="gap-top-medium">
-        <h1>To również Ci się przyda</h1>
-        <div class="regular custom-slider">
-          <div class="custom-wrapper">
-            <div class="custom-items" style="display: flex; justify-content: center; width: 100%;">
-              <div class="card">
-                <div>
-                  <a class="thumb image-loading" draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">
-                    <img draggable="false" src="/assets/images/super-booster-2000/thumb-w320.jpg" alt="Super Booster 2000">
-                  </a>
-                  <div class="container">
-                    <h4>
-                      <a draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">Wykrawarka do rur</a>
-                    </h4>
-                    <h5>Czy podobnie jak ja nie przepadasz za obróbką rur/profili pod spawanie? Lubisz majsterkować, budujesz buggy, gokarta, barierki, balustrady lub jakąkolwiek konstrkcję z rur czy profili? Jeśli tak, to chciałbym przedstawić Tobie urządzenie, które naprawdę może ułatwić pracę 😉</h5>
-                    <div><hr></div>
-                    <a class="link" draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">Przejdź do oferty</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="arrow left" aria-label="Previous slide">
-            <svg class="icon">
-              <use xlink:href="#icon-arrow-left"></use>
-            </svg>
-          </button>
-          <button class="arrow right" aria-label="Next slide">
-            <svg class="icon">
-              <use xlink:href="#icon-arrow-right"></use>
-            </svg>
-          </button>
-        </div>
+        <div class="product-note">
+  <p class="product-note__title">ℹ️ Produkt Cyfrowy (Plany DIY)</p>
+  <p>Produkt jest dokumentacją cyfrową (komplet planów budowy zestawu oprzyrządowania). Nie są to fizyczne akcesoria ani gotowe elementy metalowe. Do poprawnej realizacji projektu wymagane są podstawowe umiejętności spawalnicze oraz zlecenie wycięcia elementów stalowych (np. laserem lub plazmą) zgodnie z załączonymi plikami DXF.</p>
+</div>
       </section>
-                <br>
-                <i>Nota prawna:
-                  <br>
-                  <br>
-                  Bezpieczeństwo i odpowiedzialność: Dokumentacja techniczna została przygotowana z najwyższą starannością przez wykwalifikowanych specjalistów. Ma ona jednak charakter wyłącznie informacyjno-instruktażowy. Właściciel serwisu patryktrajder.com oraz autor projektu Mateusz Doniec nie ponoszą odpowiedzialności za jakiekolwiek szkody osobowe, rzeczowe lub majątkowe powstałe w wyniku realizacji projektu.
-                  <br>
-                  <br>
-                  Ryzyko wykonawcze:
-                  <br>
-                  Proces budowy stołu spawalniczego wymaga specjalistycznej wiedzy, doświadczenia oraz rygorystycznego przestrzegania zasad BHP. Autorzy nie mają wpływu na warunki pracy, jakość użytych materiałów ani kompetencje osób wykonujących prace. Wszelkie działania podejmowane są przez kupującego na własne ryzyko i odpowiedzialność.
-                  <br>
-                  <br>
-                  Prawa autorskie:
-                  <br>
-                  Projekt stanowi własność intelektualną serwisu patryktrajder.com i jest chroniony prawem autorskim. Zabrania się jego kopiowania, powielania, modyfikowania oraz dalszej odsprzedaży w całości lub w części.
-                  <br>
-                  <br>
-                  Zabezpieczenia cyfrowe:
-                  <br>
-                  Dokumentacja została zabezpieczona unikalnymi znacznikami cyfrowymi umożliwiającymi identyfikację pierwotnego nabywcy. Wszelkie próby nielegalnego rozpowszechniania projektu będą skutkować niezwłocznym wszczęciem postępowania na drodze prawnej.</i>
-              </p>
-            </div>
 
-          </section>
-          <section>
-            <table class="specification">
+
+
+
+
+
+
+      <section id="specifications-section" class="product-anchor-section"> 
+        <h1>Parametry</h1>
+
+      <table class="specification">
               <tr>
                 <th>Parametr</th>
                 <th>Wartość</th>
@@ -409,29 +440,170 @@
                 <td>614 kg</td>
               </tr>
               <tr>
-                <td>Maksymalne obciążenie</td>
+                <td>Maksymalne obciążenie (kółek)</td>
                 <td>460 kg</td>
               </tr>
             </table>
-          </section>
-          <section>
-            <div class="opinion">
-              <div class="header">
-                <span>Mirek (Polska)</span>
-                <svg class="flag icon">
-                  <use xlink:href="#icon-flag-pl-rect"></use>
-                </svg>
-              </div>
-              <p>Oglądam Mateusza od dawna i wiedziałem, że projekt będzie dopracowany. Nie zawiodłem się. Dokumentacja kompletna, od razu widać doświadczenie technologa. Jeśli ktoś chce mieć porządny blat spawalniczy bez błędów w projekcie, to brać w ciemno! Pozdrawienia z krakowa!
-              </p>
-            </div>
-            <div class="centered-text">
-              <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
-              <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)</p>
-            </div>
-          </section>
-        </div>
+      </section>
+
+      {#  <section id="support-section" class="product-anchor-section"> 
+        <h2>Support</h2>
+        <p>
+          xyz
+        </p>
+      </section> #}
+
+
+
+
+
+
+<section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
+  <h1>Opinie</h1>
+
+
+
+{# blok opini  #}
+  <div class="product-opinion-card">
+    <div class="product-opinion-card__header">
+      <div class="product-opinion-card__author-line">
+        <span class="product-opinion-card__author"><strong>Marek</strong></span>
+        <span class="product-opinion-card__meta">(Polska)</span>
+        <svg class="flag icon" aria-hidden="true">
+          <use xlink:href="#icon-flag-pl-rect"></use>
+        </svg>
       </div>
+
+      <div class="product-opinion-card__rating-line">
+        <div class="product-opinion-card__stars" aria-hidden="true">
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+        </div>
+        <span class="product-opinion-card__score">5/5</span>
+        <span class="product-opinion-card__product">(Stół 2400x1200 mm)</span>
+      </div>
+    </div>
+
+    <p class="product-opinion-card__text">
+      Grafik był zadowolony , mówił że za 100zl "przysłowiowe "  czy przysługę dla mnie by mu się nie chciało tego przerysowywac nawet jak bym mu dał na kartce narysowany projekt, nie ma co wymyślać koła na nowo czy wyważać głową muru i lepiej od ciebie kupić 😁 .a do tego zdjęcia poglądowe i wszystkie potrzebne czesci puzzli opisane 👍
+    </p>
+
+    <div class="product-opinion-gallery">
+      <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.jpg">
+        <img src="/assets/images/reviews/dwt03-1.jpg" alt="Zdjęcie od klienta - Drift Zone Media">
+      </button>
+    </div>
+
+
+<div class="product-opinion-gallery">
+      <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.1.jpg">
+        <img src="/assets/images/reviews/dwt03-1.1.jpg" alt="Zdjęcie od klienta - Drift Zone Media">
+      </button>
+    </div>
+ 
+  
+
+
+{# blok opini  #}
+  <div class="product-opinion-card">
+    <div class="product-opinion-card__header">
+      <div class="product-opinion-card__author-line">
+        <span class="product-opinion-card__author"><strong>Mirek</strong></span>
+        <span class="product-opinion-card__meta">(Polska)</span>
+        <svg class="flag icon" aria-hidden="true">
+          <use xlink:href="#icon-flag-pl-rect"></use>
+        </svg>
+      </div>
+
+      <div class="product-opinion-card__rating-line">
+        <div class="product-opinion-card__stars" aria-hidden="true">
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+        </div>
+        <span class="product-opinion-card__score">5/5</span>
+        <span class="product-opinion-card__product">(Stół 2000x1000 mm)</span>
+      </div>
+    </div>
+
+    <p class="product-opinion-card__text">
+      Oglądam Mateusza od dawna i wiedziałem, że projekt będzie dopracowany. Nie zawiodłem się. Dokumentacja kompletna, od razu widać doświadczenie technologa. Jeśli ktoś chce mieć porządny blat spawalniczy bez błędów w projekcie, to brać w ciemno! Pozdrawienia z krakowa!
+              </p>
+{# blok opini  #}
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="centered-text">
+          <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
+          <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)
+          </p>
+        </div>
+      <div class="product-review-lightbox" id="product-review-lightbox" hidden>
+        <div class="product-review-lightbox__backdrop" data-close-review-lightbox></div>
+        <div class="product-review-lightbox__dialog">
+        <button class="product-review-lightbox__close" type="button" aria-label="Close image" data-close-review-lightbox>
+            ×
+        </button>
+          <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
+     </div>
+    </div>
+      </section>
+
+
+
+
+
+      <section class="gap-top-medium">
+         <h2 class="product-upsell-title">To również Ci się przyda</h2>
+          <div class="regular custom-slider">
+            <div class="custom-wrapper">
+              <div class="custom-items" style="display: flex; justify-content: center; width: 100%;">
+                <div class="card">
+                  <div>
+                    <a class="thumb image-loading" draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">
+                      <img draggable="false" src="/assets/images/super-booster-2000/thumb-w320.jpg" alt="Super Booster 2000">
+                    </a>
+                    <div class="container">
+                      <h4>
+                         <a draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">Wykrawarka do rur</a>
+                            </h4>
+                            <h5>Czy podobnie jak ja nie przepadasz za obróbką rur/profili pod spawanie? Lubisz majsterkować, budujesz buggy, gokarta, barierki, balustrady lub jakąkolwiek konstrkcję z rur czy profili? Jeśli tak, to chciałbym przedstawić Tobie urządzenie, które naprawdę może ułatwić pracę 😉</h5>
+                            <div><hr></div>
+                            <a class="link" draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">Przejdź do oferty</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="arrow left" aria-label="Previous slide">
+              <svg class="icon">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="arrow right" aria-label="Next slide">
+              <svg class="icon">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+
+
 
       <section id="presentation" class="gap-top-medium">
         <div class="yt-video">
@@ -439,9 +611,86 @@
             <iframe src="https://www.youtube-nocookie.com/embed/BB4Zn4hwmps?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" title="Stół Spawalniczy"></iframe>
           </div>
         </div>
-      </section>
+
+        <p>
+          <br>
+          <i>Nota prawna:
+                  <br>
+                  <br>
+                  Bezpieczeństwo i odpowiedzialność: Dokumentacja techniczna została przygotowana z najwyższą starannością przez wykwalifikowanych specjalistów. Ma ona jednak charakter wyłącznie informacyjno-instruktażowy. Właściciel serwisu patryktrajder.com oraz autor projektu Mateusz Doniec nie ponoszą odpowiedzialności za jakiekolwiek szkody osobowe, rzeczowe lub majątkowe powstałe w wyniku realizacji projektu.
+                  <br>
+                  <br>
+                  Ryzyko wykonawcze:
+                  <br>
+                  Proces budowy stołu spawalniczego wymaga specjalistycznej wiedzy, doświadczenia oraz rygorystycznego przestrzegania zasad BHP. Autorzy nie mają wpływu na warunki pracy, jakość użytych materiałów ani kompetencje osób wykonujących prace. Wszelkie działania podejmowane są przez kupującego na własne ryzyko i odpowiedzialność.
+                  <br>
+                  <br>
+                  Prawa autorskie:
+                  <br>
+                  Projekt stanowi własność intelektualną serwisu patryktrajder.com i jest chroniony prawem autorskim. Zabrania się jego kopiowania, powielania, modyfikowania oraz dalszej odsprzedaży w całości lub w części.
+                  <br>
+                  <br>
+                  Zabezpieczenia cyfrowe:
+                  <br>
+                  Dokumentacja została zabezpieczona unikalnymi znacznikami cyfrowymi umożliwiającymi identyfikację pierwotnego nabywcy. Wszelkie próby nielegalnego rozpowszechniania projektu będą skutkować niezwłocznym wszczęciem postępowania na drodze prawnej.</i>
+              </p>
+
+         </section>
+
+
+
+
+
+
+
+
 
 <script>
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const reviewsSection = document.querySelector('.product-reviews-section');
+  if (!reviewsSection) return;
+
+  const lightbox = reviewsSection.querySelector('#product-review-lightbox');
+  const lightboxImage = reviewsSection.querySelector('#product-review-lightbox-image');
+
+  if (!lightbox || !lightboxImage) return;
+
+  reviewsSection.querySelectorAll('.product-opinion-gallery__item').forEach((button) => {
+    button.addEventListener('click', function () {
+      const fullImage = this.getAttribute('data-full');
+      if (!fullImage) return;
+
+      lightboxImage.src = fullImage;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  reviewsSection.querySelectorAll('[data-close-review-lightbox]').forEach((element) => {
+    element.addEventListener('click', function () {
+      lightbox.hidden = true;
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !lightbox.hidden) {
+      lightbox.hidden = true;
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+
+
+
+
+
 /**
  * 1. GŁÓWNA FUNKCJA: Logika wyboru stołu, aktualizacja ceny i linku EasyCart
  */
@@ -464,13 +713,17 @@ function updateTableLink() {
 
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-2?lang=pl',
+  's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-3?lang=pl',
+  's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202?lang=pl',
+  's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-2?lang=pl',
     
     
   };
 
   const bundleLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-8?lang=pl',
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202-gotowe-plany-oprzyrzadowania-podstawowego-dwta01?lang=pl',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202-gotowe-plany-oprzyrzadowania-podstawowego-dwta01-2?lang=pl',
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-zestaw-6?lang=pl',
     
   };
 
@@ -531,6 +784,53 @@ function copyEmail(element) {
     }, 2000);
   });
 }
+
+
+
+
+/** OPINIE - zdjecia w opiniach  */
+document.addEventListener('DOMContentLoaded', function () {
+  const reviewsSection = document.querySelector('.product-reviews-section');
+  if (!reviewsSection) return;
+
+  const lightbox = reviewsSection.querySelector('#product-review-lightbox');
+  const lightboxImage = reviewsSection.querySelector('#product-review-lightbox-image');
+
+  if (!lightbox || !lightboxImage) return;
+
+  reviewsSection.querySelectorAll('.product-opinion-gallery__item').forEach((button) => {
+    button.addEventListener('click', function () {
+      const fullImage = this.getAttribute('data-full');
+      if (!fullImage) return;
+
+      lightboxImage.src = fullImage;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  lightbox.querySelectorAll('[data-close-review-lightbox]').forEach((element) => {
+    element.addEventListener('click', function () {
+      lightbox.hidden = true;
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !lightbox.hidden) {
+      lightbox.hidden = true;
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+});
+/** OPINIE  */
+
+
+
+
+
 </script>
 
 
