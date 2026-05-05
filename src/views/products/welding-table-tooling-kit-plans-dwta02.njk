@@ -295,6 +295,12 @@
 
 
 
+
+
+
+
+
+
      <nav class="product-section-nav" aria-label="Product section navigation">
         <a href="#description-section" class="product-section-nav__link">Opis</a>
         {# <a href="#specifications-section" class="product-section-nav__link">Specifications</a> #}
@@ -415,45 +421,46 @@
 
 
 
-      <section id="opinions-section" class="product-anchor-section product-reviews-section">
-        <h1>Opinie</h1>
+      <section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
+  <h1>Opinie</h1>
 
-        <div class="product-opinions-summary">
-          <div class="product-opinions-summary__stars" aria-hidden="true">
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          </div>
-          <div class="product-opinions-summary__score">5.0</div>
-          <div class="product-opinions-summary__text">1 reviews</div>
+        {# blok opini  #}
+  <div class="product-opinion-card">
+    <div class="product-opinion-card__header">
+      <div class="product-opinion-card__author-line">
+        <span class="product-opinion-card__author"><strong>Arek</strong></span>
+        <span class="product-opinion-card__meta">(Polska)</span>
+        <svg class="flag icon" aria-hidden="true">
+          <use xlink:href="#icon-flag-pl-rect"></use>
+        </svg>
+      </div>
+      <div class="product-opinion-card__rating-line">
+        <div class="product-opinion-card__stars" aria-hidden="true">
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
         </div>
-
-        <div class="product-opinion-card">
-          <div class="product-opinion-card__header">
-            <strong>Arek (Poland)</strong>
-            <svg class="flag icon">
-              <use xlink:href="#icon-flag-pl-rect"></use>
-            </svg>
-          </div>
-
-          <div class="product-opinion-card__stars" aria-hidden="true">
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          </div>
-          <p>
-            bardzo duzy porzadek w plikach na plus, poczatkowo nie chcualem brac zestawu bo potrzebowalem tylko polowe rzeczy ale po wycieciu i zlozeniu szybko sie przyzwyczailem do nowych narzedzi i uzywam ich rowniez. ogolnie spoko wszystko 
+        <span class="product-opinion-card__score">5/5</span>
+        <span class="product-opinion-card__product">(dWTA01)</span>
+      </div>
+    </div>
+    <p class="product-opinion-card__text">
+      bardzo duzy porzadek w plikach na plus, poczatkowo nie chcualem brac zestawu bo potrzebowalem tylko polowe rzeczy ale po wycieciu i zlozeniu szybko sie przyzwyczailem do nowych narzedzi i uzywam ich rowniez. ogolnie spoko wszystko 
           </p>
-            {#<div class="product-opinion-gallery">
-           <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/opinia1.jpg">
-          <img src="/assets/images/reviews/opinia1.jpg" alt="Photo from customer review - Arek">
-        </button> #}
-      </div>
-      </div>
+
+    {# <div class="product-opinion-gallery">
+  <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.jpg">
+    <img src="/assets/images/reviews/dwt03-1.jpg" alt="Zdjęcie od klienta - Marek">
+  </button>
+
+  <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.1.jpg">
+    <img src="/assets/images/reviews/dwt03-1.1.jpg" alt="Zdjęcie od klienta - Marek">
+  </button>
+</div> #}
+</div>
+ {# blok opini  #}
 
 <div class="centered-text">
           <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
@@ -475,40 +482,277 @@
 
 
 
-      <section class="gap-top-medium">
-         <h2 class="product-upsell-title">To również Ci się przyda</h2>
-          <div class="regular custom-slider">
-            <div class="custom-wrapper">
-              <div class="custom-items" style="display: flex; justify-content: center; width: 100%;">
-                <div class="card">
-                  <div>
-                    <a class="thumb image-loading" draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">
-                      <img draggable="false" src="/assets/images/super-booster-2000/thumb-w320.jpg" alt="Super Booster 2000">
-                    </a>
-                    <div class="container">
-                      <h4>
-                         <a draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">Wykrawarka do rur</a>
-                            </h4>
-                            <h5>Czy podobnie jak ja nie przepadasz za obróbką rur/profili pod spawanie? Lubisz majsterkować, budujesz buggy, gokarta, barierki, balustrady lub jakąkolwiek konstrkcję z rur czy profili? Jeśli tak, to chciałbym przedstawić Tobie urządzenie, które naprawdę może ułatwić pracę 😉</h5>
-                            <div><hr></div>
-                            <a class="link" draggable="false" href="/products/super-booster-2000/" title="Super Booster 2000">Przejdź do oferty</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="arrow left" aria-label="Previous slide">
-              <svg class="icon">
-                <use xlink:href="#icon-arrow-left"></use>
-              </svg>
-            </button>
-            <button class="arrow right" aria-label="Next slide">
-              <svg class="icon">
-                <use xlink:href="#icon-arrow-right"></use>
-              </svg>
-            </button>
+
+
+
+
+
+
+      <section class="gap-top-medium homepage-products product-anchor-section section-title-center">
+      <h1>To również Ci się przyda</h1>
+      <p>
+        <br>
+        &#32;<a href="/products/" title="sklep"><strong>[Zobacz wszystkie]</strong></a>
+      </p>
+
+      <div class="product-scroller">
+        <div class="product-scroller__track">
+
+
+
+
+<div class="product-card">
+           <a href="/products/super-booster-2000/" class="product-image-link">
+           <span class="product-badge-wrap product-badge-wrap--right">
+      <span class="product-badge product-badge--physical">Produkt fizyczny</span>
+    </span>
+              <img src="/assets/images/super-booster-2000/thumb-w320.0.jpg" alt="Super Booster 2000"/></a>
+          <div class="product-card-content">
+           <a href="/products/super-booster-2000/" class="product-title"><strong>Wykrawarka do rur i profili</strong>&nbsp;(Tube Notcher) – Otwornica TN01</a>
+            <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">889</span>,<span class="cents">01</span>
+              <span class="currency">zł</span>
+            </h3>
           </div>
-        </section>
+        </div>
+            <a href="/products/super-booster-2000/" class="product-link">Więcej informacji...</a>
+            <div class="cart-action-row">
+             <a href="/products/super-booster-2000/" class="btn-dwt">Sprawdź</a></div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+ <div class="product-card">
+        <a href="/products/WeldingTable_2000x1000_MateuszDoniec/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/thumb-w320.jpg" alt="projekt stołu spawalniczego"/></a>
+        <div class="product-card-content">
+         <a href="/products/WeldingTable_2000x1000_MateuszDoniec/" class="product-title">Plany DXF:<br>Stół spawalniczy&nbsp;<strong>2000x1000</strong>&nbsp;(System 28 | Blat 15mm)</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">129</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="/products/WeldingTable_2000x1000_MateuszDoniec/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="/products/WeldingTable_2000x1000_MateuszDoniec/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+ <div class="product-card">
+        <a href="/products/WeldingTable_2400x1200_MateuszDoniec/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/thumb640.jpg" alt="projekt stołu spawalniczego"/></a>
+        <div class="product-card-content">
+         <a href="/products/WeldingTable_2400x1200_MateuszDoniec/" class="product-title">Plany DXF:<br>Stół spawalniczy&nbsp;<strong>2400x1200</strong>&nbsp;(System 16/28 | Blat 12/15mm)</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">129</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="/products/WeldingTable_2400x1200_MateuszDoniec/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="/products/WeldingTable_2400x1200_MateuszDoniec/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+ 
+
+
+
+
+<div class="product-card">
+        <a href="/products/WeldingTable_3000x1500_MateuszDoniec/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dwt03/card.jpg" alt="projekt stołu spawalniczego"/></a>
+        <div class="product-card-content">
+         <a href="/products/WeldingTable_3000x1500_MateuszDoniec/" class="product-title">Plany DXF:<br>Stół spawalniczy&nbsp;<strong>3000x1500</strong>&nbsp;(System 28 | Blat 15mm)</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">169</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="/products/WeldingTable_3000x1500_MateuszDoniec/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="/products/WeldingTable_3000x1500_MateuszDoniec/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+   
+<div class="product-card">
+        <a href="/products/welding-table-tooling-kit-plans-dwta01/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dwta01/thumb/thumb640.png" alt="akcesoria do stołu spawalniczego pdf + dxf"/></a>
+        <div class="product-card-content">
+         <a href="/products/welding-table-tooling-kit-plans-dwta01/" class="product-title">Plany DXF:<br>Zestaw&nbsp;<strong>podstawowych&nbsp;</strong>akcesoriów do stołu spawalniczego – dWTA01</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">98</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="/products/welding-table-tooling-kit-plans-dwta01/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="/products/welding-table-tooling-kit-plans-dwta01/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+ <div class="product-card">
+        <a href="/products/welding-table-extension-plans-dws02" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dws02/card.jpg" alt="Szuflada pod stół spawalniczy"/></a>
+        <div class="product-card-content">
+         <a href="/products/welding-table-extension-plans-dws02" class="product-title">Plany DXF:<br>Mobilne przedłużenie stołu spawalniczego (1200x200 mm | 16/28) – dWS02</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">89</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="/products/welding-table-extension-plans-dws02" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="/products/welding-table-extension-plans-dws02" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="product-card">
+        <a href="/products/welding-table-extension-plans-dws01" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dws01/card.jpg" alt="Szuflada pod stół spawalniczy"/></a>
+        <div class="product-card-content">
+         <a href="/products/welding-table-extension-plans-dws01" class="product-title">Plany DXF:<br>Mobilne przedłużenie stołu spawalniczego (2400x200 mm | 16/28) – dWS01</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">89</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="/products/welding-table-extension-plans-dws01" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="/products/welding-table-extension-plans-dws01" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+     <div class="product-card">
+        <a href="/products/welding-table-tooling-kit-plans-dwta03/" class="product-image-link">
+        <span class="product-badge-wrap product-badge-wrap--right">
+    <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
+  </span>
+          <img src="/assets/images/dwta03/card.jpg" alt="Szuflada pod stół spawalniczy"/></a>
+        <div class="product-card-content">
+         <a href="/products/welding-table-tooling-kit-plans-dwta03/" class="product-title">Plany DXF:<br>Szuflada pod stół spawalniczy – dWTA03</a>
+       <div class="product-price">
+          
+          <div class="price">
+            <h3>
+              <span class="value">47</span>,<span class="cents">00</span>
+              <span class="currency">zł</span>
+            </h3>
+          </div>
+        </div>
+         <a href="/products/welding-table-tooling-kit-plans-dwta03/" class="product-link">Więcej informacji...</a>
+        <div class="cart-action-row">
+         <a href="/products/welding-table-tooling-kit-plans-dwta03/" class="btn-dwt">Sprawdź</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+            </div>
+          </div>
+          <button class="arrow left" aria-label="Previous slide">
+            <svg class="icon">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="arrow right" aria-label="Next slide">
+            <svg class="icon">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
 
 
 
@@ -685,6 +929,81 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 /** OPINIE  */
+
+
+
+
+//slider produktow
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.product-scroller').forEach((scroller) => {
+    let isMouseDown = false;
+    let isDragging = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let preventClick = false;
+
+    scroller.addEventListener('mousedown', function (e) {
+      if (e.button !== 0) return; // tylko lewy przycisk myszy
+
+      isMouseDown = true;
+      isDragging = false;
+      preventClick = false;
+      startX = e.pageX;
+      startScrollLeft = scroller.scrollLeft;
+    });
+
+    window.addEventListener('mousemove', function (e) {
+      if (!isMouseDown) return;
+
+      const dx = e.pageX - startX;
+
+      // dopiero po realnym ruchu zaczynamy drag
+      if (!isDragging && Math.abs(dx) > 8) {
+        isDragging = true;
+        preventClick = true;
+        scroller.classList.add('is-dragging');
+      }
+
+      if (!isDragging) return;
+
+      scroller.scrollLeft = startScrollLeft - dx;
+      e.preventDefault();
+    });
+
+    function stopDrag() {
+      if (!isMouseDown) return;
+
+      isMouseDown = false;
+      scroller.classList.remove('is-dragging');
+
+      // po prawdziwym dragowaniu blokujemy tylko najbliższy klik
+      if (isDragging) {
+        setTimeout(() => {
+          preventClick = false;
+        }, 0);
+      }
+
+      isDragging = false;
+    }
+
+    window.addEventListener('mouseup', stopDrag);
+    scroller.addEventListener('mouseleave', stopDrag);
+
+    scroller.addEventListener('click', function (e) {
+      if (preventClick) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
+
+    // opcjonalnie: żeby przeglądarka nie próbowała zaznaczać tekstu przy szybkim dragowaniu
+    scroller.querySelectorAll('a, img').forEach((el) => {
+      el.setAttribute('draggable', 'false');
+    });
+  });
+});
+
+
 
 
 
