@@ -47,11 +47,11 @@
             </svg>
           </span>
           <a href="/en-gb/products/WeldingTable_2000x1000_MateuszDoniec/">
-           <b class="breadcrumb-full">Welding Table Build Plans 2000x1000 (System: Ø16/28 | Top: 10/15mm) - dWT02</b>
-           <b class="breadcrumb-short">Table 2000x1000</b>
+           <b class="breadcrumb-full">Welding Table Build Plans 2000x1000 (System: Ø16/28 | Top: 10/12/15mm) - dWT02</b>
+           <b class="breadcrumb-short">Welding Table Plans 2000x1000</b>
             </a>
         </nav>
-        <h1 class="gap-top">Welding Table Build Plans 2000x1000 (System: Ø16/28 | Top: 10/15mm) - dWT02</h1>
+        <h1 class="gap-top">Welding Table Build Plans 2000x1000 (System: Ø16/28 | Top: 10/12/15mm) - dWT02</h1>
       </header>
 
 
@@ -130,9 +130,12 @@
   <div style="margin-top: 0.5rem; max-width: 400px;">
    <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
       <option value="none" selected disabled>Select System & Thickness:</option>
-      <option value="s16_10">dWT02.01: System 16 | Top 10mm — €35</option>
-      <option value="s28_10">dWT02.02: System 28 | Top 10mm — €35</option>
-      <option value="s28_15">dWT02.06: System 28 | Top 15mm — €35</option>
+      <option value="s16_10">System Ø16 | Top 10 mm - dWT02.01</option>
+      <option value="s16_12">System Ø16 | Top 12 mm - dWT02.03</option>
+      <option value="s28_10">System Ø28 | Top 10 mm - dWT02.02</option>
+      <option value="s28_12">System Ø28 | Top 12 mm - dWT02.04</option>
+      <option value="s28_15">System Ø28 | Top 15 mm - dWT02.06</option>
+
     </select>
   </div>
 
@@ -307,7 +310,7 @@
         <p><b>System 16/28 compatibility:</b>&nbsp;Plans are available for both standards — choose the version that matches your tools.</p>
     </li>
     <li>
-        <p><b>Material flexibility:</b>&nbsp;The project is prepared for 10 and 15 mm thick steel plates. (12 mm coming soon) You decide on the balance between rigidity and budget.</p>
+        <p><b>Material flexibility:</b>&nbsp;The project is prepared for 10,12 and 15mm thick steel plates. You decide on the balance between rigidity and budget.</p>
     </li> 
     <li>
         <p><b>“Building block” assembly:</b>&nbsp;Precise DXF files for laser cutting make the build simple, fast and possible without specialist machinery.</p>
@@ -716,7 +719,9 @@ function updateTableLink() {
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
     's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plans-dxfpdf-ready-made-welding-table-project-dwt0201-gotowy-projekt-stolu-spawalniczego?lang=en',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plans-dxfpdf-ready-made-welding-table-project-dwt0203-gotowy-projekt-stolu-spawalniczego?lang=en',
     's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plans-dxfpdf-ready-made-welding-table-project-dwt0202-gotowy-projekt-stolu-spawalniczego?lang=en',
+    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plans-dxfpdf-ready-made-welding-table-project-dwt0201-gotowy-projekt-stolu-spawalniczego-4?lang=en',
     's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plans-dxfpdf-ready-made-welding-table-project-dwt0206-gotowy-projekt-stolu-spawalniczego?lang=en',
     
     
@@ -724,7 +729,9 @@ function updateTableLink() {
 
   const bundleLinks = {
     's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plans-dxfpdf-ready-made-welding-table-project-dwt0201-gotowy-projekt-stolu-spawalniczego-2?lang=en',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plans-dxfpdf-ready-made-welding-table-project-dwt0201-gotowy-projekt-stolu-spawalniczego-5?lang=en',
     's28_10': 'https://cart.easy.tools/checkout/patryktrajder/bundle-welding-table-accessory-set-ready-dxfpdf-plans-dwt0202-dwta01-gotowy-projekt-stolu-i-akcesoriow-spawalniczych?lang=en',
+    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/bundle-welding-table-accessory-set-ready-dxfpdf-plans-dwt0204-dwta0104-gotowy-projekt-stolu-i-akcesoriow-spawalniczych?lang=en',
     's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt02-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej?lang=en',
     
   };
