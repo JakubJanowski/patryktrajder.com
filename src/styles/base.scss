@@ -30,6 +30,10 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
+h1.gap-top2 {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 768px) {
   h1.gap-top {
     margin-top: 0.25rem;    // Tytuł wędruje wyżej
