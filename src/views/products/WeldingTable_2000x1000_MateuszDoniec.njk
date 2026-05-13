@@ -56,8 +56,14 @@
       </header>
 
 
-      <section class="row gap-bottom">
-        <div class="gallery">
+
+
+
+
+
+
+      <section class="row gap-bottom product-top-section">
+        <div class="gallery gallery--4to3">
           <div class="full">
             <div class="container">
               <img/>
@@ -68,10 +74,16 @@
               </button>
             </div>
           </div>
-          <div class="preview" style="max-width: 75%;">
+
+
+            <div class="preview">
             <div class="wrap">
-              <div class="image-loading" style="padding-top: 75%;">
-                <img src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-h400.jpg" srcset="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-h400.jpg 711w, /assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w1066.jpg 1066w, /assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w1599.jpg 1599w, /assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w2132.jpg 2132w" sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 70em) calc((100vw - 4.5em) * 3 / 5), calc(65.5em * 3 / 5)" alt="wszystkie elementy do budowy wykrawarki"/>
+              <div class="image-loading ratio4to3">
+                <img
+                 src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w800.jpg"
+                 srcset="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w800.jpg 800w, /assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w1200.jpg 1200w, /assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w1600.jpg 1600w, /assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w2132.jpg 2132w"
+                 sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 70em) calc((100vw - 4.5em) * 3 / 5), calc(65.5em * 3 / 5)" 
+                 alt="stoł spawalniczy DIY"/>
                 <div class="overlay"></div>
               </div>
             </div>
@@ -79,11 +91,11 @@
           <div class="slider">
             <div class="wrapper">
               <div class="items">
-                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-h100.jpg" alt="wszystkie elementy do budowy wykrawarki"/>
-                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery2-h100.jpg" alt="zbliżenie na części zestawu"/>
-                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery3-h100.jpg" alt="zmontowana i pomalowana wykrawarka do rur"/>
-                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery4-h100.jpg" alt="zmontowany i pomalowany zestaw od przodu"/>
-                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery5-h100.jpg" alt="zmontowany i pomalowany zestaw od tyłu"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery1-w213.jpg" alt="wszystkie elementy do budowy stołu"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery2-w213.jpg" alt="zbliżenie na części zestawu"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery3-w213.jpg" alt="stoł spawalniczy DIY"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery4-w213.jpg" alt="stoł spawalniczy DIY"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/pl/gallery5-w213.jpg" alt="stoł spawalniczy DIY"/>
               </div>
             </div>
             <button class="arrow left" aria-label="Previous">
@@ -180,7 +192,31 @@
   </div>
 
   <br>
- <div class="availability">
+
+
+<div class="availability">
+  <p class="availability-item">
+    <span class="availability-item__check">✓</span>
+    <span class="availability-item__text">
+      <span>Dostawa&nbsp;natychmiast&nbsp;</span>
+      <span class="availability-item__nowrap">| E-mail&nbsp;24/7</span>
+    </span>
+  </p>
+</div>
+
+<div class="availability">
+  <p>
+    <a href="#support-section" class="availability-item availability-item--link">
+      <span class="availability-item__check">✓</span>
+      <span class="availability-item__label">Wsparcie techniczne po zakupie</span>
+    </a>
+  </p>
+</div>
+
+
+
+
+ {# <div class="availability">
           <p><span class="green-text">Dostawa&nbsp;natychmiast</span>&nbsp;|&#32;<span style="color: #333; white-space: nowrap;">E-mail 24/7</span></p>
        </div>
 
@@ -206,12 +242,14 @@
                 <use xlink:href="#icon-flat-eye-wrench"></use>
               </svg>
             </span>
-          </div>
+          </div> #}
 
 
-<div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 48px; margin-bottom: 32px;">
+<div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 48px; margin-bottom: 16px;">
   <a id="buy-table-btn" href="javascript:void(0)" class="btn-dwt" onclick="handleTableDisabledClick()" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center;">Kup Teraz</a>
 </div>
+
+<p class="checkout-note">Po kliknięciu „Kup Teraz” przejdziesz do koszyka&nbsp;<span class="checkout-note__brand">Easytools</span>.</p>
 
 
 <div class="payment-icons" style="text-align: center; margin-top: 25px; opacity: 0.8;">
@@ -292,7 +330,7 @@
      <nav class="product-section-nav" aria-label="Product section navigation">
         <a href="#description-section" class="product-section-nav__link">Opis</a>
         <a href="#specifications-section" class="product-section-nav__link">Parametry</a>
-        {# <a href="#support-section" class="product-section-nav__link">Support</a> #}
+        <a href="#support-section" class="product-section-nav__link">Wsparcie</a>
         <a href="#opinions-section" class="product-section-nav__link">Opinie</a>
       </nav>
 
@@ -402,7 +440,7 @@
               </tr>
               <tr>
                 <td>System otworów</td>
-                <td>Ø28 mm (standard profesjonalnych narzędzi spawalniczych)</td>
+                <td>Ø16/28 mm (do wyboru standard dla profesjonalnych narzędzi spawalniczych)</td>
               </tr>
               <tr>
                 <td>Siatka otworów</td>
@@ -427,12 +465,33 @@
             </table>
       </section>
 
-      {#  <section id="support-section" class="product-anchor-section"> 
-        <h2>Support</h2>
-        <p>
-          xyz
-        </p>
-      </section> #}
+
+
+
+
+
+
+    <section id="support-section" class="product-scroll-section product-anchor-section">
+  <h1>Wsparcie po zakupie</h1>
+   <p>Naszym celem nie jest sprzedaż samych planów i zakończenie kontaktu z klientem.</p>
+   <ul class="dots">
+<li>
+  <p>Kupując projekt, otrzymujesz nie tylko pliki DXF/PDF, ale również wsparcie techniczne.</p>
+</li>
+<li>
+<p>Po zakupie otrzymasz kontakt e-mail do eksperta technicznego, który odpowie na pytania dotyczące zakupionej dokumentacji.</p>
+   
+</li>
+<li>
+  <p>Pomagamy wyjaśnić oznaczenia, wymiary, materiały przewidziane w dokumentacji oraz kolejność montażu, aby łatwiej przejść od projektu do gotowego wykonania.</p>
+</li>
+</ul>
+
+<p>ℹ️ Wsparcie techniczne dotyczy zakupionej dokumentacji i jej prawidłowego odczytania. Nie obejmuje nanoszenia spersonalizowanych zmian w projekcie, takich jak inne wymiary, zmiana konstrukcji lub dostosowanie projektu pod indywidualne założenia. Jeśli potrzebujesz indywidualnie zmodyfikowanego projektu, napisz do nas:&nbsp;<a href="mailto:trajder.sklep@gmail.com">trajder.sklep@gmail.com</a></p>
+</section>
+
+
+
 
 
 
@@ -441,8 +500,6 @@
 
 <section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
   <h1>Opinie</h1>
-
-
 
 {# blok opini  #}
   <div class="product-opinion-card">
@@ -1122,20 +1179,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </script>

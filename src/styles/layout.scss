@@ -344,3 +344,95 @@ p.indent {
     font-size: 1.2rem;
   }
 }
+
+
+
+// informacja o easytools
+.checkout-box {
+  max-width: 400px;
+  margin: 58px 0 32px auto;
+  text-align: center;
+}
+
+.checkout-button-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout-note {
+  margin: 12px 0 18px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #6b7280;
+  text-align: center;
+  text-align-last: center;
+}
+
+.payment-icons {
+  text-align: center;
+  margin-top: 18px;
+  opacity: 0.8;
+}
+
+.checkout-note__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+
+
+
+// wsparcie po zakupie i info o dostawie darmowej
+.availability {
+  margin: 0 0 7px 0;
+}
+
+.availability p {
+  margin: 0;
+}
+
+.availability-item {
+  display: inline-grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 4px;
+  align-items: start;
+  max-width: 100%;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.availability-item__check {
+  color: #009b2f;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.availability-item__text {
+  min-width: 0;
+}
+
+.availability-item__nowrap {
+  white-space: nowrap;
+}
+
+.availability-item--link {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.availability-item--link:hover {
+  color: #007cf0;
+  text-decoration: none;
+}
+
+.availability-item--link:hover .availability-item__label {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

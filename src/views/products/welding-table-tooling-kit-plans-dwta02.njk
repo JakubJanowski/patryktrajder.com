@@ -197,37 +197,37 @@
 
             <br>
 
-            <div class="availability">
-              <p><span class="green-text">Dostawa&nbsp;natychmiast</span>&nbsp;|&#32;<span style="color: #333; white-space: nowrap;">E-mail 24/7</span></p>
-            </div>
+          
+<div class="availability">
+  <p class="availability-item">
+    <span class="availability-item__check">✓</span>
+    <span class="availability-item__text">
+      <span>Dostawa&nbsp;natychmiast&nbsp;</span>
+      <span class="availability-item__nowrap">| E-mail&nbsp;24/7</span>
+    </span>
+  </p>
+</div>
 
-            <div class="assembly-difficulty">
-              <p>Trudność złożenia</p>
-              <span>
-                <svg class="icon">
-                  <use xlink:href="#icon-flat-eye-wrench-full"></use>
-                </svg>
-                <svg class="icon">
-                  <use xlink:href="#icon-flat-eye-wrench-full"></use>
-                </svg>
-                <svg class="icon">
-                  <use xlink:href="#icon-flat-eye-wrench-full"></use>
-                </svg>
-                <svg class="icon">
-                  <use xlink:href="#icon-flat-eye-wrench"></use>
-                </svg>
-                <svg class="icon">
-                  <use xlink:href="#icon-flat-eye-wrench"></use>
-                </svg>
-                <svg class="icon">
-                  <use xlink:href="#icon-flat-eye-wrench"></use>
-                </svg>
-              </span>
-            </div>
+<div class="availability">
+  <p>
+    <a href="#support-section" class="availability-item availability-item--link">
+      <span class="availability-item__check">✓</span>
+      <span class="availability-item__label">Wsparcie techniczne po zakupie</span>
+    </a>
+  </p>
+</div>
 
-            <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 58px; margin-bottom: 32px;">
+
+
+
+            <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 58px; margin-bottom: 16px;">
               <a id="buy-table-btn" href="javascript:void(0)" class="btn-dwt" onclick="handleTableDisabledClick()" style="margin: 0; font-size: 20px; padding: 0 30px; height: 44px; display: inline-flex; align-items: center; justify-content: center;">Kup Teraz</a>
             </div>
+
+
+            <p class="checkout-note">Po kliknięciu „Kup Teraz” przejdziesz do koszyka&nbsp;<span class="checkout-note__brand">Easytools</span>.</p>
+
+
 
             <div class="payment-icons" style="text-align: center; margin-top: 25px; opacity: 0.8;">
               <span style="font-size: 10px; display: block; margin-bottom: 12px; color: #888; letter-spacing: 1px; font-weight: 600;">BEZPIECZNA PŁATNOŚĆ PRZEZ:</span>
@@ -272,6 +272,11 @@
         </div>
       </section>
 
+
+
+
+
+
       <section class="parallax-section gap-bottom gap-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/WeldingTable_2400x1200_MateuszDoniec/table-paralaksa.jpg');
          background-position: 90% center;">
         {# jak ma skalowac sie zdjecie 0 idzie w prawo 100 idzie w lewo #}
@@ -300,29 +305,12 @@
 
 
 
-
-
      <nav class="product-section-nav" aria-label="Product section navigation">
         <a href="#description-section" class="product-section-nav__link">Opis</a>
         {# <a href="#specifications-section" class="product-section-nav__link">Specifications</a> #}
-        {# <a href="#support-section" class="product-section-nav__link">Support</a> #}
+        <a href="#support-section" class="product-section-nav__link">Wsparcie</a>
         <a href="#opinions-section" class="product-section-nav__link">Opinie</a>
       </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       <section id="description-section" class="product-anchor-section">
@@ -398,6 +386,11 @@
 </div>
       </section>
 
+
+
+
+
+
       {# <section id="specifications-section" class="product-anchor-section"> 
         <h2>Specifications</h2>
 
@@ -409,12 +402,32 @@
         </table>
       </section> #}
 
-      {#  <section id="support-section" class="product-anchor-section"> 
-        <h2>Support</h2>
-        <p>
-          xyz
-        </p>
-      </section> #}
+
+
+
+
+
+<section id="support-section" class="product-scroll-section product-anchor-section">
+  <h1>Wsparcie po zakupie</h1>
+   <p>Naszym celem nie jest sprzedaż samych planów i zakończenie kontaktu z klientem.</p>
+   <ul class="dots">
+<li>
+  <p>Kupując projekt, otrzymujesz nie tylko pliki DXF/PDF, ale również wsparcie techniczne.</p>
+</li>
+<li>
+<p>Po zakupie otrzymasz kontakt e-mail do eksperta technicznego, który odpowie na pytania dotyczące zakupionej dokumentacji.</p>
+   
+</li>
+<li>
+  <p>Pomagamy wyjaśnić oznaczenia, wymiary, materiały przewidziane w dokumentacji oraz kolejność montażu, aby łatwiej przejść od projektu do gotowego wykonania.</p>
+</li>
+</ul>
+
+<p>ℹ️ Wsparcie techniczne dotyczy zakupionej dokumentacji i jej prawidłowego odczytania. Nie obejmuje nanoszenia spersonalizowanych zmian w projekcie, takich jak inne wymiary, zmiana konstrukcji lub dostosowanie projektu pod indywidualne założenia. Jeśli potrzebujesz indywidualnie zmodyfikowanego projektu, napisz do nas:&nbsp;<a href="mailto:trajder.sklep@gmail.com">trajder.sklep@gmail.com</a></p>
+</section>
+
+
+     
 
 
 
@@ -422,7 +435,7 @@
 
 
 
-      <section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
+<section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
   <h1>Opinie</h1>
 
         {# blok opini  #}
@@ -478,7 +491,6 @@
      </div>
     </div>
       </section>
-
 
 
 
