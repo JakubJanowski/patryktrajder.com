@@ -847,21 +847,7 @@
   </div>
 
 
-
-
-
-            </div>
-          </div>
-          <button class="arrow left" aria-label="Previous slide">
-            <svg class="icon">
-              <use xlink:href="#icon-arrow-left"></use>
-            </svg>
-          </button>
-          <button class="arrow right" aria-label="Next slide">
-            <svg class="icon">
-              <use xlink:href="#icon-arrow-right"></use>
-            </svg>
-          </button>
+         </div>
         </div>
       </section>
 
@@ -920,51 +906,6 @@
 
 
 <script>
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const reviewsSection = document.querySelector('.product-reviews-section');
-  if (!reviewsSection) return;
-
-  const lightbox = reviewsSection.querySelector('#product-review-lightbox');
-  const lightboxImage = reviewsSection.querySelector('#product-review-lightbox-image');
-
-  if (!lightbox || !lightboxImage) return;
-
-  reviewsSection.querySelectorAll('.product-opinion-gallery__item').forEach((button) => {
-    button.addEventListener('click', function () {
-      const fullImage = this.getAttribute('data-full');
-      if (!fullImage) return;
-
-      lightboxImage.src = fullImage;
-      lightbox.hidden = false;
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  reviewsSection.querySelectorAll('[data-close-review-lightbox]').forEach((element) => {
-    element.addEventListener('click', function () {
-      lightbox.hidden = true;
-      lightboxImage.src = '';
-      document.body.style.overflow = '';
-    });
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && !lightbox.hidden) {
-      lightbox.hidden = true;
-      lightboxImage.src = '';
-      document.body.style.overflow = '';
-    }
-  });
-});
-
-
-
-
-
-
 /**
  * 1. GŁÓWNA FUNKCJA: Logika wyboru stołu, aktualizacja ceny i linku EasyCart
  */

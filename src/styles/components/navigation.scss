@@ -711,3 +711,26 @@ html {
   }
 }
 
+
+.product-page-anchor-nav .homepage-products {
+  width: 100%;
+  max-width: 100%;
+  overflow: clip;
+}
+
+
+.product-page-anchor-nav .homepage-products .product-scroller {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* track może być szeroki tylko wewnątrz scrollera */
+.product-page-anchor-nav .homepage-products .product-scroller__track {
+  display: flex;
+  width: max-content;
+  max-width: none;
+}
