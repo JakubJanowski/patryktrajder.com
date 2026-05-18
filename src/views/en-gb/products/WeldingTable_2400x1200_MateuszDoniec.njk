@@ -48,12 +48,12 @@
           </span>
 
            <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/">
-            <b class="breadcrumb-full">Welding Table Build Plans 2400x1200 (System 16/28 | Top 12/15mm)</b>
+            <b class="breadcrumb-full">Welding Table Build Plans 2400x1200 (System 16/28 | Top 10/12/15mm)</b>
   
           <b class="breadcrumb-short">Table 2400x1200</b>
             </a>
         </nav>
-        <h1 class="gap-top">Welding Table Build Plans 2400x1200 (System 16/28 | Top 12/15mm)</h1>
+        <h1 class="gap-top">Welding Table Build Plans 2400x1200 (System 16/28 | Top 10/12/15mm)</h1>
       </header>
 
       <section class="row gap-bottom product-top-section">
@@ -122,9 +122,12 @@
   <div style="margin-top: 0.5rem; max-width: 400px;">
    <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
       <option value="none" selected disabled>Select System & Thickness:</option>
-      <option value="s28_15">System 28 | Top 15mm — €35</option>
-      <option value="s28_12">System 28 | Top 12mm — €35</option>
-      <option value="s16_12">System 16 | Top 12mm — €35</option>
+      
+      <option value="s16_10">System Ø16 | Top 10mm — dWT01.01</option>
+      <option value="s16_12">System Ø16 | Top 12mm — dWT01.03</option>
+      <option value="s28_10">System Ø28 | Top 10mm — dWT01.02</option>
+      <option value="s28_12">System Ø28 | Top 12mm — dWT01.04</option>
+      <option value="s28_15">System Ø28 | Top 15mm — dWT01.06</option>
     </select>
   </div>
 
@@ -464,16 +467,20 @@ function updateTableLink() {
 
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-2?lang=en',
+    's16_10': '',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-3?lang=en',
+    's28_10': '',
     's28_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-4?lang=en',
-    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-3?lang=en'
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-gotowy-projekt-dokumentacji-technicznej-2?lang=en',
     
   };
 
   const bundleLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej?lang=en',
+    's16_10': '',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej-3?lang=en',
+    's28_10': '',
     's28_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej-2?lang=en',
-    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej-3?lang=en'
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/ready-made-technical-documentation-project-pdfdxf-model-dwt01-accessories-dwta01-gotowy-projekt-dokumentacji-technicznej?lang=en',
   };
 
   // --- LOGIKA PRZYCISKU (Tu jest blokada zakupu) ---

@@ -47,14 +47,14 @@
             </svg>
           </span>
           <a href="/products/WeldingTable_2400x1200_MateuszDoniec/">
-          <b class="breadcrumb-full">Plany DXF/PDF: Stół spawalniczy 2400x1200 (System 16/28 | Blat 12/15 mm)</b>
+          <b class="breadcrumb-full">Plany DXF/PDF: Stół spawalniczy 2400x1200 (System 16/28 | Blat 10/12/15 mm)</b>
            <b class="breadcrumb-short">Stół 2400x1200</b>
             </a>
 
 
         </nav>
          <h1 class="gap-top gap-top2">Plany DXF/PDF: Stół spawalniczy&nbsp;<strong>2400x1200</strong>&nbsp;</h1>
-        <p class="product-page-subtitle">System 16/28 | Blat 12/15 mm</p>
+        <p class="product-page-subtitle">System 16/28 | Blat 10/12/15 mm</p>
       </header>
 
       <section class="row gap-bottom product-top-section">
@@ -141,7 +141,10 @@
   <div style="margin-top: 0.5rem; max-width: 400px;">
    <select id="table-config" onchange="updateTableLink()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #333; outline: none;">
       <option value="none" selected disabled>Wybierz System i Grubość blatu</option>
+
+      <option value="s16_10">System Ø16 | Blat 10mm — dWT01.01</option>
       <option value="s16_12">System Ø16 | Blat 12mm — dWT01.03</option>
+      <option value="s28_10">System Ø28 | Blat 10mm — dWT01.02</option>
       <option value="s28_12">System Ø28 | Blat 12mm — dWT01.04</option>
       <option value="s28_15">System Ø28 | Blat 15mm — dWT01.06</option>
     </select>
@@ -881,17 +884,19 @@ function updateTableLink() {
 
   // --- DEFINICJA LINKÓW EASYCART ---
   const soloLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-2?lang=pl',
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0101?lang=pl',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-4?lang=pl',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0102?lang=pl',
     's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-3?lang=pl',
-    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-4?lang=pl'
-    
-    
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-2?lang=pl',
   };
 
   const bundleLinks = {
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-5?lang=pl',
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0101-gotowe-plany-oprzyrzadowania-podstawowego-dwta0101?lang=pl',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-7?lang=pl',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0102-gotowe-plany-oprzyrzadowania-podstawowego-dwta0102?lang=pl',
     's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-6?lang=pl',
-    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-7?lang=pl'
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2400x1200-system-o28-5?lang=pl',
     
     
   };
