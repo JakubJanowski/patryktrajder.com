@@ -7,6 +7,7 @@ import Header from "./scripts/header";
 import HoldOnClick from "./scripts/hold-on-click";
 import LanguageDropdown from "./scripts/language-dropdown";
 import Slider from "./scripts/slider";
+import YoutubePopup from "./scripts/youtube-popup";
 
 const banners = document.getElementsByClassName("banner");
 for (let i = 0; i < banners.length; i++) new Banner(banners[i] as HTMLElement);
@@ -36,6 +37,8 @@ if (holdContainer) new HoldOnClick(holdContainer as HTMLElement);
 const languageDropdowns = document.getElementsByClassName("language-dropdown");
 for (let i = 0; i < languageDropdowns.length; i++)
   new LanguageDropdown(languageDropdowns[i] as HTMLElement);
+
+new YoutubePopup();
 
 // import Promotion from "./scripts/promotion";
 // const products = document.getElementsByClassName("product-details");
