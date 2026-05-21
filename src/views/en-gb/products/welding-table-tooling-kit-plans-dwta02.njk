@@ -207,10 +207,8 @@
   
   
 
-<br>
- 
-
- <div class="availability">
+ <div class="product-availability-list">
+          <div class="availability">
           <p class="availability-item">
     <span class="availability-item__check">✓</span>
     <span class="availability-item__text">
@@ -227,6 +225,24 @@
       <span class="availability-item__label">Post-purchase technical support</span>
     </a>
   </p>
+</div>
+
+
+  <div class="availability">
+    <p>
+      <button
+        type="button"
+        class="availability-item availability-item--link js-youtube-popup-open"
+        data-youtube-id="yAkuHngwtvU"
+      >
+        <span class="availability-item__check">✓</span>
+        <span class="availability-item__label">
+          Tested in real workshop use
+          <span class="availability-item__video-text">(watch video)</span>
+        </span>
+      </button>
+    </p>
+  </div>
 </div>
 
 
@@ -720,11 +736,6 @@
 
 
 
-
-
-
-
-
       <section id="presentation" class="gap-top-medium">
         <div class="yt-video">
           <div>
@@ -750,6 +761,24 @@
         </p>
 
       </section>
+
+
+
+
+      <div class="youtube-popup" id="youtube-popup" aria-hidden="true">
+  <div class="youtube-popup__overlay" data-youtube-close></div>
+
+  <div class="youtube-popup__content" role="dialog" aria-modal="true" aria-label="YouTube video">
+    <button class="youtube-popup__close" type="button" data-youtube-close aria-label="Close video">
+      <svg class="icon youtube-popup__close-icon" aria-hidden="true">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="youtube-popup__video" id="youtube-popup-video"></div>
+  </div>
+</div>
+
 
 <script>
 /**

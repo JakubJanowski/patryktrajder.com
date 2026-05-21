@@ -1,4 +1,4 @@
-{% extends "templates/layout-en-gb.njk" %}
+{% extends "templates/layout-de.njk" %}
 {% set tab = "products" %}
 
 {% block meta %}
@@ -31,7 +31,7 @@
       <header class="gap-top">
         <nav class="breadcrumbs">
           <span>
-            <a href="/en-gb/" title="Homepage">
+            <a href="/de/" title="Homepage">
               <svg class="home icon">
                 <use xlink:href="#icon-home"></use>
               </svg>
@@ -41,12 +41,12 @@
             </svg>
           </span>
           <span>
-            <a href="/en-gb/products/">Products</a>
+            <a href="/de/products/">Products</a>
             <svg class="icon">
               <use xlink:href="#icon-arrow-right"></use>
             </svg>
           </span>
-          <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/">
+          <a href="/de/products/WeldingTable_2400x1200_MateuszDoniec/">
             <b class="breadcrumb-full">Welding Table Build Plans 2400x1200 (System 16/28 | Top 12/15mm)</b>
   
             <b class="breadcrumb-short">Table 2400x1200</b>
@@ -155,6 +155,55 @@
               </svg>
             </span>
           </div>
+
+
+
+
+
+            <div class="product-availability-list">
+
+  <div class="availability">
+    <p class="availability-item">
+      <span class="availability-item__check">✓</span>
+      <span class="availability-item__text">
+        <span>Sofortiger&nbsp;Download&nbsp;</span>
+        <span class="availability-item__nowrap">| E-Mail&nbsp;24/7</span>
+      </span>
+    </p>
+  </div>
+
+  <div class="availability">
+    <p>
+      <a href="#support-section" class="availability-item availability-item--link">
+        <span class="availability-item__check">✓</span>
+        <span class="availability-item__label">Technischer Support nach dem Kauf</span>
+      </a>
+    </p>
+  </div>
+
+  <div class="availability">
+    <p>
+      <button
+        type="button"
+        class="availability-item availability-item--link js-youtube-popup-open"
+        data-youtube-id="BB4Zn4hwmps"
+      >
+        <span class="availability-item__check">✓</span>
+        <span class="availability-item__label">
+          Im Praxiseinsatz getestet
+          <span class="availability-item__video-text">(Video ansehen)</span>
+        </span>
+      </button>
+    </p>
+  </div>
+
+</div>
+
+
+
+
+
+
           <p class="note">* Calls only in English or Polish language.</p>
         </div>
       </section>
@@ -328,6 +377,27 @@
           </div>
         </div>
       </section>
+
+
+
+
+<div class="youtube-popup" id="youtube-popup" aria-hidden="true">
+  <div class="youtube-popup__overlay" data-youtube-close></div>
+
+  <div class="youtube-popup__content" role="dialog" aria-modal="true" aria-label="YouTube-Video">
+    <button class="youtube-popup__close" type="button" data-youtube-close aria-label="Video schließen">
+      <svg class="icon youtube-popup__close-icon" aria-hidden="true">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="youtube-popup__video" id="youtube-popup-video"></div>
+  </div>
+</div>
+
+
+
+
 
     </article>
   </main>

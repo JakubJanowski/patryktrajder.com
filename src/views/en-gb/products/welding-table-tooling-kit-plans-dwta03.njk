@@ -127,35 +127,43 @@
   
 
 
-       <br>
- <div class="availability">
-          <p><span class="green-text">Instant&nbsp;Email</span>&nbsp;|&#32;<span style="color: #333; white-space: nowrap;">24/7</span></p>
-       </div>
+      <div class="product-availability-list">
+          <div class="availability">
+          <p class="availability-item">
+    <span class="availability-item__check">✓</span>
+    <span class="availability-item__text">
+      <span>Instant&nbsp;Email&nbsp;</span>
+      <span class="availability-item__nowrap">&nbsp;24/7</span>
+    </span>
+  </p>
+</div>
+
+<div class="availability">
+  <p>
+    <a href="#support-section" class="availability-item availability-item--link">
+      <span class="availability-item__check">✓</span>
+      <span class="availability-item__label">Post-purchase technical support</span>
+    </a>
+  </p>
+</div>
 
 
- <div class="assembly-difficulty">
-            <p>Difficulty of assembly</p>
-            <span>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench-full"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench-full"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-            </span>
-          </div>
+  <div class="availability">
+    <p>
+      <button
+        type="button"
+        class="availability-item availability-item--link js-youtube-popup-open"
+        data-youtube-id="yAkuHngwtvU"
+      >
+        <span class="availability-item__check">✓</span>
+        <span class="availability-item__label">
+          Tested in real workshop use
+          <span class="availability-item__video-text">(watch video)</span>
+        </span>
+      </button>
+    </p>
+  </div>
+</div>
 
 
         <div style="display: flex; justify-content: flex-end; max-width: 400px; margin-top: 48px; margin-bottom: 32px;">
@@ -451,13 +459,31 @@
         </div>
       </div>
 
-      <section id="presentation" class="gap-top-medium">
+     <section id="presentation" class="gap-top-medium">
         <div class="yt-video">
           <div>
-            <iframe src="https://www.youtube-nocookie.com/embed/BB4Zn4hwmps?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" title="Stół Spawalniczy"></iframe>
-          </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yAkuHngwtvU?si=a_vdw4CN4Ne6XCdB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe></div>
         </div>
-      </section>
+
+
+
+
+
+<div class="youtube-popup" id="youtube-popup" aria-hidden="true">
+  <div class="youtube-popup__overlay" data-youtube-close></div>
+
+  <div class="youtube-popup__content" role="dialog" aria-modal="true" aria-label="YouTube video">
+    <button class="youtube-popup__close" type="button" data-youtube-close aria-label="Close video">
+      <svg class="icon youtube-popup__close-icon" aria-hidden="true">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="youtube-popup__video" id="youtube-popup-video"></div>
+  </div>
+</div>
+
 
 <script>
 /**

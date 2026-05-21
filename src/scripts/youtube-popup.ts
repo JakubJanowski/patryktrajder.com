@@ -11,12 +11,51 @@ export default class YoutubePopup {
     this.openButtons = document.querySelectorAll<HTMLButtonElement>(".js-youtube-popup-open");
     this.closeButtons = document.querySelectorAll<HTMLElement>("[data-youtube-close]");
 
+    // Jeśli na stronie nie ma popupu YouTube, nic nie rób.
     if (!this.popup || !this.videoBox || this.openButtons.length === 0) return;
 
     this.bindEvents();
 
     // Nie obciąża startu strony — odpala dopiero po 3 sekundach.
     window.setTimeout(() => this.addYoutubePreconnect(), 3000);
+  }
+
+  private getPageLang(): string {
+    return document.documentElement.lang.toLowerCase();
+  }
+
+  private getLoadingText(): string {
+    // Opcjonalne ręczne nadpisanie z HTML:
+    // <div class="youtube-popup" data-loading-text="...">
+    if (this.popup?.dataset.loadingText) {
+      return this.popup.dataset.loadingText;
+    }
+
+    const pageLang = this.getPageLang();
+
+    if (pageLang.startsWith("pl")) {
+      return "Ładowanie filmu...";
+    }
+
+    if (pageLang.startsWith("de")) {
+      return "Video wird geladen...";
+    }
+
+    return "Loading video...";
+  }
+
+  private getIframeTitle(): string {
+    const pageLang = this.getPageLang();
+
+    if (pageLang.startsWith("pl")) {
+      return "Film YouTube";
+    }
+
+    if (pageLang.startsWith("de")) {
+      return "YouTube-Video";
+    }
+
+    return "YouTube video";
   }
 
   private addYoutubePreconnect(): void {
@@ -41,6 +80,8 @@ export default class YoutubePopup {
   private openYoutubePopup(videoId: string | undefined): void {
     if (!videoId || !this.popup || !this.videoBox) return;
 
+    // Jeśli użytkownik kliknie przed upływem 3 sekund,
+    // preconnect wykona się natychmiast.
     this.addYoutubePreconnect();
 
     this.popup.classList.add("is-open");
@@ -49,12 +90,15 @@ export default class YoutubePopup {
 
     this.videoBox.classList.add("is-loading");
 
+    const loadingText = this.getLoadingText();
+    const iframeTitle = this.getIframeTitle();
+
     this.videoBox.innerHTML = `
-      <div class="youtube-popup__loader">Ładowanie filmu...</div>
+      <div class="youtube-popup__loader">${loadingText}</div>
 
       <iframe
         src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&autoplay=1"
-        title="Film YouTube"
+        title="${iframeTitle}"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
