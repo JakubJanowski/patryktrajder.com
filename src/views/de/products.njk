@@ -12,14 +12,6 @@
 {% endblock %}
 
 {% block body %}
-    {# <div class="banner">
-        <div class="container">
-            <div class="image-placeholder" style="padding-top: 25.104166666%;">
-                <img src="/assets/images/products-banner-w1920.jpg" srcset="/assets/images/products-banner-w768.jpg 768w, /assets/images/products-banner-w1920.jpg 1920w" alt="Werkzeuge an der Werkstattwand"/>
-            </div>
-        </div>
-    </div> #}
-
     <main>
         <nav class="breadcrumbs gap-top">
             <span>
@@ -36,67 +28,37 @@
                 <b>Produkte</b>
             </a>
         </nav>
-        {#
-        <nav class="categories">
-            <a href="#diy-tools" title="DIY tools">
-                <p>
-                    DIY-Werkzeuge
-                </p>
-            </a>
-            <a href="#gadgets" title="Gadgets">
-                <p>
-                    Gadgets
-                </p>
-            </a>
-        </nav> #}
+        
 
       <article id="diy-tools" class="gap-top preview-list">
       {# <h1 class="gap-bottom-medium centered-text">Produkte</h1> #}
-      <div class="product-cards-container">
-  <div class="product-card">
-<a href="/de/products/super-booster-2000/" class="product-image-link">
-<img src="/assets/images/super-booster-2000/thumb-w320.0.jpg" alt="Super Booster 2000"/>
-  </a>
-    <div class="product-card-content">
-      <a href="/de/products/super-booster-2000/" class="product-title">Rohrausklinker - Super Booster 2000 (Tube Notcher)</a>
-      <div class="product-price">EURO 189.01</div>
-      <a href="/de/products/super-booster-2000/" class="product-link">Mehr Informationen...</a>
-      <div class="cart-action-row">
-<a href="/de/products/super-booster-2000/" class="btn-dwt">Details ansehen</a>
-      </div>
-    </div>
-  </div>
 
+{% from "components/product-card-de.njk" import productCardDe %}
 
-  <div class="product-card">
-  <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/" class="product-image-link">
-    <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/enthumb-w320h180.jpg" alt="wealding table plans"/>
-     </a>
-    <div class="product-card-content">
-      <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/" class="product-title">Welding Table Build Plans &nbsp;<strong>2400x1200</strong>&nbsp;(System 16/28 | Top 12/15mm)</a>
-        <div class="product-price">EURO 35.00</div>
-             <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/" class="product-link">Mehr Informationen...</a>
-        <div class="cart-action-row">
-        <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/" class="btn-dwt">Details ansehens</a>
-      </div>
-    </div>
-  </div>
+{% set productOrderDe = [
+  "TN01",
+  "dWT04",
+  "dWT02",
+  "dWT03",
+  "dWT05",
+  "dWTA01",
+  "dWTA02",
+  "dWS02",
+  "dWS01",
+  "dWTA03"
+] %}
 
-<div class="product-card">
-  <a href="/en-gb/products/WeldingTable_2000x1000_MateuszDoniec/" class="product-image-link">
-    <img src="/assets/images/WeldingTable_2000x1000_MateuszDoniec/thumb-w320.jpg" alt="wealding table plans"/>
-     </a>
-    <div class="product-card-content">
-      <a href="/en-gb/products/WeldingTable_2000x1000_MateuszDoniec/" class="product-title">Welding Table Build Plans &nbsp;<strong>2000x1000</strong>&nbsp;(System 16/28 | Top 12/15mm)</a>
-        <div class="product-price">EURO 35.00</div>
-             <a href="/en-gb/products/WeldingTable_2000x1000_MateuszDoniec/" class="product-link">Mehr Informationen...</a>
-        <div class="cart-action-row">
-        <a href="/en-gb/products/WeldingTable_2000x1000_MateuszDoniec/" class="btn-dwt">Details ansehens</a>
-      </div>
-    </div>
-  </div>
-  </div>
+<div class="product-cards-container">
+  {% for productCode in productOrderDe %}
+    {% set product = productsDe[productCode] %}
 
+    {% if product %}
+      {{ productCardDe(product) }}
+    {% else %}
+      {# Missing product in productsDe.json: {{ productCode }} #}
+    {% endif %}
+  {% endfor %}
+</div>
 
 
 

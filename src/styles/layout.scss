@@ -327,7 +327,20 @@ p.indent {
 }
 
 
+/* Karty w sekcji "To również Ci się przyda" - tekst jak na /products/ */
+.homepage-products .product-card,
+.homepage-products .product-card-content,
+.homepage-products .product-title,
+.homepage-products .product-link,
+.homepage-products .product-price {
+  text-align: left;
+}
 
+/* Przycisk zostaje po prawej stronie karty */
+.homepage-products .cart-action-row {
+  display: flex;
+  justify-content: flex-end;
+}
 
 
 .product-page-subtitle {
