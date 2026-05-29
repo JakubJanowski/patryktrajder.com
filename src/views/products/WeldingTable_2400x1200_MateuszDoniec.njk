@@ -129,7 +129,7 @@
     </span>
     <span class="product-review-jump__score">5.0</span>
     <span class="product-review-jump__dot">·</span>
-    <span class="product-review-jump__count">(2 opinie)</span>
+    <span class="product-review-jump__count">(3 opinie)</span>
   </a>
 
 
@@ -286,6 +286,11 @@
         </div>
       </section>
 
+
+
+{# -------------------------------------------------------------------------------------- #}
+
+
   <section class="parallax-section gap-bottom gap-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/WeldingTable_2400x1200_MateuszDoniec/table-paralaksa.jpg');
          background-position: 90% center;">  {# jak ma skalowac sie zdjecie 0 idzie w prawo 100 idzie w lewo #}  
         {# INSTRUKCJA
@@ -307,7 +312,7 @@
 
 
 
-
+{# -------------------------------------------------------------------------------------- #}
 
 
 <nav class="product-section-nav" aria-label="Product section navigation">
@@ -396,6 +401,8 @@
 
 
 
+{# -------------------------------------------------------------------------------------- #}
+
 
 
 
@@ -464,11 +471,11 @@
 
 
 
+{# -------------------------------------------------------------------------------------- #}
 
 
 
-
-    <section id="support-section" class="product-scroll-section product-anchor-section">
+<section id="support-section" class="product-scroll-section product-anchor-section">
   <h1>Wsparcie po zakupie</h1>
    <p>Naszym celem nie jest sprzedaż samych planów i zakończenie kontaktu z klientem.</p>
    <ul class="dots">
@@ -492,109 +499,32 @@
 
 
 
-
-
-
-<section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
-  <h1>Opinie</h1>
-
-{# blok opini  #}
-  <div class="product-opinion-card">
-    <div class="product-opinion-card__header">
-      <div class="product-opinion-card__author-line">
-        <span class="product-opinion-card__author"><strong>Marek</strong></span>
-        <span class="product-opinion-card__meta">(Polska)</span>
-        <svg class="flag icon" aria-hidden="true">
-          <use xlink:href="#icon-flag-pl-rect"></use>
-        </svg>
-      </div>
-      <div class="product-opinion-card__rating-line">
-        <div class="product-opinion-card__stars" aria-hidden="true">
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-        </div>
-        <span class="product-opinion-card__score">5/5</span>
-        <span class="product-opinion-card__product">(Stół 2400x1200 mm)</span>
-      </div>
-    </div>
-    <p class="product-opinion-card__text">
-      Grafik był zadowolony , mówił że za 100zl "przysłowiowe "  czy przysługę dla mnie by mu się nie chciało tego przerysowywac nawet jak bym mu dał na kartce narysowany projekt, nie ma co wymyślać koła na nowo czy wyważać głową muru i lepiej od ciebie kupić 😁 .a do tego zdjęcia poglądowe i wszystkie potrzebne czesci puzzli opisane 👍
-    </p>
-
-    <div class="product-opinion-gallery">
-  <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.jpg">
-    <img src="/assets/images/reviews/dwt03-1.jpg" alt="Zdjęcie od klienta - Marek">
-  </button>
-
-  <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.1.jpg">
-    <img src="/assets/images/reviews/dwt03-1.1.jpg" alt="Zdjęcie od klienta - Marek">
-  </button>
-</div>
-</div>
- {# blok opini  #}
-  
-
-
-{# blok opini  #}
-  <div class="product-opinion-card">
-    <div class="product-opinion-card__header">
-      <div class="product-opinion-card__author-line">
-        <span class="product-opinion-card__author"><strong>Mirek</strong></span>
-        <span class="product-opinion-card__meta">(Polska)</span>
-        <svg class="flag icon" aria-hidden="true">
-          <use xlink:href="#icon-flag-pl-rect"></use>
-        </svg>
-      </div>
-      <div class="product-opinion-card__rating-line">
-        <div class="product-opinion-card__stars" aria-hidden="true">
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-        </div>
-        <span class="product-opinion-card__score">5/5</span>
-        <span class="product-opinion-card__product">(Stół 2000x1000 mm)</span>
-      </div>
-    </div>
-    <p class="product-opinion-card__text">
-      Oglądam Mateusza od dawna i wiedziałem, że projekt będzie dopracowany. Nie zawiodłem się. Dokumentacja kompletna, od razu widać doświadczenie technologa. Jeśli ktoś chce mieć porządny blat spawalniczy bez błędów w projekcie, to brać w ciemno! Pozdrawienia z krakowa!
-      </p>
-  </div>
-{# blok opini  #}
+{# -------------------------------------------------------------------------------------- #}
 
 
 
 
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
 
-<div class="centered-text">
-          <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
-          <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)
-          </p>
-        </div>
-      <div class="product-review-lightbox" id="product-review-lightbox" hidden>
-        <div class="product-review-lightbox__backdrop" data-close-review-lightbox></div>
-        <div class="product-review-lightbox__dialog">
-        <button class="product-review-lightbox__close" type="button" aria-label="Close image" data-close-review-lightbox>
-            ×
-        </button>
-          <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
-     </div>
-    </div>
-      </section>
+{% set productReviews = [
+  "dWT01-002-pl",
+  "dWT01-001-pl",
+  "dWT02-001-pl"
+] %}
 
-
-
-
-
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
       
 
 
 
+{# -------------------------------------------------------------------------------------- #}
+
  
+
+
+
       
 {% set recommendedProducts = [
         "TN01",
@@ -616,7 +546,7 @@
 
 
 
-
+{# -------------------------------------------------------------------------------------- #}
 
 
 
@@ -627,6 +557,9 @@
           </div>
         </div>
 </section> 
+
+
+{# -------------------------------------------------------------------------------------- #}
 
         <p>
           <br>
@@ -653,6 +586,8 @@
 
          
 
+
+{# -------------------------------------------------------------------------------------- #}
 
 
 

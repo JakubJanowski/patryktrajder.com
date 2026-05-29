@@ -503,46 +503,28 @@
 
 
 
-<section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
-  <h1>Opinie</h1>
 
 
 
-{# blok opini  #}
-  <div class="product-opinion-card">
-    <div class="product-opinion-card__header">
-      <div class="product-opinion-card__author-line">
-        <span class="product-opinion-card__author"><strong>Rafik87</strong></span>
-        <span class="product-opinion-card__meta">(Polska)</span>
-        <svg class="flag icon" aria-hidden="true">
-          <use xlink:href="#icon-flag-pl-rect"></use>
-        </svg>
-      </div>
+{# -------------------------------------------------------------------------------------- #}
 
-      <div class="product-opinion-card__rating-line">
-        <div class="product-opinion-card__stars" aria-hidden="true">
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-        </div>
-        <span class="product-opinion-card__score">5/5</span>
-        <span class="product-opinion-card__product">(2400x200 mm)</span>
-      </div>
-    </div>
 
-    <p class="product-opinion-card__text">
-      Projekt konkretny, wszystko pasuje jak trzeba. Wycięte, poskładane bez problemów, nic nie trzeba było poprawiać. Pliki przejrzyste, robota idzie gładko. Jak najbardziej na plus
-    </p>
 
-    <div class="product-opinion-gallery">
-      <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/opinia-dWS01.jpg">
-        <img src="/assets/images/reviews/opinia-dWS01.jpg" alt="Zdjęcie od klienta - Drift Zone Media">
-      </button>
-    </div>
-  </div>
-{# blok opini  #}
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
+
+{% set productReviews = [
+  "dWS01-001-pl"
+] %}
+
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
+
+
+
+
+
+{# -------------------------------------------------------------------------------------- #}
 
 
 
@@ -550,21 +532,6 @@
 
 
 
-<div class="centered-text">
-          <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
-          <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)
-          </p>
-        </div>
-      <div class="product-review-lightbox" id="product-review-lightbox" hidden>
-        <div class="product-review-lightbox__backdrop" data-close-review-lightbox></div>
-        <div class="product-review-lightbox__dialog">
-        <button class="product-review-lightbox__close" type="button" aria-label="Close image" data-close-review-lightbox>
-            ×
-        </button>
-          <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
-     </div>
-    </div>
-      </section>
 
 
 
@@ -584,6 +551,14 @@
 ] %}
 
 {% include "sections/recommended-products-pl.njk" %}
+
+
+
+
+
+
+
+
 
 
 

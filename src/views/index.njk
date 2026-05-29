@@ -210,47 +210,7 @@ height: 100%; – całe zdjęcie będzie pokryte płynnym przejściem od czerni 
     <br>
     <br>
 
-    <section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
-      <h1>Wybrane opinie</h1>
-
-      <div class="product-opinion-card">
-        <div class="product-opinion-card__header">
-          <div class="product-opinion-card__author-line">
-            <span class="product-opinion-card__author"><strong>Ekipa Drift Zone Media</strong></span>
-            <span class="product-opinion-card__meta">(Polska)</span>
-            <svg class="flag icon" aria-hidden="true">
-              <use xlink:href="#icon-flag-pl-rect"></use>
-            </svg>
-          </div>
-
-          <div class="product-opinion-card__rating-line">
-            <div class="product-opinion-card__stars" aria-hidden="true">
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            </div>
-            <span class="product-opinion-card__score">5/5</span>
-            <span class="product-opinion-card__product">[WYKRAWARKA DO RUR]</span>
-          </div>
-        </div>
-
-        <p class="product-opinion-card__text">
-          Jesteśmy pod mega wrażenie wykonania Wykrawarki Super Booster 2000.
-          Wszystkie szczegóły są dopracowane do perfekcji.
-          Montaż jest banalnie prosty, wszystkie kroki są świetnie opisane na stronie.
-          Wykrawarka bardzo ułatwia prace podczas budowy klatki bezpieczeństwa.
-          Myśle ze równie spisze się przy innych projektach wykonanych z rur czy profili.
-        </p>
-
-        <div class="product-opinion-gallery">
-          <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/opinia1.jpg">
-            <img src="/assets/images/reviews/opinia1.jpg" alt="Zdjęcie od klienta - Drift Zone Media">
-          </button>
-        </div>
-      </div>
-       {# blok opini  #}
+    
 
 
 
@@ -258,45 +218,29 @@ height: 100%; – całe zdjęcie będzie pokryte płynnym przejściem od czerni 
 
 
 
-{# blok opini  #}
-      <div class="product-opinion-card">
-        <div class="product-opinion-card__header">
-          <div class="product-opinion-card__author-line">
-            <span class="product-opinion-card__author"><strong>Marek</strong></span>
-            <span class="product-opinion-card__meta">(Polska)</span>
-            <svg class="flag icon" aria-hidden="true">
-              <use xlink:href="#icon-flag-pl-rect"></use>
-            </svg>
-          </div>
 
-          <div class="product-opinion-card__rating-line">
-            <div class="product-opinion-card__stars" aria-hidden="true">
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            </div>
-            <span class="product-opinion-card__score">5/5</span>
-            <span class="product-opinion-card__product">(Stół 2400x1200 mm)</span>
-          </div>
-        </div>
+{% set reviewsLang = "pl" %}
+{% set reviewsHeading = "Wybrane opinie" %}
+{% set reviewsIntro = "Zobacz, jak projekty i produkty TRAJDER sprawdzają się w realnych warsztatach." %}
+{% set reviewsSectionClass = "homepage-reviews" %}
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
 
-        <p class="product-opinion-card__text">
-          Grafik był zadowolony , mówił że za 100zl "przysłowiowe "  czy przysługę dla mnie by mu się nie chciało tego przerysowywac nawet jak bym mu dał na kartce narysowany projekt, nie ma co wymyślać koła na nowo czy wyważać głową muru i lepiej od ciebie kupić 😁 .a do tego zdjęcia poglądowe i wszystkie potrzebne czesci puzzli opisane 👍
-    </p>
+{% set productReviews = [
+   "dWT01-002-pl",
+   "dWT01-001-pl",
+   "dWS01-001-pl",
+   "TN01-001-pl",
+   "TN01-002-pl",
+   "TN01-003-en",
+   "TN01-004-en",
+   "TN01-005-de",
+   "TN01-005-en",
+   "dWTA01-001-pl"
+] %}
 
-        <div class="product-opinion-gallery">
-          <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.jpg">
-            <img src="/assets/images/reviews/dwt03-1.jpg" alt="Zdjęcie od klienta - Marek">
-          </button>
-
-          <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.1.jpg">
-            <img src="/assets/images/reviews/dwt03-1.1.jpg" alt="Zdjęcie od klienta - Marek">
-          </button>
-        </div>
-      </div>
- {# blok opini  #}
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
 
 
 
@@ -307,51 +251,14 @@ height: 100%; – całe zdjęcie będzie pokryte płynnym przejściem od czerni 
 
 
 
-{# --------------------------------------- #}
 
 
 
-{# blok opini  #}
-      <div class="product-opinion-card">
-        <div class="product-opinion-card__header">
-          <div class="product-opinion-card__author-line">
-            <span class="product-opinion-card__author"><strong>Rafał</strong></span>
-            <span class="product-opinion-card__meta">(Polska)</span>
-            <svg class="flag icon" aria-hidden="true">
-              <use xlink:href="#icon-flag-pl-rect"></use>
-            </svg>
-          </div>
 
-          <div class="product-opinion-card__rating-line">
-            <div class="product-opinion-card__stars" aria-hidden="true">
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-            </div>
-            <span class="product-opinion-card__score">5/5</span>
-            <span class="product-opinion-card__product">[WYKRAWARKA DO RUR]</span>
-          </div>
-        </div>
 
-        <p class="product-opinion-card__text">
-          Panie Patryku ostatnio złożyłem zakupiona wykrawarke i muszę przyznać robi robotę fajnie się na niej pracuje, jestem naprawde zadowolony. Pozdrawiam
-        </p>
-      </div>
 
-      <div class="product-review-lightbox" id="product-review-lightbox" hidden>
-        <div class="product-review-lightbox__backdrop" data-close-review-lightbox></div>
 
-        <div class="product-review-lightbox__dialog">
-          <button class="product-review-lightbox__close" type="button" aria-label="Close image" data-close-review-lightbox>
-            ×
-          </button>
 
-          <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
-        </div>
-      </div>
-    </section>
 
     <section class="gap-top-medium homepage-products product-anchor-section">
       <h1>Wybrane Poradniki</h1>

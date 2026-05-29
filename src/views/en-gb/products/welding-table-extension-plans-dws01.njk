@@ -376,60 +376,30 @@
 
 
 
-      <section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
-        <h1>Reviews</h1>
-
-        <div class="product-opinion-card">
-          <div class="product-opinion-card__header">
-            <div class="product-opinion-card__author-line">
-              <span class="product-opinion-card__author"><strong>Rafik87</strong></span>
-              <span class="product-opinion-card__meta">(Poland)</span>
-              <svg class="flag icon" aria-hidden="true">
-                <use xlink:href="#icon-flag-pl-rect"></use>
-              </svg>
-            </div>
-
-            <div class="product-opinion-card__rating-line">
-              <div class="product-opinion-card__stars" aria-hidden="true">
-                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-              </div>
-              <span class="product-opinion-card__score">5/5</span>
-              <span class="product-opinion-card__product">(2400x200 mm)</span>
-            </div>
-          </div>
-
-          <p class="product-opinion-card__text">
-            Produkt jest dokumentacją cyfrową (komplet planów budowy zestawu oprzyrządowania). Nie są to fizyczne akcesoria ani gotowe elementy metalowe. Do poprawnej realizacji projektu wymagane są podstawowe umiejętności spawalnicze oraz zlecenie wycięcia elementów stalowych (np. laserem lub plazmą) zgodnie z załączonymi plikami DXF.
-          </p>
-
-          <div class="product-opinion-gallery">
-            <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/opinia-dWS01.jpg">
-              <img src="/assets/images/reviews/opinia-dWS01.jpg" alt="Customer review photo">
-            </button>
-          </div>
-        </div>
-
-        <div class="centered-text">
-          <p class="single-out">Would you also like to share your own experience with this purchase?</p>
-          <p class="gap-top">At the moment, reviews cannot be added directly through the website, so if you would like to submit one, please send it to&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, and I will add it manually to the site. Thank you in advance — it truly means a lot to me! ;)</p>
-        </div>
-        <div class="product-review-lightbox" id="product-review-lightbox" hidden>
-          <div class="product-review-lightbox__backdrop" data-close-review-lightbox></div>
-          <div class="product-review-lightbox__dialog">
-            <button class="product-review-lightbox__close" type="button" aria-label="Close image" data-close-review-lightbox>
-              ×
-            </button>
-            <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
-          </div>
-        </div>
-      </section>
 
      
+{# -------------------------------------------------------------------------------------- #}
 
+
+
+
+{% set reviewsLang = "en" %}
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
+
+{% set productReviews = [
+  "dWS01-001-pl"
+] %}
+
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
+
+
+
+
+
+
+{# -------------------------------------------------------------------------------------- #}
 
 
 
@@ -595,119 +565,9 @@ function copyEmail(element) {
   });
 }
 
-/** REVIEWS - review photos */
-document.addEventListener('DOMContentLoaded', function () {
-  const reviewsSection = document.querySelector('.product-reviews-section');
-  if (!reviewsSection) return;
-
-  const lightbox = reviewsSection.querySelector('#product-review-lightbox');
-  const lightboxImage = reviewsSection.querySelector('#product-review-lightbox-image');
-
-  if (!lightbox || !lightboxImage) return;
-
-  reviewsSection.querySelectorAll('.product-opinion-gallery__item').forEach((button) => {
-    button.addEventListener('click', function () {
-      const fullImage = this.getAttribute('data-full');
-      if (!fullImage) return;
-
-      lightboxImage.src = fullImage;
-      lightbox.hidden = false;
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  lightbox.querySelectorAll('[data-close-review-lightbox]').forEach((element) => {
-    element.addEventListener('click', function () {
-      lightbox.hidden = true;
-      lightboxImage.src = '';
-      document.body.style.overflow = '';
-    });
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && !lightbox.hidden) {
-      lightbox.hidden = true;
-      lightboxImage.src = '';
-      document.body.style.overflow = '';
-    }
-  });
-});
-/** REVIEWS */
 
 
 
-
-
-
-//slider produktow
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.product-scroller').forEach((scroller) => {
-    let isMouseDown = false;
-    let isDragging = false;
-    let startX = 0;
-    let startScrollLeft = 0;
-    let preventClick = false;
-
-    scroller.addEventListener('mousedown', function (e) {
-      if (e.button !== 0) return; // tylko lewy przycisk myszy
-
-      isMouseDown = true;
-      isDragging = false;
-      preventClick = false;
-      startX = e.pageX;
-      startScrollLeft = scroller.scrollLeft;
-    });
-
-    window.addEventListener('mousemove', function (e) {
-      if (!isMouseDown) return;
-
-      const dx = e.pageX - startX;
-
-      // dopiero po realnym ruchu zaczynamy drag
-      if (!isDragging && Math.abs(dx) > 8) {
-        isDragging = true;
-        preventClick = true;
-        scroller.classList.add('is-dragging');
-      }
-
-      if (!isDragging) return;
-
-      scroller.scrollLeft = startScrollLeft - dx;
-      e.preventDefault();
-    });
-
-    function stopDrag() {
-      if (!isMouseDown) return;
-
-      isMouseDown = false;
-      scroller.classList.remove('is-dragging');
-
-      // po prawdziwym dragowaniu blokujemy tylko najbliższy klik
-      if (isDragging) {
-        setTimeout(() => {
-          preventClick = false;
-        }, 0);
-      }
-
-      isDragging = false;
-    }
-
-    window.addEventListener('mouseup', stopDrag);
-    scroller.addEventListener('mouseleave', stopDrag);
-
-    scroller.addEventListener('click', function (e) {
-      if (preventClick) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    }, true);
-
-    // opcjonalnie: żeby przeglądarka nie próbowała zaznaczać tekstu przy szybkim dragowaniu
-    scroller.querySelectorAll('a, img').forEach((el) => {
-      el.setAttribute('draggable', 'false');
-    });
-  });
-});
 </script>
     </article>
   </main>

@@ -449,73 +449,27 @@
 
 
 
+{# -------------------------------------------------------------------------------------- #}
+
+
+
+
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
+
+{% set productReviews = [
+  "dWTA03-001-pl"
+] %}
+
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
 
 
 
 
 
-<section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
-  <h1>Opinie</h1>
 
-{# blok opini  #}
-  <div class="product-opinion-card">
-    <div class="product-opinion-card__header">
-      <div class="product-opinion-card__author-line">
-        <span class="product-opinion-card__author"><strong>Przem88</strong></span>
-        <span class="product-opinion-card__meta">(Polska)</span>
-        <svg class="flag icon" aria-hidden="true">
-          <use xlink:href="#icon-flag-pl-rect"></use>
-        </svg>
-      </div>
-      <div class="product-opinion-card__rating-line">
-        <div class="product-opinion-card__stars" aria-hidden="true">
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-          <svg class="icon"><use xlink:href="#icon-star"></use></svg>
-        </div>
-        <span class="product-opinion-card__score">5/5</span>
-        <span class="product-opinion-card__product">(dWTA03)</span>
-      </div>
-    </div>
-    <p class="product-opinion-card__text">
-      Rysunki przejrzyste i  kompletne. Wszystko ok</p>
-
-    {# <div class="product-opinion-gallery">
-  <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.jpg">
-    <img src="/assets/images/reviews/dwt03-1.jpg" alt="Zdjęcie od klienta - Marek">
-  </button>
-
-  <button class="product-opinion-gallery__item" type="button" data-full="/assets/images/reviews/dwt03-1.1.jpg">
-    <img src="/assets/images/reviews/dwt03-1.1.jpg" alt="Zdjęcie od klienta - Marek">
-  </button>
-</div> #}
-</div>
- {# blok opini  #}
-  
-
-
-
-
-<div class="centered-text">
-          <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
-          <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)
-          </p>
-        </div>
-      <div class="product-review-lightbox" id="product-review-lightbox" hidden>
-        <div class="product-review-lightbox__backdrop" data-close-review-lightbox></div>
-        <div class="product-review-lightbox__dialog">
-        <button class="product-review-lightbox__close" type="button" aria-label="Close image" data-close-review-lightbox>
-            ×
-        </button>
-          <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
-     </div>
-    </div>
-      </section>
-
-
-
+{# -------------------------------------------------------------------------------------- #}
 
 
       
@@ -697,124 +651,6 @@ function copyEmail(element) {
 }
 
 
-
-
-
-
-
-/** OPINIE - zdjecia w opiniach  */
-document.addEventListener('DOMContentLoaded', function () {
-  const reviewsSection = document.querySelector('.product-reviews-section');
-  if (!reviewsSection) return;
-
-  const lightbox = reviewsSection.querySelector('#product-review-lightbox');
-  const lightboxImage = reviewsSection.querySelector('#product-review-lightbox-image');
-
-  if (!lightbox || !lightboxImage) return;
-
-  reviewsSection.querySelectorAll('.product-opinion-gallery__item').forEach((button) => {
-    button.addEventListener('click', function () {
-      const fullImage = this.getAttribute('data-full');
-      if (!fullImage) return;
-
-      lightboxImage.src = fullImage;
-      lightbox.hidden = false;
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  lightbox.querySelectorAll('[data-close-review-lightbox]').forEach((element) => {
-    element.addEventListener('click', function () {
-      lightbox.hidden = true;
-      lightboxImage.src = '';
-      document.body.style.overflow = '';
-    });
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && !lightbox.hidden) {
-      lightbox.hidden = true;
-      lightboxImage.src = '';
-      document.body.style.overflow = '';
-    }
-  });
-});
-/** OPINIE  */
-
-
-
-
-
-
-//slider produktow
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.product-scroller').forEach((scroller) => {
-    let isMouseDown = false;
-    let isDragging = false;
-    let startX = 0;
-    let startScrollLeft = 0;
-    let preventClick = false;
-
-    scroller.addEventListener('mousedown', function (e) {
-      if (e.button !== 0) return; // tylko lewy przycisk myszy
-
-      isMouseDown = true;
-      isDragging = false;
-      preventClick = false;
-      startX = e.pageX;
-      startScrollLeft = scroller.scrollLeft;
-    });
-
-    window.addEventListener('mousemove', function (e) {
-      if (!isMouseDown) return;
-
-      const dx = e.pageX - startX;
-
-      // dopiero po realnym ruchu zaczynamy drag
-      if (!isDragging && Math.abs(dx) > 8) {
-        isDragging = true;
-        preventClick = true;
-        scroller.classList.add('is-dragging');
-      }
-
-      if (!isDragging) return;
-
-      scroller.scrollLeft = startScrollLeft - dx;
-      e.preventDefault();
-    });
-
-    function stopDrag() {
-      if (!isMouseDown) return;
-
-      isMouseDown = false;
-      scroller.classList.remove('is-dragging');
-
-      // po prawdziwym dragowaniu blokujemy tylko najbliższy klik
-      if (isDragging) {
-        setTimeout(() => {
-          preventClick = false;
-        }, 0);
-      }
-
-      isDragging = false;
-    }
-
-    window.addEventListener('mouseup', stopDrag);
-    scroller.addEventListener('mouseleave', stopDrag);
-
-    scroller.addEventListener('click', function (e) {
-      if (preventClick) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    }, true);
-
-    // opcjonalnie: żeby przeglądarka nie próbowała zaznaczać tekstu przy szybkim dragowaniu
-    scroller.querySelectorAll('a, img').forEach((el) => {
-      el.setAttribute('draggable', 'false');
-    });
-  });
-});
 
 
 

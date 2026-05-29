@@ -131,7 +131,7 @@
     </span>
     <span class="product-review-jump__score">5.0</span>
     <span class="product-review-jump__dot">·</span>
-    <span class="product-review-jump__count">(2 opinie)</span>
+    <span class="product-review-jump__count">(3 opinie)</span>
   </a>
 
 
@@ -528,10 +528,9 @@
 
 
 
-<section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
+{# <section id="opinions-section" class="product-anchor-section product-reviews-section homepage-reviews">
   <h1>Opinie</h1>
 
-{# blok opini  #}
   <div class="product-opinion-card">
     <div class="product-opinion-card__header">
       <div class="product-opinion-card__author-line">
@@ -567,11 +566,11 @@
   </button>
 </div>
 </div>
- {# blok opini  #}
+
   
 
 
-{# blok opini  #}
+
   <div class="product-opinion-card">
     <div class="product-opinion-card__header">
       <div class="product-opinion-card__author-line">
@@ -597,7 +596,7 @@
       Oglądam Mateusza od dawna i wiedziałem, że projekt będzie dopracowany. Nie zawiodłem się. Dokumentacja kompletna, od razu widać doświadczenie technologa. Jeśli ktoś chce mieć porządny blat spawalniczy bez błędów w projekcie, to brać w ciemno! Pozdrawienia z krakowa!
       </p>
   </div>
-{# blok opini  #}
+
 
 
 
@@ -617,16 +616,27 @@
           <img id="product-review-lightbox-image" src="" alt="Enlarged customer review photo">
      </div>
     </div>
-      </section>
+      </section> #}
+
+
+{# -------------------------------------------------------------------------------------- #}
+
+
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
+
+{% set productReviews = [
+  "dWT01-002-pl",
+  "dWT01-001-pl",
+  "dWT02-001-pl"
+] %}
+
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
 
 
 
-
-
-      
-
-
-
+{# -------------------------------------------------------------------------------------- #}
   
 
 {% set recommendedProducts = [
@@ -647,7 +657,7 @@
 
 
 
-
+{# -------------------------------------------------------------------------------------- #}
 
 
 
@@ -706,109 +716,17 @@
 
 
 
-<script>
-/**
- * 1. GŁÓWNA FUNKCJA: Logika wyboru stołu, aktualizacja ceny i linku EasyCart
- */
-function updateTableLink() {
-  const config = document.getElementById('table-config').value;
-  const addonCheckbox = document.getElementById('addon-checkbox');
-  const isAddon = addonCheckbox.checked;
-  const buyBtn = document.getElementById('buy-table-btn');
-  const label = document.getElementById('config-label');
-  const priceDisplay = document.getElementById('main-price-value');
-
-  // --- AKTUALIZACJA CENY NA STRONIE ---
-  // Pozwalamy klientowi klikać checkbox w dowolnym momencie
-  let basePrice = 129;
-  let finalPrice = isAddon ? (basePrice + 49) : basePrice;
-  
-  if (priceDisplay) {
-    priceDisplay.innerText = finalPrice;
-  }
-
-  // --- DEFINICJA LINKÓW EASYCART ---
-  const soloLinks = {
-  's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-3?lang=pl',
-  's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0203?lang=pl',
-  's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202?lang=pl',
-  's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-4?lang=pl',
-  's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-2?lang=pl',
-    
-    
-  };
-
-  const bundleLinks = {
-    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202-gotowe-plany-oprzyrzadowania-podstawowego-dwta01?lang=pl',
-    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0203-gotowe-plany-oprzyrzadowania-podstawowego-dwta0103?lang=pl',
-    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202-gotowe-plany-oprzyrzadowania-podstawowego-dwta01-2?lang=pl',
-    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0204-gotowe-plany-oprzyrzadowania-podstawowego-dwta0104?lang=pl',
-    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-zestaw-6?lang=pl',
-    
-  };
-
-  // --- LOGIKA PRZYCISKU (Tu jest blokada zakupu) ---
-  if (config !== "none") {
-    // Jeśli stół jest wybrany: odblokuj przycisk i przypisz odpowiedni link
-    buyBtn.href = isAddon ? bundleLinks[config] : soloLinks[config];
-   //  buyBtn.classList.remove('disabled-btn');
-    
-    // Zdejmij ewentualne czerwone ostrzeżenie
-    label.style.color = '#707070';
-    label.style.fontWeight = '400';
-    label.innerHTML = 'Wybierz konfigurację planów:';
-
-    // Zgaś czerwoną ramkę
-    const selectBox = document.getElementById('table-config');
-    selectBox.style.borderColor = '#c5c4c4';
-    selectBox.style.boxShadow = 'none';
-  } else {
-    // Jeśli stół NIE jest wybrany: przycisk zablokowany (nawet jeśli dodatek jest zaznaczony)
-    buyBtn.href = 'javascript:void(0)';
-   //  buyBtn.classList.add('disabled-btn');
-  }
-}
-
-/**
- * 2. FUNKCJA: Obsługa kliknięcia w zablokowany przycisk
- */
-function handleTableDisabledClick() {
-  const config = document.getElementById('table-config').value; // Teraz sprawdzamy wybór, a nie klasę
-  const label = document.getElementById('config-label');
-  const selectBox = document.getElementById('table-config');
-  
-  if (config === "none") {
-    label.style.color = 'red';
-    label.style.fontWeight = 'bold';
-    label.innerHTML = 'Wybierz konfigurację planów:';
-    
-    selectBox.style.borderColor = 'red';
-    selectBox.style.boxShadow = '0 0 5px rgba(255, 0, 0, 0.4)';
-    selectBox.focus({ preventScroll: true });
-    selectBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    // Opcjonalnie zostawiamy focus, żeby po przewinięciu lista była "aktywna"
-    setTimeout(() => selectBox.focus(), 500);
-  }
-}
-
-/**
- * 3. TWOJA FUNKCJA: Kopiowanie adresu e-mail
- */
-function copyEmail(element) {
-  navigator.clipboard.writeText('sklep@trajder.com').then(function() {
-    const numberSpan = element.querySelector('.number');
-    numberSpan.innerHTML = '<span style="color: #00a650;">Skopiowano! ✓</span>';
-    
-    setTimeout(function() {
-      numberSpan.innerHTML = 'sklep@trajder.com';
-    }, 2000);
-  });
-}
 
 
 
 
-/** OPINIE - zdjecia w opiniach  */
+
+
+
+
+
+
+{# /** OPINIE - zdjecia w opiniach  */
 document.addEventListener('DOMContentLoaded', function () {
   const reviewsSection = document.querySelector('.product-reviews-section');
   if (!reviewsSection) return;
@@ -920,7 +838,114 @@ document.addEventListener('DOMContentLoaded', function () {
       el.setAttribute('draggable', 'false');
     });
   });
-});
+}); #}
+
+
+
+
+
+<script>
+/**
+ * 1. GŁÓWNA FUNKCJA: Logika wyboru stołu, aktualizacja ceny i linku EasyCart
+ */
+function updateTableLink() {
+  const config = document.getElementById('table-config').value;
+  const addonCheckbox = document.getElementById('addon-checkbox');
+  const isAddon = addonCheckbox.checked;
+  const buyBtn = document.getElementById('buy-table-btn');
+  const label = document.getElementById('config-label');
+  const priceDisplay = document.getElementById('main-price-value');
+
+  // --- AKTUALIZACJA CENY NA STRONIE ---
+  // Pozwalamy klientowi klikać checkbox w dowolnym momencie
+  let basePrice = 129;
+  let finalPrice = isAddon ? (basePrice + 49) : basePrice;
+  
+  if (priceDisplay) {
+    priceDisplay.innerText = finalPrice;
+  }
+
+  // --- DEFINICJA LINKÓW EASYCART ---
+  const soloLinks = {
+  's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-3?lang=pl',
+  's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0203?lang=pl',
+  's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202?lang=pl',
+  's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-4?lang=pl',
+  's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-system-o28-2?lang=pl',
+    
+    
+  };
+
+  const bundleLinks = {
+    's16_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202-gotowe-plany-oprzyrzadowania-podstawowego-dwta01?lang=pl',
+    's16_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0203-gotowe-plany-oprzyrzadowania-podstawowego-dwta0103?lang=pl',
+    's28_10': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0202-gotowe-plany-oprzyrzadowania-podstawowego-dwta01-2?lang=pl',
+    's28_12': 'https://cart.easy.tools/checkout/patryktrajder/plany-dxfpdf-gotowy-projekt-stolu-spawalniczego-dwt0204-gotowe-plany-oprzyrzadowania-podstawowego-dwta0104?lang=pl',
+    's28_15': 'https://cart.easy.tools/checkout/patryktrajder/plany-budowy-stolu-spawalniczego-2000x1000-zestaw-6?lang=pl',
+    
+  };
+
+  // --- LOGIKA PRZYCISKU (Tu jest blokada zakupu) ---
+  if (config !== "none") {
+    // Jeśli stół jest wybrany: odblokuj przycisk i przypisz odpowiedni link
+    buyBtn.href = isAddon ? bundleLinks[config] : soloLinks[config];
+   //  buyBtn.classList.remove('disabled-btn');
+    
+    // Zdejmij ewentualne czerwone ostrzeżenie
+    label.style.color = '#707070';
+    label.style.fontWeight = '400';
+    label.innerHTML = 'Wybierz konfigurację planów:';
+
+    // Zgaś czerwoną ramkę
+    const selectBox = document.getElementById('table-config');
+    selectBox.style.borderColor = '#c5c4c4';
+    selectBox.style.boxShadow = 'none';
+  } else {
+    // Jeśli stół NIE jest wybrany: przycisk zablokowany (nawet jeśli dodatek jest zaznaczony)
+    buyBtn.href = 'javascript:void(0)';
+   //  buyBtn.classList.add('disabled-btn');
+  }
+}
+
+/**
+ * 2. FUNKCJA: Obsługa kliknięcia w zablokowany przycisk
+ */
+function handleTableDisabledClick() {
+  const config = document.getElementById('table-config').value; // Teraz sprawdzamy wybór, a nie klasę
+  const label = document.getElementById('config-label');
+  const selectBox = document.getElementById('table-config');
+  
+  if (config === "none") {
+    label.style.color = 'red';
+    label.style.fontWeight = 'bold';
+    label.innerHTML = 'Wybierz konfigurację planów:';
+    
+    selectBox.style.borderColor = 'red';
+    selectBox.style.boxShadow = '0 0 5px rgba(255, 0, 0, 0.4)';
+    selectBox.focus({ preventScroll: true });
+    selectBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Opcjonalnie zostawiamy focus, żeby po przewinięciu lista była "aktywna"
+    setTimeout(() => selectBox.focus(), 500);
+  }
+}
+
+/**
+ * 3. TWOJA FUNKCJA: Kopiowanie adresu e-mail
+ */
+function copyEmail(element) {
+  navigator.clipboard.writeText('sklep@trajder.com').then(function() {
+    const numberSpan = element.querySelector('.number');
+    numberSpan.innerHTML = '<span style="color: #00a650;">Skopiowano! ✓</span>';
+    
+    setTimeout(function() {
+      numberSpan.innerHTML = 'sklep@trajder.com';
+    }, 2000);
+  });
+}
+
+
+
+
 
 
 </script>

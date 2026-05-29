@@ -372,6 +372,33 @@
 
 
 
+
+{# -------------------------------------------------------------------------------------- #}
+
+
+
+
+{% set reviewsLang = "de" %}
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
+
+{% set productReviews = [
+  "dWT01-002-pl",
+  "dWT01-001-pl",
+  "dWT02-001-pl"
+] %}
+
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
+
+
+
+
+
+
+{# -------------------------------------------------------------------------------------- #}
+
+
 {% set recommendedProducts = [
   "TN01",
   "dWT04",
