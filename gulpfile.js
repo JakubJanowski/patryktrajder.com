@@ -153,7 +153,13 @@ function styles() {
     .pipe(gulp.dest(distDir + "/src/"));
 }
 
-gulp.task("assets", gulp.parallel(cursors, favicon, icons, images, manifests));
+function videos() {
+  return gulp
+    .src("assets/videos/**/*")
+    .pipe(gulp.dest(distDir + "/assets/videos/"));
+}
+
+gulp.task("assets", gulp.parallel(cursors, favicon, icons, images, manifests, videos));
 
 gulp.task("clean", function () {
   return spawn("rimraf " + distDir, [], {
