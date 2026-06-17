@@ -12,109 +12,171 @@
 {% endblock %}
 
 {% block body %}
-    <main>
+    <main class="products-page-main">
         <nav class="breadcrumbs gap-top">
             <span>
-                <a href="/de/" title="Homepage">
+                <a href="/de/" title="Startseite">
                     <svg class="home icon">
                         <use xlink:href="#icon-home"></use>
                     </svg>
                 </a>
+
                 <svg class="icon">
                     <use xlink:href="#icon-arrow-right"></use>
                 </svg>
             </span>
+
             <a href="/de/products/">
                 <b>Produkte</b>
             </a>
         </nav>
-        
 
-      <article id="diy-tools" class="gap-top preview-list">
-      {# <h1 class="gap-bottom-medium centered-text">Produkte</h1> #}
+        <article id="diy-tools" class="gap-top preview-list" data-product-shop>
 
-{% from "components/product-card-de.njk" import productCardDe %}
+            {% from "components/product-card-de.njk" import productCardDe %}
 
-{% set productOrderDe = [
-  "TN01",
-  "dWT04",
-  "dWT02",
-  "dWT01",
-  "dWT03",
-  "dWT05",
-  "dWTA01",
-  "dWTA02",
-  "dWS02",
-  "dWS01",
-  "dWTA03"
-] %}
+            {#
+              Verfügbare Typen:
+              - projects = DXF/PDF-Pläne
+              - diy      = DIY-Bausätze
+              - ready    = Fertige Produkte
+            #}
+            {% set productListDe = [
+                { code: "TN01", type: "diy" },
+                { code: "dWT04", type: "projects" },
+                { code: "dWT02", type: "projects" },
+                { code: "dWT01", type: "projects" },
+                { code: "dWT03", type: "projects" },
+                { code: "dWT05", type: "projects" },
+                { code: "dWTA01", type: "projects" },
+                { code: "dWTA02", type: "projects" },
+                { code: "dWS02", type: "projects" },
+                { code: "dWS01", type: "projects" },
+                { code: "dWTA03", type: "projects" }
+            ] %}
 
-<div class="product-cards-container">
-  {% for productCode in productOrderDe %}
-    {% set product = productsDe[productCode] %}
+            {#
+              SHOP-TABS
 
-    {% if product %}
-      {{ productCardDe(product) }}
-    {% else %}
-      {# Missing product in productsDe.json: {{ productCode }} #}
-    {% endif %}
-  {% endfor %}
-</div>
+              Das sind separate Klassen für die Shop-Seite.
+              Wir verwenden nicht .product-section-nav von den Produktseiten,
+              damit das Filtern im Shop nicht mit dem Scrollen auf Produktseiten kollidiert.
+            #}
+            <nav class="product-shop-tabs" aria-label="Produktkategorien">
+                <button
+                    type="button"
+                    class="product-shop-tabs__button is-active"
+                    data-product-tab="all"
+                    aria-pressed="true"
+                >
+                    Alle
+                </button>
 
+                <button
+                    type="button"
+                    class="product-shop-tabs__button"
+                    data-product-tab="projects"
+                    aria-pressed="false"
+                >
+                    DXF/PDF-Pläne
+                </button>
 
+                <button
+                    type="button"
+                    class="product-shop-tabs__button"
+                    data-product-tab="diy"
+                    aria-pressed="false"
+                >
+                    DIY-Bausätze
+                </button>
 
-    </article>
+                <button
+                    type="button"
+                    class="product-shop-tabs__button"
+                    data-product-tab="ready"
+                    aria-pressed="false"
+                >
+                    Fertige Produkte
+                </button>
+            </nav>
 
-       {#
-            <section>
-                <h2>
-                    <a href="super-booster-2000/" title="Super Booster 200">Rohrausklinker - Super Booster 2000</a>
-                </h2>
-                <h4>Rohr-/Profil-Lochsäge - Modellbausatz zur Montage</h4>
-                <div class="row gap-top">
-                    <div>
-                        <p>
-                            Sind Sie, wie ich, ein großer Fan der Rohr-/Profilbearbeitung zum Schweißen? Basteln Sie gerne, bauen Sie gerne Buggys, Go-Karts, Geländer oder andere Konstellationen aus Rohren oder Profilen? Wenn ja, dann möchte ich Ihnen ein Gerät vorstellen, das Ihnen die Arbeit wirklich erleichtern kann 😉.
-                        </p>
-                        <p class="single-out-link">
-                            <a href="super-booster-2000/" title="Super Booster 200">Mehr Informationen...</a>
-                        </p>
-                    </div>
-                    <div>
-                        <a class="image-loading" href="super-booster-2000/" title="Super Booster 200">
-                            <img src="/assets/images/super-booster-2000/thumb-w1120.jpg" alt="Super Booster 2000"/>
-                        </a>
-                    </div>
-                </div>
-            </section> #}
+            <p class="product-shop-empty" data-product-empty hidden>
+                Produkte in dieser Kategorie werden bald verfügbar sein.
+            </p>
+
+            <div class="product-cards-container">
+                {% for item in productListDe %}
+                    {% set product = productsDe[item.code] %}
+
+                    {% if product %}
+                        <div class="product-shop-item" data-product-type="{{ item.type }}">
+                            {{ productCardDe(product) }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
         </article>
-
-
-        {# <article id="diy-projects" class="gap-top-large">
-            <h1>
-                DIY projects
-            </h1>
-            <section>
-                <h2>
-                    <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/" title="Super Booster 2000">Welding Table Build Plans 2400x1200 (System Ø28)</a>
-                </h2>
-                <h4>Project: Mateusz Doniec</h4>
-                <div class="row gap-top">
-                    <div>
-                        <p>
-                            Tired of welding on uneven floors or makeshift benches where nothing stays square? Do the prices of professional 2400x1200 tables blow your mind? If so, I’ve teamed up with a technologist to create complete build plans that will completely level up your workshop game 😉"
-                        </p>
-                        <p class="single-out-link">
-                            <a href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/" title="Super Booster 2000">More information...</a>
-                        </p>
-                    </div>
-                    <div>
-                        <a class="image-loading" href="/en-gb/products/WeldingTable_2400x1200_MateuszDoniec/" title="Super Booster 2000">
-                            <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/thumb-w1120.jpg" alt="Super Booster 2000"/>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </article> #}
     </main>
+
+    <script>
+      /*
+        EINFACHES JS FÜR SHOP-TABS
+
+        - funktioniert nur innerhalb von [data-product-shop]
+        - beeinflusst nicht die Abschnitts-Tabs auf Produktseiten
+        - ändert nicht die URL
+        - weist Kategorien nicht automatisch zu
+      */
+      (function () {
+        var shop = document.querySelector("[data-product-shop]");
+
+        if (!shop) {
+          return;
+        }
+
+        var tabs = shop.querySelectorAll("[data-product-tab]");
+        var items = shop.querySelectorAll("[data-product-type]");
+        var emptyMessage = shop.querySelector("[data-product-empty]");
+
+        if (!tabs.length || !items.length) {
+          return;
+        }
+
+        function showTab(activeTab) {
+          var visibleCount = 0;
+
+          tabs.forEach(function (tab) {
+            var tabName = tab.getAttribute("data-product-tab");
+            var isActive = tabName === activeTab;
+
+            tab.classList.toggle("is-active", isActive);
+            tab.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+
+          items.forEach(function (item) {
+            var productType = item.getAttribute("data-product-type");
+            var shouldShow = activeTab === "all" || productType === activeTab;
+
+            item.hidden = !shouldShow;
+
+            if (shouldShow) {
+              visibleCount++;
+            }
+          });
+
+          if (emptyMessage) {
+            emptyMessage.hidden = visibleCount > 0;
+          }
+        }
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            showTab(tab.getAttribute("data-product-tab"));
+          });
+        });
+
+        showTab("all");
+      })();
+    </script>
 {% endblock %}

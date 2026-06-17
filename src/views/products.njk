@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block body %}
-  {# <div class="banner">
+ {# <div class="banner">
     <div class="container">
       <div class="image-placeholder" style="padding-top: 25.104166666%;">
         <img src="/assets/images/products-banner-w1920.jpg" srcset="/assets/images/products-banner-w768.jpg 768w, /assets/images/products-banner-w1920.jpg 1920w" alt="Narzędzia na ścianie warsztatu"/>
@@ -20,110 +20,176 @@
     </div>
   </div> #}
 
-  <main>
-    <nav class="breadcrumbs gap-top">
-      <span>
-        <a href="/" title="Strona główna">
-          <svg class="home icon">
-            <use xlink:href="#icon-home"></use>
-          </svg>
-        </a>
-        <svg class="icon">
-          <use xlink:href="#icon-arrow-right"></use>
+<main class="products-page-main">
+
+  <nav class="breadcrumbs gap-top">
+    <span>
+      <a href="/" title="Strona główna">
+        <svg class="home icon">
+          <use xlink:href="#icon-home"></use>
         </svg>
-      </span>
-      <a href="/products/">
-        <b>Sklep</b>
       </a>
+
+      <svg class="icon">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </span>
+
+    <a href="/products/">
+      <b>Sklep</b>
+    </a>
+  </nav>
+
+  <article id="diy-tools" class="gap-top preview-list" data-product-shop>
+
+    {% from "components/product-card-pl.njk" import productCardPl %}
+
+    {#
+      Dostępne typy:
+      - projects = Projekty DXF/PDF
+      - diy      = Zestawy DIY
+      - ready    = Gotowe produkty
+    #}
+    {% set productListPl = [
+      { code: "TN01", type: "diy" },
+      { code: "dWT04", type: "projects" },
+      { code: "dWT02", type: "projects" },
+      { code: "dWT01", type: "projects" },
+      { code: "dWT03", type: "projects" },
+      { code: "dWTA01", type: "projects" },
+      { code: "dWTA02", type: "projects" },
+      { code: "dWS02", type: "projects" },
+      { code: "dWS01", type: "projects" },
+      { code: "dWTA03", type: "projects" },
+      { code: "RS01", type: "projects" }
+    ] %}
+
+    {#
+      ZAKŁADKI SKLEPU
+
+      To są osobne klasy dla sklepu.
+      Nie używamy .product-section-nav z kart produktów,
+      żeby nie mieszać filtrowania sklepu ze scrollowaniem na karcie produktu.
+    #}
+    <nav class="product-shop-tabs" aria-label="Kategorie produktów">
+      <button
+        type="button"
+        class="product-shop-tabs__button is-active"
+        data-product-tab="all"
+        aria-pressed="true"
+      >
+        Wszystkie
+      </button>
+
+      <button
+        type="button"
+        class="product-shop-tabs__button"
+        data-product-tab="projects"
+        aria-pressed="false"
+      >
+        Projekty DXF/PDF
+      </button>
+
+      <button
+        type="button"
+        class="product-shop-tabs__button"
+        data-product-tab="diy"
+        aria-pressed="false"
+      >
+        Zestawy DIY
+      </button>
+
+      <button
+        type="button"
+        class="product-shop-tabs__button"
+        data-product-tab="ready"
+        aria-pressed="false"
+      >
+        Gotowe produkty
+      </button>
     </nav>
 
-    <article id="diy-tools" class="gap-top preview-list">
+    <p class="product-shop-empty" data-product-empty hidden>
+      W tej kategorii produkty pojawią się wkrótce.
+    </p>
 
-  {% from "components/product-card-pl.njk" import productCardPl %}
+    <div class="product-cards-container">
+      {% for item in productListPl %}
+        {% set product = productsPl[item.code] %}
 
-      {% set productOrderPl = [
-        "TN01",
-        "dWT04",
-        "dWT02",
-        "dWT01",
-        "dWT03",
-        "dWTA01",
-        "dWTA02",
-        "dWS02",
-        "dWS01",
-        "dWTA03"
-      ] %}
-
-      <div class="product-cards-container">
-        {% for productCode in productOrderPl %}
-          {% set product = productsPl[productCode] %}
-
-          {% if product %}
+        {% if product %}
+          <div class="product-shop-item" data-product-type="{{ item.type }}">
             {{ productCardPl(product) }}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </article>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </article>
 
 
 
 
 
-
-
-
-
-<!--
-BADGE / PLAKIETKI NA ZDJĘCIACH PRODUKTÓW
-
-CO ROBIĄ:
-- pokazują typ produktu
-- opcjonalnie pokazują wyróżnienie marketingowe
-
-GDZIE WKLEJAĆ:
-- wewnątrz <a class="product-image-link">
-- nad <img>
-
-POZYCJE:
-- product-badge-wrap--right = prawa strona
-- product-badge-wrap--left = lewa strona
-
-DOSTĘPNE BADGE:
-- product-badge--physical   = produkt fizyczny
-- product-badge--pdf        = PDF
-- product-badge--pdf-dxf    = PDF + DXF
-- product-badge--bestseller = Bestseller
-
-PRZYKŁAD 1: PHYSICAL PRODUCT
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--physical">Physical product</span>
-</span>
-
-PRZYKŁAD 2: PDF
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--pdf">PDF</span>
-</span>
-
-PRZYKŁAD 3: PDF + DXF
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
-</span>
-
-PRZYKŁAD 4: BESTSELLER
-<span class="product-badge-wrap product-badge-wrap--left">
-  <span class="product-badge product-badge--bestseller">Bestseller</span>
-</span>
-
-PRZYKŁAD 5: BESTSELLER + PHYSICAL PRODUCT
-<span class="product-badge-wrap product-badge-wrap--left">
-  <span class="product-badge product-badge--bestseller">Bestseller</span>
-</span>
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--physical">Physical product</span>
-</span>
--->
-
-
- </article>
 </main>
+<script>
+  /*
+    PROSTY JS DO ZAKŁADEK SKLEPU
+
+    - działa tylko wewnątrz [data-product-shop]
+    - nie dotyka zakładek na kartach produktów
+    - nie zmienia URL
+    - nie przypisuje kategorii automatycznie
+  */
+  (function () {
+    var shop = document.querySelector("[data-product-shop]");
+
+    if (!shop) {
+      return;
+    }
+
+    var tabs = shop.querySelectorAll("[data-product-tab]");
+    var items = shop.querySelectorAll("[data-product-type]");
+    var emptyMessage = shop.querySelector("[data-product-empty]");
+
+    if (!tabs.length || !items.length) {
+      return;
+    }
+
+    function showTab(activeTab) {
+      var visibleCount = 0;
+
+      tabs.forEach(function (tab) {
+        var tabName = tab.getAttribute("data-product-tab");
+        var isActive = tabName === activeTab;
+
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      items.forEach(function (item) {
+        var productType = item.getAttribute("data-product-type");
+        var shouldShow = activeTab === "all" || productType === activeTab;
+
+        item.hidden = !shouldShow;
+
+        if (shouldShow) {
+          visibleCount++;
+        }
+      });
+
+      if (emptyMessage) {
+        emptyMessage.hidden = visibleCount > 0;
+      }
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        showTab(tab.getAttribute("data-product-tab"));
+      });
+    });
+
+    showTab("all");
+  })();
+</script>
 {% endblock %}

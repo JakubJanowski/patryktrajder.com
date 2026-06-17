@@ -1,6 +1,6 @@
 {
   "TN01": {
-    "badge": "Produkt fizyczny",
+    "badge": "Zestaw DIY",
     "badgeClass": "product-badge--physical",
     "url": "/products/super-booster-2000/",
     "image": "/assets/images/super-booster-2000/thumb-w320.0.jpg",
@@ -106,6 +106,17 @@
     "alt": "Szuflada pod stół spawalniczy",
     "title": "Plany DXF/PDF:<br>Szuflada pod stół spawalniczy – dWTA03",
     "price": "47",
+    "cents": "00"
+  },
+
+  "RS01": {
+    "badge": "PDF + DXF",
+    "badgeClass": "product-badge--pdf-dxf",
+    "url": "/products/roller-stand-rs01/",
+    "image": "/assets/images/rs01/card.jpg",
+    "alt": "Stojak rolkowy warsztatowy RS01 | Roller Stand",
+    "title": "Plany DXF/PDF: Stojak rolkowy warsztatowy RS01 | Roller Stand",
+    "price": "29",
     "cents": "00"
   }
 }

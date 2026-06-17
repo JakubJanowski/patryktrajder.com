@@ -77,8 +77,48 @@ export default class YoutubePopup {
     });
   }
 
-  private openYoutubePopup(videoId: string | undefined): void {
+  private normalizeYoutubeStart(startSeconds?: string): string {
+    if (!startSeconds) return "0";
+
+    const trimmedStart = startSeconds.trim();
+
+    // Obsługa prostego zapisu w sekundach, np. data-youtube-start="69"
+    if (/^\d+$/.test(trimmedStart)) {
+      return trimmedStart;
+    }
+
+    return "0";
+  }
+
+  private cleanYoutubeId(videoId: string): string {
+    const trimmedVideoId = videoId.trim();
+
+    // Awaryjnie, gdyby gdzieś zostało stare data-youtube-id="ID?start=69"
+    if (trimmedVideoId.includes("?")) {
+      return trimmedVideoId.split("?")[0];
+    }
+
+    return trimmedVideoId;
+  }
+
+  private openYoutubePopup(videoId: string | undefined, startSeconds?: string): void {
     if (!videoId || !this.popup || !this.videoBox) return;
+
+    const cleanVideoId = this.cleanYoutubeId(videoId);
+    const start = this.normalizeYoutubeStart(startSeconds);
+
+    if (!cleanVideoId) return;
+
+    const params = new URLSearchParams({
+      rel: "0",
+      autoplay: "1"
+    });
+
+    // Jeśli nie ma data-youtube-start, film zaczyna od początku.
+    // Jeśli data-youtube-start istnieje i jest większe niż 0, dodajemy start do URL.
+    if (start !== "0") {
+      params.set("start", start);
+    }
 
     // Jeśli użytkownik kliknie przed upływem 3 sekund,
     // preconnect wykona się natychmiast.
@@ -97,7 +137,7 @@ export default class YoutubePopup {
       <div class="youtube-popup__loader">${loadingText}</div>
 
       <iframe
-        src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&autoplay=1"
+        src="https://www.youtube-nocookie.com/embed/${cleanVideoId}?${params.toString()}"
         title="${iframeTitle}"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
@@ -132,7 +172,7 @@ export default class YoutubePopup {
       button.addEventListener("touchstart", () => this.addYoutubePreconnect(), { once: true });
 
       button.addEventListener("click", () => {
-        this.openYoutubePopup(button.dataset.youtubeId);
+        this.openYoutubePopup(button.dataset.youtubeId, button.dataset.youtubeStart);
       });
     });
 

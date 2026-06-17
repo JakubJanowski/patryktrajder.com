@@ -20,193 +20,172 @@
     </div>
   </div> #}
 
-  <main>
-    <nav class="breadcrumbs gap-top">
-      <span>
-        <a href="/en-gb/" title="Homepage">
-          <svg class="home icon">
-            <use xlink:href="#icon-home"></use>
-          </svg>
-        </a>
-        <svg class="icon">
-          <use xlink:href="#icon-arrow-right"></use>
+<main class="products-page-main">
+
+  <nav class="breadcrumbs gap-top">
+    <span>
+      <a href="/en-gb/" title="Homepage">
+        <svg class="home icon">
+          <use xlink:href="#icon-home"></use>
         </svg>
-      </span>
-      <a href="/en-gb/products/">
-        <b>Shop</b>
       </a>
+
+      <svg class="icon">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </span>
+
+    <a href="/en-gb/products/">
+      <b>Shop</b>
+    </a>
+  </nav>
+
+  <article id="diy-tools" class="gap-top preview-list" data-product-shop>
+
+    {% from "components/product-card-en.njk" import productCardEn %}
+
+    {#
+      Available types:
+      - projects = DXF/PDF plans
+      - diy      = DIY kits
+      - ready    = Ready-made products
+    #}
+    {% set productListEn = [
+      { code: "TN01", type: "diy" },
+      { code: "dWT04", type: "projects" },
+      { code: "dWT02", type: "projects" },
+      { code: "dWT01", type: "projects" },
+      { code: "dWT03", type: "projects" },
+      { code: "dWTA01", type: "projects" },
+      { code: "dWTA02", type: "projects" },
+      { code: "dWS02", type: "projects" },
+      { code: "dWS01", type: "projects" },
+      { code: "dWTA03", type: "projects" }
+    ] %}
+
+    {#
+      SHOP TABS
+
+      These are separate classes for the shop page.
+      We do not use .product-section-nav from product pages,
+      so filtering the shop does not mix with product-page scrolling.
+    #}
+    <nav class="product-shop-tabs" aria-label="Product categories">
+      <button
+        type="button"
+        class="product-shop-tabs__button is-active"
+        data-product-tab="all"
+        aria-pressed="true"
+      >
+        All
+      </button>
+
+      <button
+        type="button"
+        class="product-shop-tabs__button"
+        data-product-tab="projects"
+        aria-pressed="false"
+      >
+        DXF/PDF Plans
+      </button>
+
+      <button
+        type="button"
+        class="product-shop-tabs__button"
+        data-product-tab="diy"
+        aria-pressed="false"
+      >
+        DIY Kits
+      </button>
+
+      <button
+        type="button"
+        class="product-shop-tabs__button"
+        data-product-tab="ready"
+        aria-pressed="false"
+      >
+        Ready Products
+      </button>
     </nav>
-    {# <nav class="categories">
-      <a href="#diy-tools" title="DIY tools">
-        <p>
-          DIY tools
-        </p>
-      </a>
-      <a href="#gadiy-toolsdgets" title="DIY projects">
-        <p>
-          DIY projects
-        </p>
-      </a>
-    </nav> #}
 
-    <article id="diy-tools" class="gap-top preview-list">
-      {# <h1 class="gap-bottom-medium centered-text">Shop</h1> #}
+    <p class="product-shop-empty" data-product-empty hidden>
+      Products in this category will be available soon.
+    </p>
 
-      {#
-      <section>
-        <h2>
-          <a href="super-booster-2000/" title="Super Booster 200">Tube Notcher - Super Booster 2000</a>
-        </h2>
-        <h4>Pipe/profile hole saw - model kit for assembly</h4>
-        <div class="row gap-top">
-          <div>
-            <p>
-              Like me, aren't you a big fan of tube / profile processing for welding? Do you like tinkering, building buggies, go-karts, railings, railings or any constellation from pipes or profiles? If so, I would like to introduce you to a device that can really make your work easier 😉.
-            </p>
-            <p class="single-out-link">
-              <a href="super-booster-2000/" title="Super Booster 200">More information...</a>
-            </p>
+    <div class="product-cards-container">
+      {% for item in productListEn %}
+        {% set product = productsEn[item.code] %}
+
+        {% if product %}
+          <div class="product-shop-item" data-product-type="{{ item.type }}">
+            {{ productCardEn(product) }}
           </div>
-          <div>
-            <a class="image-loading" href="super-booster-2000/" title="Super Booster 200">
-              <img src="/assets/images/super-booster-2000/thumb-w1120.jpg" alt="Super Booster 2000"/>
-            </a>
-          </div>
-        </div>
-      </section> #}
-
-
-
-
-
-
-
-<!--
-BADGE / PLAKIETKI NA ZDJĘCIACH PRODUKTÓW
-
-CO ROBIĄ:
-- pokazują typ produktu
-- opcjonalnie pokazują wyróżnienie marketingowe
-
-GDZIE WKLEJAĆ:
-- wewnątrz <a class="product-image-link">
-- nad <img>
-
-POZYCJE:
-- product-badge-wrap--right = prawa strona
-- product-badge-wrap--left = lewa strona
-
-DOSTĘPNE BADGE:
-- product-badge--physical   = produkt fizyczny
-- product-badge--pdf        = PDF
-- product-badge--pdf-dxf    = PDF + DXF
-- product-badge--bestseller = Bestseller
-
-PRZYKŁAD 1: PHYSICAL PRODUCT
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--physical">Physical product</span>
-</span>
-
-PRZYKŁAD 2: PDF
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--pdf">PDF</span>
-</span>
-
-PRZYKŁAD 3: PDF + DXF
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--pdf-dxf">PDF + DXF</span>
-</span>
-
-PRZYKŁAD 4: BESTSELLER
-<span class="product-badge-wrap product-badge-wrap--left">
-  <span class="product-badge product-badge--bestseller">Bestseller</span>
-</span>
-
-PRZYKŁAD 5: BESTSELLER + PHYSICAL PRODUCT
-<span class="product-badge-wrap product-badge-wrap--left">
-  <span class="product-badge product-badge--bestseller">Bestseller</span>
-</span>
-<span class="product-badge-wrap product-badge-wrap--right">
-  <span class="product-badge product-badge--physical">Physical product</span>
-</span>
--->
-
-
-
-
-
-
-
-
-
-
-{% from "components/product-card-en.njk" import productCardEn %}
-
-{% set productOrderEn = [
-        "TN01",
-        "dWT04",
-        "dWT02",
-        "dWT01",
-        "dWT03",
-        "dWTA01",
-        "dWTA02",
-        "dWS02",
-        "dWS01",
-        "dWTA03"
-] %}
-
-<div class="product-cards-container">
-  {% for productCode in productOrderEn %}
-    {% set product = productsEn[productCode] %}
-
-    {% if product %}
-      {{ productCardEn(product) }}
-    {% else %}
-      {# Missing product in productsEn.json: {{ productCode }} #}
-    {% endif %}
-  {% endfor %}
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+        {% endif %}
+      {% endfor %}
+    </div>
 
   </article>
 
-    {# <article id="diy-projects" class="gap-top-large">
-      <h1>
-        DIY projects
-      </h1>
-      <section>
-        <h2>
-          <a href="WeldingTable_2400x1200_MateuszDoniec/" title="Super Booster 2000">Welding Table Build Plans 2400x1200 (System 16/28 | Top 12/15mm)</a>
-        </h2>
-        <h4>Project: Mateusz Doniec</h4>
-        <div class="row gap-top">
-          <div>
-            <p>
-              Tired of welding on uneven floors or makeshift benches where nothing stays square? Do the prices of professional 2400x1200 tables blow your mind? If so, I’ve teamed up with a technologist to create complete build plans that will completely level up your workshop game 😉"
-            </p>
-            <p class="single-out-link">
-              <a href="WeldingTable_2400x1200_MateuszDoniec/" title="Super Booster 2000">More information...</a>
-            </p>
-          </div>
-          <div>
-            <a class="image-loading" href="WeldingTable_2400x1200_MateuszDoniec/" title="Super Booster 2000">
-              <img src="/assets/images/WeldingTable_2400x1200_MateuszDoniec/thumb-w1120.jpg" alt="Super Booster 2000"/>
-            </a>
-          </div>
-        </div>
-      </section> 
-    </article> #}
-  </main>
+</main>
+
+<script>
+  /*
+    SIMPLE JS FOR SHOP TABS
+
+    - works only inside [data-product-shop]
+    - does not affect product-page section tabs
+    - does not change the URL
+    - does not assign categories automatically
+  */
+  (function () {
+    var shop = document.querySelector("[data-product-shop]");
+
+    if (!shop) {
+      return;
+    }
+
+    var tabs = shop.querySelectorAll("[data-product-tab]");
+    var items = shop.querySelectorAll("[data-product-type]");
+    var emptyMessage = shop.querySelector("[data-product-empty]");
+
+    if (!tabs.length || !items.length) {
+      return;
+    }
+
+    function showTab(activeTab) {
+      var visibleCount = 0;
+
+      tabs.forEach(function (tab) {
+        var tabName = tab.getAttribute("data-product-tab");
+        var isActive = tabName === activeTab;
+
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      items.forEach(function (item) {
+        var productType = item.getAttribute("data-product-type");
+        var shouldShow = activeTab === "all" || productType === activeTab;
+
+        item.hidden = !shouldShow;
+
+        if (shouldShow) {
+          visibleCount++;
+        }
+      });
+
+      if (emptyMessage) {
+        emptyMessage.hidden = visibleCount > 0;
+      }
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        showTab(tab.getAttribute("data-product-tab"));
+      });
+    });
+
+    showTab("all");
+  })();
+</script>
 {% endblock %}

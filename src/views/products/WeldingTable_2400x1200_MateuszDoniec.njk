@@ -311,9 +311,154 @@
 </section>
 
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap');
 
-{# -------------------------------------------------------------------------------------- #}
+/* Główny blok: film po lewej + tekst po prawej */
+.product-video-showcase {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  width: 100%;
+  max-width: none;
+  margin: 18px 0 38px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f4f6f8;
+}
 
+/* Lewa część z filmem */
+.product-video-showcase__media {
+  min-height: 360px;
+  background: #111;
+}
+
+/* Sam film */
+.product-video-showcase__media video {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Prawa część z tekstem */
+.product-video-showcase__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 48px;
+  background: #f4f6f8;
+  color: #06152b;
+  text-align: center;
+}
+
+/* Mały napis nad nagłówkiem, jeśli kiedyś go odkomentujesz */
+.product-video-showcase__label {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1c7ed6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Główny nagłówek po prawej stronie */
+.product-video-showcase .product-video-showcase__content .product-video-showcase__title {
+  max-width: 430px;
+  margin: 0 auto 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: #06152b;
+  text-align: center;
+}
+
+.product-video-showcase .product-video-showcase__content .product-video-showcase__text {
+  max-width: 430px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #06152b;
+  text-align: center;
+}
+
+/* Akapit pod filmem w sekcji opisu */
+.product-intro-text {
+  margin: 0 0 26px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #06152b;
+}
+
+/* Uniwersalny przycisk, jeśli będziesz chciał dodać go w innym miejscu */
+.product-cta-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 28px 0 34px;
+}
+
+.product-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: #06152b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.product-cta-button:hover {
+  background: #1c7ed6;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Mobile / tablet */
+@media (max-width: 900px) {
+  .product-video-showcase {
+    grid-template-columns: 1fr;
+    margin: 28px auto 34px;
+    border-radius: 14px;
+  }
+
+  .product-video-showcase__media,
+  .product-video-showcase__media video {
+    min-height: 260px;
+  }
+
+  .product-video-showcase__content {
+    padding: 34px 24px 38px;
+  }
+
+  .product-video-showcase .product-video-showcase__content .product-video-showcase__title {
+    max-width: 360px;
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .product-video-showcase .product-video-showcase__content .product-video-showcase__text {
+    max-width: 360px;
+    font-size: 16px;
+  }
+
+  .product-intro-text {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+</style>
+      
 
 <nav class="product-section-nav" aria-label="Product section navigation">
         <a href="#description-section" class="product-section-nav__link">Opis</a>
@@ -322,11 +467,40 @@
         <a href="#opinions-section" class="product-section-nav__link">Opinie</a>
       </nav>
 
+
+
+
       <section id="description-section" class="product-anchor-section">
         <h1>Opis</h1>
-        <div>
-          <p>Zbuduj stół spawalniczy, który odmieni Twój warsztat. To oficjalna dokumentacja techniczna stołu,
-           który znasz z kanału Mateusz Doniec. Projekt nie jest tylko "rysunkiem" – to owoc połączenia praktyki warsztatowej Mateusza oraz 20-letniego doświadczenia
+
+<div class="product-video-showcase">
+  <div class="product-video-showcase__media">
+    <video autoplay loop muted playsinline preload="metadata">
+      <source src="/assets/videos/test3.mp4" type="video/mp4">
+      Twoja przeglądarka nie obsługuje wideo.
+    </video>
+  </div>
+
+  <div class="product-video-showcase__content">
+    <div>
+      {# <span class="product-video-showcase__label">Projekt przetestowany w praktyce</span> #}
+
+      <h2 class="product-video-showcase__title">
+        Zbuduj stół spawalniczy, który odmieni Twój warsztat.
+      </h2>
+
+      <p class="product-video-showcase__text">
+      To oficjalna dokumentacja techniczna stołu, który znasz z kanału Mateusz Doniec.
+    </p>
+    </div>
+  </div>
+</div>
+        
+
+
+
+      <div>
+            <p>Projekt nie jest tylko "rysunkiem" – to owoc połączenia praktyki warsztatowej Mateusza oraz 20-letniego doświadczenia 
             naszego technologa. Otrzymujesz sprawdzoną, stabilną i niezwykle precyzyjną konstrukcję, którą wykonasz za ułamek ceny rynkowej.
           </p>
          

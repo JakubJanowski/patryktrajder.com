@@ -171,8 +171,11 @@ html {
 
 
 .product-page-anchor-nav .product-anchor-section {
-  max-width: 920px; /* tekst nie rozlewa się za szeroko */
+ max-width: 100%;
+ width: 100%;
 }
+  // max-width: 920px;  tekst nie rozlewa się za szeroko
+
 
 .product-page-anchor-nav .product-anchor-section p,
 .product-page-anchor-nav .product-anchor-section li {
