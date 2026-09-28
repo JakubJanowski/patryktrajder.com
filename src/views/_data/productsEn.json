@@ -117,5 +117,17 @@
     "price": "12",
     "cents": "00",
     "currency": "€"
+  },
+
+   "oac01": {
+    "badge": "PDF + DXF",
+    "badgeClass": "product-badge--pdf-dxf",
+    "url": "/en-gb/products/oxy-acetylene-cart/",
+    "image": "/assets/images/oac01/card.jpg",
+    "alt": "DXF/PDF Plans: Oxy-Acetylene Cylinder Cart",
+    "title": "DXF/PDF Plans: Oxy-Acetylene Cylinder Cart",
+    "price": "12",
+    "cents": "00",
+    "currency": "€"
   }
 }

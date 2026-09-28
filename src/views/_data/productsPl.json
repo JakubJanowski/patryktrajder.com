@@ -118,5 +118,16 @@
     "title": "Plany DXF/PDF: Stojak rolkowy warsztatowy RS01 | Roller Stand",
     "price": "29",
     "cents": "00"
+  },
+
+  "oac01": {
+    "badge": "PDF + DXF",
+    "badgeClass": "product-badge--pdf-dxf",
+    "url": "/products/oxy-acetylene-cart/",
+    "image": "/assets/images/oac01/card.jpg",
+    "alt": "Plany DXF/PDF: Wózek na butle tlen-acetylen | Oxy-Acetylene Cart",
+    "title": "Plany DXF/PDF: Wózek na butle tlen-acetylen",
+    "price": "49",
+    "cents": "00"
   }
 }
