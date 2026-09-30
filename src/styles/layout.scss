@@ -418,6 +418,15 @@ p.indent {
   opacity: 0.8;
 }
 
+.payment-icons.payment-icons--mono img {
+  filter: grayscale(1) saturate(0) contrast(1.2);
+  opacity: 0.82;
+}
+
+.payment-icons.payment-icons--mono span {
+  color: #8a8f98;
+}
+
 .checkout-note__brand {
   display: inline-flex;
   align-items: center;

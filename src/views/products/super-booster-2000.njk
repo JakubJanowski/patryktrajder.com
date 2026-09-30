@@ -1,4 +1,5 @@
 {% extends "templates/layout.njk" %}
+{% set defaultShippingCountry = "g1" %}
 {% set tab = "products" %}
 
 {% block meta %}
@@ -14,11 +15,7 @@
   {% include "vectors/chevron-up.sym" %}
   {% include "vectors/chevron-down.sym" %}
   {% include "vectors/close.sym" %}
-  {% include "vectors/flag-de-rect.sym" %}
-  {% include "vectors/flag-es-rect.sym" %}
-  {% include "vectors/flag-nl-rect.sym" %}
   {% include "vectors/flag-pl-rect.sym" %}
-  {% include "vectors/flag-us-rect.sym" %}
   {% include "vectors/flat-eye-wrench.sym" %}
   {% include "vectors/flat-eye-wrench-full.sym" %}
   {% include "vectors/home.sym" %}
@@ -29,8 +26,12 @@
   {% include "vectors/star.sym" %}
 {% endblock %}
 
+
+
+
+
 {% block body %}
-  <main id="super-booster-2000">
+  <main id="super-booster-2000" class="product-page-anchor-nav">
     <article>
       <header class="gap-top">
         <nav class="breadcrumbs">
@@ -50,31 +51,71 @@
               <use xlink:href="#icon-arrow-right"></use>
             </svg>
           </span>
-          <a href="/products/super-booster-2000/">
-            <b>Super Booster 2000</b>
-          </a>
-        </nav>
-        <nav class="categories">
-          <a href="instruction/" title="Instrukcja montażu">
-            <p>
-              Instrukcja montażu
-            </p>
-          </a>
-          <a href="#presentation" title="Prezentacja możliwości">
-            <p>
-              Prezentacja możliwości
-            </p>
-          </a>
-          <a href="equipment/" title="Wyposażenie">
-            <p>
-              Wyposażenie
-            </p>
-          </a>
-        </nav>
-        <h1 class="gap-top">Wykrawarka do rur - Super Booster 2000</h1>
+          <a href="/products/super-booster-2000">
+            <b class="breadcrumb-full">Wykrawarka do rur i profili (Tube Notcher) – Otwornica TN01</b>
+            <b class="breadcrumb-short">Wykrawarka TN01</b>
+             </a>
+             </nav>
+             <h1 class="gap-top gap-top2">Wykrawarka do&nbsp;<strong>rur i profili</strong>&nbsp;(Tube Notcher) – Otwornica TN01</h1>
+             <p class="product-page-subtitle"></p>
       </header>
 
-      <section class="row gap-bottom">
+
+
+<section class="row gap-bottom product-top-section">
+        <div class="gallery gallery--4to3">
+          <div class="full">
+            <div class="container">
+              <img/>
+              <button class="close">
+                <svg class="icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="preview">
+            <div class="wrap">
+              <div class="image-loading ratio4to3">
+                <img
+                 src="/assets/images/TN01/gallery1-w800.jpg" 
+                 srcset="/assets/images/TN01/gallery1-w800.jpg 800w, /assets/images/TN01/gallery1-w1200.jpg 1200w, /assets/images/TN01/gallery1-w1600.jpg 1600w, /assets/images/TN01/gallery1-w2132.jpg 2132w" 
+                 sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 70em) calc((100vw - 4.5em) * 3 / 5), calc(65.5em * 3 / 5)"
+                 alt="wszystkie elementy do budowy wykrawarki"/>
+
+
+
+                <div class="overlay"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slider">
+            <div class="wrapper">
+              <div class="items">
+                <img data-ratio="75" draggable="false" src="/assets/images/TN01/gallery1-w213.jpg" alt="wszystkie elementy do budowy wykrawarki"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/TN01/gallery2-w213.jpg" alt="zbliżenie na części zestawu wykrawarki"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/TN01/gallery3-w213.jpg" alt="trzpien bazyjacy do wykrawarki do rur"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/TN01/gallery4-w213.jpg" alt="wskaznik do wykrawarki do rur"/>
+                <img data-ratio="75" draggable="false" src="/assets/images/TN01/gallery5-w213.jpg" alt="Wałek z adapterem do montażu otwornic"/>
+              </div>
+            </div>
+            <button class="arrow left" aria-label="Previous">
+              <svg class="icon">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="arrow right" aria-label="Next">
+              <svg class="icon">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+
+
+
+      {# <section class="row gap-bottom product-top-section">
         <div class="gallery">
           <div class="full">
             <div class="container">
@@ -116,134 +157,719 @@
               </svg>
             </button>
           </div>
-        </div>
-        <div class="product-details">
-          <h2>Cena</h2>
-           <div class="price">
-             <h3>
-              <span class="value">889</span>,<span class="cents">01</span>
-              <span class="currency">zł</span>
-              <span class="tax-info">(brutto)</span>
-             </h3>
-              </div>
+        </div> #}
 
 
-{#  
 
-          <style>
-  /* Styl dla wyszarzonego i zablokowanego przycisku */
-  .btn-dwt.disabled-btn {
-    background-color: #d3d3d3 !important; /* Jasnoszary */
-    color: #888 !important; /* Ciemniejszy szary tekst */
-    cursor: not-allowed !important; /* Kursor zakazu */
-   /* pointer-events: none;  Całkowicie blokuje możliwość kliknięcia */
-    box-shadow: none !important;
+
+
+
+
+    <div class="product-details">
+
+
+
+<style>
+  .purchase-panel {
+    max-width: 400px;
   }
+
+  .purchase-panel__title {
+    margin-bottom: 6px;
+  }
+
+  .purchase-panel__reviews {
+    margin: 0 0 14px 0;
+  }
+
+  .price-summary-card {
+    max-width: 400px;
+    margin: 0 0 24px 0;
+    padding: 14px 16px 16px;
+    border: 1px solid #dbe5f1;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    box-sizing: border-box;
+  }
+
+  .price-summary-card__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 12px;
+    color: #1f2937;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .price-summary-card__left {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .price-summary-card__icon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
+    display: inline-block;
+    background: #64748b;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  .price-summary-card__icon--label {
+    background: #707070;
+    -webkit-mask-image: url('/assets/icons/label.png');
+    mask-image: url('/assets/icons/label.png');
+  }
+
+
+
+.price-summary-card__icon--addon {
+  background: #707070;
+  -webkit-mask-image: url('/assets/icons/dodatek.png');
+  mask-image: url('/assets/icons/dodatek.png');
+}
+
+
+
+  .price-summary-card__icon--delivery {
+    background: #007bff;
+    -webkit-mask-image: url('/assets/icons/delivery.svg');
+    mask-image: url('/assets/icons/delivery.svg');
+  }
+
+  .price-summary-card__value {
+    margin-left: auto;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #707070;
+  }
+
+  .price-summary-card__value--shipping {
+    color: #008f2f;
+  }
+
+  .price-summary-card__divider {
+    height: 1px;
+    margin: 4px 0 13px;
+    background: #d8dee8;
+  }
+
+  .price-summary-card__total {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    color: #007cf0;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .price-summary-card__total-label {
+    font-size: 16px;
+  }
+
+  .price-summary-card__total-value {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-left: auto;
+    white-space: nowrap;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+  }
+
+  .price-summary-card__tax {
+    color: #707070;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .purchase-shipping-select {
+    max-width: 400px;
+    margin-top: 12px;
+  }
+
+  .purchase-shipping-select__label {
+    margin: 0 0 16px;
+    color: #707070;
+    font-size: 1.18rem;
+    line-height: 1.3;
+  }
+
+  .purchase-shipping-select select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #c5c4c4;
+    border-radius: 4px;
+    background: #fefdfa;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .purchase-shipping-select__note {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.45;
+  }
+
+  /* DROPDOWN KRAJU DOSTAWY - ukrywa stary select, ale zostawia go dla logiki Easytools */
+  .purchase-shipping-select__native {
+    display: none;
+  }
+
+  /* DROPDOWN KRAJU DOSTAWY - własny wygląd pola wyboru */
+  .custom-country-select {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 6px;
+    font-size: 16px;
+  }
+
+  .custom-country-select__control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    border: 1px solid #c5c4c4;
+    border-radius: 8px;
+    background: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .custom-country-select.is-open .custom-country-select__control {
+    border-color: #007cf0;
+    box-shadow: 0 0 0 1px rgba(0, 124, 240, 0.15);
+  }
+
+  .custom-country-select.is-error .custom-country-select__control {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+  }
+
+  .custom-country-select__label {
+    position: absolute;
+    top: -9px;
+    left: 11px;
+    padding: 0 5px;
+    background: #ffffff;
+    color: #707070;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .custom-country-select.is-open .custom-country-select__label {
+    color: #007cf0;
+  }
+
+  .custom-country-select.is-error .custom-country-select__label {
+    color: red;
+  }
+
+  .custom-country-select__input {
+    width: 100%;
+    height: 40px;
+    padding: 10px 42px 10px 12px;
+    border: 0;
+    background: transparent;
+    color: #111827;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+.custom-country-select__arrow {
+  position: absolute;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #707070;
+  border-bottom: 2px solid #707070;
+  transform: rotate(45deg);
+  transition: transform 0.18s ease;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+  .custom-country-select.is-open .custom-country-select__arrow {
+    transform: rotate(225deg);
+    margin-top: 6px;
+  }
+
+  .custom-country-select__dropdown {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    max-height: 260px;
+    overflow-y: auto;
+    border: 1px solid #c5c4c4;
+    border-radius: 0 0 8px 8px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    display: none;
+  }
+
+  .custom-country-select.is-open .custom-country-select__dropdown {
+    display: block;
+  }
+
+  .custom-country-select__option {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #111827;
+    font-size: 15px;
+    line-height: 1.35;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .custom-country-select__option:hover,
+  .custom-country-select__option.is-highlighted {
+    background: #eef6ff;
+  }
+
+  .custom-country-select__option.is-selected {
+    color: #007cf0;
+    font-weight: 700;
+  }
+
+  .custom-country-select__empty {
+    padding: 10px 12px;
+    color: #707070;
+    font-size: 14px;
+  }
+
+  .buy-box {
+    max-width: 400px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .buy-box__button {
+    width: 100%;
+    min-height: 54px;
+    margin: 0;
+    padding: 0 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-sizing: border-box;
+  }
+
+  .purchase-panel .checkout-note {
+    max-width: 400px;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .purchase-panel .payment-icons {
+    max-width: 400px;
+    text-align: center;
+    margin-top: 24px;
+    opacity: 0.85;
+  }
+
+  .availability-item__shipping-logos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .availability-item__shipping-logo {
+    display: block;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .availability-item__shipping-logo--inpost {
+    height: 46px;
+  }
+
+  .availability-item__shipping-logo--dpd {
+    height: 20px;
+  }
+
+.product-availability-list {
+  max-width: 400px;
+  margin-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.product-availability-list .availability {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.product-availability-list .availability + .availability {
+  border-top: 1px solid #e5e7eb;
+}
+
+.product-availability-list .availability p {
+  margin: 0;
+}
+
+.product-availability-list .availability-item {
+  width: 100%;
+  padding: 2px 0;
+  border: 0;
+  line-height: 1.35;
+}
+
+.product-availability-list .availability-item--link {
+  border: 0;
+}
+
+  @media (max-width: 768px) {
+    .price-summary-card,
+    .purchase-shipping-select,
+    .buy-box,
+    .purchase-panel .checkout-note,
+    .purchase-panel .payment-icons,
+    .product-availability-list {
+      max-width: 100%;
+    }
+
+    .price-summary-card__total {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .price-summary-card__total-value {
+      margin-left: 0;
+      font-size: 24px;
+    }
+  }
+
+
+.addon-card {
+  margin: 18px 0 12px;
+}
 </style>
 
-<div class="delivery-options gap-bottom">
-  <p id="delivery-label" class="tip" style="margin-top: 2rem;">Wybierz kraj i sposób dostawy:</p>
-  
-  <div style="margin-top: 0.5rem; max-width: 300px;">
-    <select id="delivery-country" onchange="updateDeliveryCost()" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #c5c4c4; border-radius: 4px; background: #fefdfa; color: #555; cursor: pointer; outline: none;">
-      <option value="none" selected disabled>Wybierz państwo z listy</option>
-      <option value="pl">Polska: Kurier InPost (przedpłata) — 30 zł</option>
-      <option value="pl2">Polska: Kurier InPost (pobranie) — 20 zł</option>
-      <option value="de">Niemcy: Kurier (przedpłata) — 75 zł</option>
-    </select>
+          <div class="purchase-panel">
+
+
+
+            {# <h2 class="purchase-panel__title">Cena</h2> #}
+
+            <a href="#opinions-section" class="product-review-jump purchase-panel__reviews" aria-label="Jump to opinions">
+              <span class="product-review-jump__stars" aria-hidden="true">
+                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon"><use xlink:href="#icon-star"></use></svg>
+              </span>
+              <span class="product-review-jump__score">5.0</span>
+              <span class="product-review-jump__dot">·</span>
+              <span class="product-review-jump__count">(3 opinie)</span>
+            </a>
+
+
+
+            <div class="purchase-shipping-select">
+              <p id="config-label" class="purchase-shipping-select__label">Wybierz kraj dostawy</p>
+
+              {# DROPDOWN KRAJU DOSTAWY - stary select zostaje ukryty i nadal steruje logiką Easytools #}
+              <select id="table-config" class="purchase-shipping-select__native" onchange="updateTableLink()">
+                <option value="none" {% if defaultShippingCountry == "none" %}selected{% endif %} disabled>Wybierz kraj dostawy</option>
+                <option value="g1" {% if defaultShippingCountry == "g1" %}selected{% endif %}>Polska - GRATIS</option>
+
+                {# <option value="g2">Niemcy - 49 zł</option>
+                <option value="g2">Czechy - 49 zł</option>
+                <option value="g2">Słowacja - 49 zł</option>
+                <option value="g2">Austria - 49 zł</option>
+                <option value="g2">Holandia - 49 zł</option>
+                <option value="g2">Belgia - 49 zł</option>
+                <option value="g2">Francja - 49 zł</option>
+                <option value="g2">Włochy - 49 zł</option>
+                <option value="g2">Hiszpania - 49 zł</option>
+                <option value="g2">Portugalia - 49 zł</option>
+                <option value="g2">Węgry - 49 zł</option>
+
+                <option value="g3">Dania - 139 zł</option>
+                <option value="g3">Szwecja - 139 zł</option>
+                <option value="g3">Finlandia - 139 zł</option>
+                <option value="g3">Irlandia - 139 zł</option> #}
+              </select>
+
+              {# DROPDOWN KRAJU DOSTAWY - nowy ładniejszy dropdown widoczny dla klienta #}
+              <div class="custom-country-select" id="custom-country-select">
+                <div class="custom-country-select__control">
+                  <span class="custom-country-select__label">Państwo *</span>
+
+                  <input
+                    type="text"
+                    class="custom-country-select__input"
+                    id="custom-country-input"
+                    autocomplete="off"
+                    placeholder=""
+                  >
+
+                  <span class="custom-country-select__arrow"></span>
+                </div>
+
+                <div class="custom-country-select__dropdown" id="custom-country-dropdown"></div>
+              </div>
+
+              <p class="purchase-shipping-select__note" style="margin-bottom: 10px;">Dostawa do innych państw możliwa po indywidualnej wycenie.</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="price-summary-card addon-card" style="position: relative; margin-bottom: 12px;">
+  <div style="position: absolute; top: -11px; left: 14px; background: #007cf0; color: #ffffff; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em;">
+    W pakiecie taniej
   </div>
-  
-  <div id="delivery-result" style="display: none; margin-top: 1rem; font-size: 1.1rem; color: #404041; font-weight: 600;">
-  </div>
 
- <div style="display: flex; justify-content: flex-end; max-width: 300px; margin-top: 15px;">
-  <a id="buy-now-btn" 
-     href="javascript:void(0)" 
-     class="btn-dwt disabled-btn" 
-     onclick="handleDisabledClick()" 
-     style="margin: 0; font-size: 20px; padding: 0 24px; height: 44px; display: inline-flex;">
-     Kup Teraz
-  </a>
-</div> #}
+  <label style="display: flex; align-items: flex-start; cursor: pointer; gap: 12px; margin-bottom: 0;">
+    <input
+      type="checkbox"
+      id="addon-checkbox"
+      onchange="updateTableLink()"
+      style="margin-top: 5px; transform: scale(1.25);"
+    >
 
+    <span style="flex: 1;">
+      <span style="display: block; color: #374151; font-weight: 700; font-size: 1.02rem; line-height: 1.35;">
+        Adapter do otwornic 12-29 (-49%)
+      </span>
 
-  {# <p class="tip">Inny kraj lub opcja? Napisz do mnie:</p> #}
+      <span style="display: block; color: #008f2f; font-weight: 800; margin-top: 7px; font-size: 1.08rem;">
+        + 50 zł
+        <s style="color: #707070; font-weight: 500; font-size: 0.92rem; margin-left: 4px;">99 zł</s>
+      </span>
+    </span>
+  </label>
 
-          <p class="tip">Produkt zamówić możesz za pomocą:</p>
-          <div class="contact">
-            <a class="messenger option" href="https://www.messenger.com/t/patryktrajder" rel="noopener" target="_blank" title="Napisz do mnie na Messengerze">
-              <svg class="icon messenger">
-                <use xlink:href="#icon-messenger"></use>
-              </svg>Messenger</a>
+  <details style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #e5e7eb; font-size: 0.85rem;">
+    <summary style="color: #6b7280; cursor: pointer; user-select: none; outline: none; font-weight: 600;">
+      Zobacz zawartość pakietu
+    </summary>
 
-        <div class="phone">
-  <div class="hold-on-click option" title="Kliknij, aby skopiować adres" onclick="copyEmail(this)">
-    <svg class="icon">
-      <use xlink:href="#icon-mail"></use>
-    </svg>
-    <span class="text">Email</span>
-    <span class="number" style="cursor: copy;">sklep@trajder.com</span>
-  </div>
-  <div class="invisible option">
-    <svg class="icon">
-      <use xlink:href="#icon-mail"></use>
-    </svg>sklep@trajder.com
-  </div>
+    <div style="margin-top: 12px;">
+      Adapter do otwornic 12–29 mm — przydatny, jeśli chcesz korzystać z mniejszych otwornic.
+    </div>
+  </details>
 </div>
 
 
-            <div class="phone" href="tel:+48602106170" rel="nofollow noopener" target="_blank">
-              <div class="hold-on-click option">
-                <svg class="icon">
-                  <use xlink:href="#icon-mobile"></use>
-                </svg>
-                <span class="text">Telefon</span>
-                <span class="number">602 106 170</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      <div id="price-breakdown" class="price-summary-card" aria-live="polite">
+              <div class="price-summary-card__row">
+                <div class="price-summary-card__left">
+                  <span class="price-summary-card__icon price-summary-card__icon--label" aria-hidden="true"></span>
+                  <span>Cena produktu</span>
+                </div>
+                <strong class="price-summary-card__value" id="summary-product-price">1029,00 zł</strong>
               </div>
-              <div class="invisible option">
-                <svg class="icon">
-                  <use xlink:href="#icon-mobile"></use>
-                </svg>602 106 170
+
+              <div class="price-summary-card__row" id="summary-addon-row" style="display: none;">
+                <div class="price-summary-card__left">
+                  <span class="price-summary-card__icon price-summary-card__icon--addon" aria-hidden="true"></span>
+                  <span>Adapter</span>
+                </div>
+                <strong class="price-summary-card__value" id="summary-addon-price">50,00 zł</strong>
+              </div>
+
+              <div class="price-summary-card__row">
+                <div class="price-summary-card__left">
+                  <span class="price-summary-card__icon price-summary-card__icon--delivery" aria-hidden="true"></span>
+                  <span>Dostawa</span>
+                </div>
+                <strong class="price-summary-card__value price-summary-card__value--shipping">
+                  <span id="summary-shipping-price">0,00 zł</span>
+                  <span id="summary-shipping-label">&nbsp;gratis</span>
+                </strong>
+              </div>
+
+              <div class="price-summary-card__divider"></div>
+
+              <div class="price-summary-card__total">
+                <span class="price-summary-card__total-label">Łącznie do zapłaty</span>
+                <strong class="price-summary-card__total-value">
+                  <span id="summary-total-price">1029,00 zł</span>
+                  <span class="price-summary-card__tax">(brutto)</span>
+                </strong>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            {# <div style="margin-top: 1.8rem; background: #ffffff; border: 1px solid #d1d5db; padding: 16px; border-radius: 6px; max-width: 400px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative;">
+            <div style="position: absolute; top: -11px; left: 14px; background: #0056b3; color: #ffffff; padding: 2px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+              W pakiecie taniej
+            </div>
+              <label style="display: flex; align-items: flex-start; cursor: pointer; gap: 12px; margin-bottom: 0;">
+                <input type="checkbox" id="addon-checkbox" onchange="updateTableLink()" style="margin-top: 4px; transform: scale(1.3);">
+                <span style="flex: 1;">
+                  <span style="display: block; color: #374151; font-weight: 600; font-size: 1.05rem;">Plany oprzyrządowania (-50%)</span>
+                  <span style="display: block; color: #00a650; font-weight: 600; margin-top: 8px; font-size: 1.1rem;">
+                    + 49 zł <s style="color: #555555; font-weight: 500; font-size: 0.95rem; margin-left: 4px;">98 zł</s>
+                  </span>
+                </span>
+              </label>
+            </div> #}
+
+
+
+            <div class="buy-box">
+            <a
+              id="buy-table-btn"
+              href="javascript:void(0)"
+              class="btn-dwt buy-box__button"
+              onclick="return handleTableDisabledClick()"
+            >
+              Kup Teraz
+            </a>
+          </div>
+
+
+            <p class="checkout-note">Po kliknięciu „Kup Teraz” przejdziesz do koszyka&nbsp;<span class="checkout-note__brand">Easytools</span>.</p>
+
+            <div class="payment-icons payment-icons--mono">
+              <span style="font-size: 10px; display: block; margin-bottom: 12px; color: #888; letter-spacing: 1px; font-weight: 600;">BEZPIECZNA PŁATNOŚĆ PRZEZ:</span>
+
+              <div style="display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap;">
+                <a href="https://tpay.com/jak-to-dziala" target="_blank" title="Bezpieczne płatności online Tpay" style="text-decoration: none; line-height: 0;">
+                  <img src="https://tpay.com/img/banners/tpay_logo_blue.svg" alt="Tpay" title="Tpay - szybkie płatności i przelewy" style="height: 16px; width: auto; border: 0;">
+                </a>
+
+                <img src="/assets/icons/blik.svg" alt="Blik" title="Płatność kodem BLIK" style="height: 18px; width: auto;">
+                <img src="/assets/icons/google-pay.svg" alt="Google Pay" title="Płatność Google Pay" style="height: 20px; width: auto;">
+
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <img src="/assets/icons/visa.svg" alt="Visa" title="Płatność kartą Visa" style="height: 14px; width: auto;">
+                  <img src="/assets/icons/mastercard.svg" alt="Mastercard" title="Płatność kartą Mastercard" style="height: 14px; width: auto;">
+                </div>
+
+                <span style="font-size: 11px; color: #777; font-weight: 700; margin-left: 5px; text-transform: uppercase; letter-spacing: 0.5px;">+ I INNE</span>
+              </div>
+            </div>
+
+            <div class="product-availability-list">
+              <div class="availability">
+                <p class="availability-item">
+                  <span class="availability-item__check">✓</span>
+                  <span class="availability-item__text">
+                    <span>Darmowa dostawa do Polski</span><br>
+                    <span class="availability-item__nowrap">
+                      Wysyłka&nbsp;w&nbsp;24h
+
+                      <span class="availability-item__shipping-logos" aria-label="Przewoźnicy: InPost i DPD">
+                        <img
+                          src="/assets/icons/InPost.svg"
+                          alt="InPost"
+                          class="availability-item__shipping-logo availability-item__shipping-logo--inpost"
+                        >
+
+                        <img
+                          src="/assets/icons/dpd_logo.svg"
+                          alt="DPD"
+                          class="availability-item__shipping-logo availability-item__shipping-logo--dpd"
+                        >
+                      </span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+
+              <div class="availability">
+                <p class="availability-item">
+                  <span class="availability-item__check">✓</span>
+                  <span class="availability-item__text">14 dni na zwrot bez podania przyczyny</span>
+                </p>
+              </div>
+
+              <div class="availability">
+                <p>
+                  <a href="#support-section" class="availability-item availability-item--link">
+                    <span class="availability-item__check">✓</span>
+                    <span class="availability-item__label">Wsparcie techniczne po zakupie</span>
+                  </a>
+                </p>
+              </div>
+
+              <div class="availability">
+                <p>
+                  <button
+                    type="button"
+                    class="availability-item availability-item--link js-youtube-popup-open"
+                    data-youtube-id="OaNSVxAPvso"
+                  >
+                    <span class="availability-item__check">✓</span>
+                    <span class="availability-item__label">
+                      Projekt przetestowany w akcji
+                      <span class="availability-item__video-text">(obejrzyj wideo)</span>
+                    </span>
+                  </button>
+                </p>
               </div>
             </div>
           </div>
-     <div class="availability">
-    <p>Na stanie w warsztacie&nbsp;|&#32;<span class="green-text">Wysyłka&nbsp;w&nbsp;24h</span></p>
-</div>
-          <div class="assembly-difficulty">
-            <p>Trudność złożenia</p>
-            <span>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench-full"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench-full"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-              <svg class="icon">
-                <use xlink:href="#icon-flat-eye-wrench"></use>
-              </svg>
-            </span>
-          </div>
-          {# <div class="options">
-            <div>Specjalnie dla Was, daję możliwość modyfikacji zamówienia - tak, aby cena była przystępna dla każdego. Koszt produkcji wałka na maszynach cnc z zachowaniem jakości którą sobie narzuciłem jest na tyle drogi, że być może ktos kto ma dostęp do tokarki, postanowi zaoszczedzić i zrobic go we własnym zakresie trochę taniej. 😉</div>
-            <div class="checkbox row">
-              <svg class="icon">
-                <use xlink:href="#icon-square"></use>
-              </svg>
-              <p>1× toczony hartowany wał z orginalnym adapterem do mocowania otwornic (+90 PLN).</p>
-            </div>
-          </div> #}
         </div>
       </section>
+
+
+
 
 
 <section class="parallax-section gap-bottom gap-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/super-booster-2000/thumb-w1120.jpg'); 
@@ -269,37 +895,133 @@ background-position: 50% center;"> {# jak ma skalowac sie zdjecie 0 idzie w praw
 
 
 
-      <div class="tabs">
-        <input id="description-tab-button" type="radio" name="tab-button" checked="checked">
-        <input id="parameters-tab-button" type="radio" name="tab-button">
-        <input id="opinions-tab-button" type="radio" name="tab-button">
-        <div class="buttons">
-          <label for="description-tab-button">Opis</label>
-          <label for="parameters-tab-button">Parametry</label>
-          <label for="opinions-tab-button">Opinie</label>
-        </div>
-        <div class="content gap-top">
-          <section>
-            <div class="row">
-              <div>
-                <p>
-                  Cały zamysł konstrukcji zaprojektowałem już 5 lat temu, od tego czasu starałem się wprowadzać cały czas modyfikacje, aby był jak najlepszy. Najnowsza wersja jest ulepszona o m.in.
-                  <br>
-                  hartowany wał (taki sam jakiego używa się do produkcji siłowników w maszynach budowlanych), specjalną końcówkę do szybkiej wymiany otwornic, kątownik z podziałką do łatwego i szybkiego ustawienia przyrządu pod daną pracę, zawleczki (aby docisk materiału zawsze trzymał się na swoim miejscu), blokadę kąta dla powtarzalosci cięć, i kilka innych ulepszeń, które znacząco podnoszą komfort pracy. Jednak zarazem podniosły cenę 😉 Moim celem było stworzenie produktu o jak najlepszych paramatrach oraz w cenie przystępnej dla każdego. Na początku zakładałem sprzedaż zestawu trochę taniej, jednak doszedłem do wniosku, że podniesienie jakości bedzie dobrą decyzją.
-                </p>
-              </div>
-              {# <div> 
-                <div class="image-loading">
-                  <img src="/assets/images/super-booster-2000/thumb-w1120.jpg" alt="prezentacja złożonej wykrawarki do rur"/>
-                </div 
-              </div>>  #}
-            </div>
 
-            <div>
-              <p class="single-out">W skład zestawu wchodzi:</p>
 
-              <ul class="dots">
-                <li>
+     <nav class="product-section-nav" aria-label="Product section navigation">
+        <a href="#description-section" class="product-section-nav__link">Opis</a>
+        <a href="#specifications-section" class="product-section-nav__link">Parametry</a>
+        <a href="#support-section" class="product-section-nav__link">Wsparcie</a>
+        <a href="#opinions-section" class="product-section-nav__link">Opinie</a>
+      </nav>
+
+      <section id="description-section" class="product-anchor-section">
+        <h1>Opis</h1>
+        <div>
+          <p>
+  Pierwszą wersję tej konstrukcji zaprojektowałem około 8 lat temu. Od tamtego czasu regularnie ją poprawiałem, testowałem i dopracowywałem, żeby finalnie powstał zestaw, który naprawdę dobrze sprawdza się w warsztacie.
+</p>
+<p>
+  Najnowsza wersja ma m.in. hartowany wał, końcówkę do szybkiej wymiany otwornic, kątownik z podziałką, zawleczki trzymające docisk na miejscu oraz blokadę kąta do powtarzalnych cięć.
+</p>
+
+<p>Zdjęcia widoczne obecnie na stronie nie przedstawiają w pełni najnowszej wersji wykrawarki. Najnowsza konstrukcja została dodatkowo dopracowana i różni się kilkoma detalami, które pokazuję w materiałach wideo poniżej. Do czasu aktualizacji galerii możesz zobaczyć tam aktualny wygląd wykrawarki oraz omówienie wprowadzonych zmian.</p>
+
+
+<div style="margin: 30px 0;">
+  <h3>Filmy z prezentacji najnowszej wersji</h3>
+  
+
+  <a
+    href="https://drive.google.com/drive/u/0/folders/1IAICvGC_fcVbBHKqCcPNBe5-rWSJ2EJd"
+    target="_blank"
+    rel="noopener"
+    class="btn-dwt"
+    style="display: inline-flex; align-items: center; text-decoration: none;"
+  >
+    ▶ Zobacz najnowsza wykrawarkę
+  </a>
+</div>
+
+
+<br>
+<br>
+<br>
+
+ <h3>*Filmy z prezentacji możliwosci poniżej sa z poprzedniej wersji* - niedlugo aktualizacja strony</h3>
+
+<div class="product-video-showcase">
+  <div class="product-video-showcase__media">
+    <video autoplay loop muted playsinline preload="metadata">
+      <source src="/assets/videos/tn3.mp4" type="video/mp4">
+      Twoja przeglądarka nie obsługuje wideo.
+    </video>
+  </div>
+
+  <div class="product-video-showcase__content">
+    <div>
+      {# <span class="product-video-showcase__label">Projekt przetestowany w praktyce</span> #}
+
+      <h2 class="product-video-showcase__title">
+        Wykrawaj profile jak zawodowiec.
+      </h2>
+
+      <p class="product-video-showcase__text">
+      Idealne połączenie profili z rurami.
+    </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="product-video-showcase product-video-showcase--reverse">
+  <div class="product-video-showcase__media">
+    <video autoplay loop muted playsinline preload="metadata">
+      <source src="/assets/videos/tn2.mp4" type="video/mp4">
+      Twoja przeglądarka nie obsługuje wideo.
+    </video>
+  </div>
+
+  <div class="product-video-showcase__content">
+    <div>
+      <h2 class="product-video-showcase__title">
+        Wykrawaj rury przez środek.
+      </h2>
+
+      <p class="product-video-showcase__text">
+        Do zastosowania np. w barierkach.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="product-video-showcase">
+  <div class="product-video-showcase__media">
+    <video autoplay loop muted playsinline preload="metadata">
+      <source src="/assets/videos/tn1.mp4" type="video/mp4">
+      Twoja przeglądarka nie obsługuje wideo.
+    </video>
+  </div>
+
+  <div class="product-video-showcase__content">
+    <div>
+      {# <span class="product-video-showcase__label">Projekt przetestowany w praktyce</span> #}
+
+      <h2 class="product-video-showcase__title">
+        Idealne połaczenia
+      </h2>
+
+      <p class="product-video-showcase__text">
+      sprawdż i przekonaj się sam
+    </p>
+    </div>
+  </div>
+</div>
+
+
+            <h3>Co zawiera ten zestaw?</h3>
+
+          <ul class="dots">
+                  <li>
                   <p>
                     11x blachy wycinane Laserem (przygotowane do spawania poprzez obróbkę krawędzi, otworów, gwintowanie itd; dokladność wyciętych elementów to 0,03 MM, wycinane na jednym z najlepszych dostepnych źródeł lasera w polsce)
                   </p>
@@ -340,7 +1062,7 @@ background-position: 50% center;"> {# jak ma skalowac sie zdjecie 0 idzie w praw
                 </li>
                 <li>
                   <p>
-                    1x grawerowany kątownik wraz z logo - aktualnie gratis (cena zakupu 25zł)
+                    1x grawerowany kątownik wraz z logo
                   </p>
                 </li>
                 <li>
@@ -357,146 +1079,29 @@ background-position: 50% center;"> {# jak ma skalowac sie zdjecie 0 idzie w praw
                 </li>
               </ul>
 
-              <p class="gap-top">
-                Zestaw kompletny, przygotowany do złożenia. Czas potrzebny na złożenie zestawu to około 30 minut. Poniżej lista z niezbędnymi narzędziami potrzebnymi do budowy. ;)
-              </p>
-            </div>
+      
 
-            <div class="expander materials shrink gap-top">
-              <header>
-                <p>Narzędzia potrzebne do złożenia zestawu</p>
-              </header>
-              <div class="container">
-                <ul class="dots">
-                  <li>
-                    <p>jakakolwiek spawarka np. TIG, MIG, MAG, MMA (elektrody),</p>
-                  </li>
-                  <li>
-                    <p>szlifierka kątowa (do zabielenia miejsc spawanych),</p>
-                  </li>
-                  <li>
-                    <p>kątownik,
-                    </p>
-                  </li>
-                  <li>
-                    <p>2× ścisk stolarski,</p>
-                  </li>
-                  <li>
-                    <p>klucz płasko-oczkowy 8 mm,</p>
-                  </li>
-                  <li>
-                    <p>klucz płasko-oczkowy 12 mm,</p>
-                  </li>
-                  <li>
-                    <p>klucz płasko-oczkowy 19 mm,</p>
-                  </li>
-                  <li>
-                    <p>klucz płasko-oczkowy 30 mm,</p>
-                  </li>
-                  <li>
-                    <p>wymiennie do powyższego można użyć szczypiec nastawnych do rur,</p>
-                  </li>
-                  <li>
-                    <p>opcjonalnie młotek (bo bez młota to nie robota xd),
-                    </p>
-                  </li>
-                  <li>
-                    <p>typowa odzież ochronna: okulary ochronne do szlifierki, rękawice do spawania itp. ;)
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <button>
-                <svg class="icon">
-                  <use xlink:href="#icon-chevron-down"></use>
-                </svg>
-              </button>
-            </div>
 
-            <p class="single-out-link">
-              <a href="instruction/" title="Instrukcja montażu">Instrukcja montażu</a>
-            </p>
-            <div class="row gap-top">
-              <div>
-                <div class="image-loading ratio3to2">
-                  <img src="/assets/images/super-booster-2000/detail2-w1120.jpg" alt="słupek z gwintem"/>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Jak możesz zauwazyć, na zdjęciu obok miejsce, gdzie trzeba przyspawać&#32;<q>słupek z gwintem</q>, zostało natrasowane poprzez grawer laserem z dokładnością do 1 setnej milimetra, co w połączeniu z pasowaniem na wpusty gwarantuje przyjemną pracę bez niespodzianek 😉
-                </p>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <div class="image-loading">
-                  <img src="/assets/images/super-booster-2000/equipment/metal-sheet/detail2-w1120.jpg" alt="elementy do budowy wykrawarki"/>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Cały zestaw do złożenia zaprojektowałem w taki sposób aby ułatwić jego montaż, tak aby nawet początkujący majsterkowicz nie miał z nim żadnych problemów, a cały proces składania przypominał bardziej zabawę aniżeli pracę. 😉
-                </p>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <div class="image-loading ratio3to2">
-                  <img src="/assets/images/super-booster-2000/detail3-w1120.jpg" alt="kątownik do precyzyjnego ustawiania kątu"/>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Specjalnie wyskalowany kątownik będzię waszym najlepszym kumplem podczas pracy, ponieważ zaoszczedzi mase czasu oraz przypilnuję powtarzalności cięć 😉
-                </p>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <div class="image-loading">
-                  <img src="/assets/images/super-booster-2000/detail4-w1120.jpg" alt="metalowe podstawki pod łożyska"/>
-                </div>
-              </div>
-              <div>
-                <p>
-                  W zestawie dokładam wszelkich starań nawet tam gdzie pozornie nie są wymagane, idealnym tego przykładem są szlifowane pod kątem krawędzie m.in. podstawek pod łożyska, czy słupek z gwintemM20, jest to zabieg tylko stylistyczny nie wpływający na pracę przystawki
-                </p>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <div class="image-loading">
-                  <img src="/assets/images/super-booster-2000/detail5-w1120.jpg" alt="blacha z otworami fasolkowymi do montażu łożysk"/>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Dzięki zastosowaniu fasolek do mocowania łożysk mamy możliwość bardzo szybkiej regulacji, a co najważniejsze bezstopniowej. Ma to szczególne znaczenie, gdy chcemy często zmieniać rozmiar obrabianej rury czy profilu.
-                </p>
-              </div>
-            </div>
 
-            <div class="row">
-              <div>
-                <div class="image-loading">
-                  <img src="/assets/images/super-booster-2000/detail6-w1120.jpg" alt="Wałek z adapterem do montażu otwornic"/>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Połączenie walka z otwornica było dla mnie największym wyzwaniem. Początkowo gwintowałem sam pręt jednak to połączenie nie sprawdzało się w przypadku używania większych otwornic. Postanowiłem nie wyważać otwartych drzwi i zastosowałem orginalny adapter do mocowania otwornic. Posiada on specjalne trzpienie które przejmują na siebie cała energię zapobiegając uszkodzeniu gwintu.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section>
-            <table class="specification">
-              <tr>
+
+ 
+      </section>
+
+
+
+
+
+
+
+      <section id="specifications-section" class="product-anchor-section"> 
+        <h1>Parametry</h1>
+
+      <table class="specification">
+             <tr>
                 <th>Parametr</th>
                 <th>Wartość</th>
               </tr>
@@ -545,305 +1150,480 @@ background-position: 50% center;"> {# jak ma skalowac sie zdjecie 0 idzie w praw
                 <td>35×25×15 cm</td>
               </tr>
             </table>
-          </section>
-          <section>
-            <div class="opinion">
-              <div class="header">
-                <span>Rafał (Polska)</span>
-                <svg class="flag icon">
-                  <use xlink:href="#icon-flag-pl-rect"></use>
-                </svg>
-                <span class="rating">
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <span class="points">5/5</span>
-                </span>
-              </div>
-              <p>Panie Patryku ostatnio złożyłem zakupiona wykrawarke i muszę przyznać robi robotę fajnie się na niej pracuje, jestem naprawde zadowolony. Pozdrawiam</p>
-              {# <div class="attachments">
-                <div>Zdjęcia (kliknij aby powiększyć):</div>
-                <div class="items">
-                  <img src="http://placekitten.com/g/82/54?v=1" alt="">
-                  <img src="http://placekitten.com/g/82/54?v=2" alt="">
-                  <img src="http://placekitten.com/g/82/54?v=3" alt="">
-                </div>
-              </div> #}
-            </div>
-            <div class="opinion">
-              <div class="header">
-                <span>Jesse (USA)</span>
-                <svg class="flag icon">
-                  <use xlink:href="#icon-flag-us-rect"></use>
-                </svg>
-                <span class="rating">
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <span class="points">5/5</span>
-                </span>
-              </div>
-              <p>My package of the tubing notcher has arrived. I thank you for shipping it to me as it arrived in good shape and the box was not damaged. I will get this welded together and painted similar to the way you have shown yours. Thank you again.</p>
-            </div>
-            <div class="opinion">
-              <div class="header">
-                <span>Ben (Holandia)</span>
-                <svg class="flag icon">
-                  <use xlink:href="#icon-flag-nl-rect"></use>
-                </svg>
-                <span class="rating">
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <span class="points">5/5</span>
-                </span>
-              </div>
-              <p>Good morning Patryk, Thank you for sending me the parcel. Received it last week and was very well packed and presented. The parts look very professional, especially the spindle for the drillbit looks super!! Ik can't wait to put it all together and start working with it but right now it's a little bit cold in the shed. I'm sure it's the same in Poland? Once again thank you and I'll keep you posted when i have put it together. Cheers. Ben</p>
-            </div>
-            <div class="opinion">
-              <div class="header">
-                <span>D. Düsentrieb (Niemcy)</span>
-                <svg class="flag icon">
-                  <use xlink:href="#icon-flag-de-rect"></use>
-                </svg>
-                <span class="rating">
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <span class="points">5/5</span>
-                </span>
-              </div>
-              <p>
-                Wirklich ein sehr gutes Produkt der Shop ist absolut vertrauenswürdig ich habe es vor Weihnachten bestellt im neuen Jahr bekommen jetzt vor kurzem zusammengeschweißt und es ist alles 100% für den Preis vor allen Dingen immer netter Kontakt das Puzzle ist echt sehr genau gearbeitet ein Traum<br>
-                <br>
-                English:<br>
-                Really a very good product the shop is absolutely trustworthy I ordered it before Christmas in the new year now got welded together recently and it's all 100% for the price above all always nice contact the puzzle is really very accurate a dream
-              </p>
-            </div>
-            <div class="opinion">
-              <div class="header">
-                <span>Fernando (Hiszpania)</span>
-                <svg class="flag icon">
-                  <use xlink:href="#icon-flag-es-rect"></use>
-                </svg>
-                <span class="rating">
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <svg class="icon">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                  <span class="points">5/5</span>
-                </span>
-              </div>
-              <p>Compre la maquina a patryk y me llego en 5 dias desde polonia a españa, un placer tratar con Patryk</p>
-            </div>
-            <div class="centered-text">
-              <p class="single-out">Również chcesz podzielić się własnymi doświadczeniami z zakupu?</p>
-              <p class="gap-top">Aktualnie nie ma możliwości dodawania opinii bezpośrednio przez stronę, wiec jeśli chcesz dodać opinie proszę wyślij ją na&#32;<a href="mailto:opinie@trajder.com" rel="nofollow noopener" target="_blank" title="opinie@trajder.com">opinie@trajder.com</a>, a ja dodam ją ręcznie na stronę. Z góry dziękuję za opinie, to wiele dla mnie znaczy! ;)</p>
-            </div>
-          </section>
-        </div>
-      </div>
+      </section>
+
+
+
+
+
+
+
+    <section id="support-section" class="product-scroll-section product-anchor-section">
+  <h1>Wsparcie po zakupie</h1>
+   <p>Naszym celem nie jest sprzedaż samych zestawów i zakończenie kontaktu z klientem.</p>
+   <ul class="dots">
+<li>
+  <p>Kupując zestaw do samodzielnej budowy, otrzymujesz nie tylko paczke z detalami, ale również wsparcie techniczne.</p>
+</li>
+<li>
+<p>Po zakupie otrzymasz kontakt e-mail do eksperta technicznego, który odpowie na pytania dotyczące zakupionego produktu.</p> 
+</li>
+</ul>
+
+<p>ℹ️ Wsparcie techniczne dotyczy zakupionego zestawu i jego prawidłowego montażu. Nie obejmuje zmiany konstrukcji lub dostosowanie projektu pod indywidualne założenia. Jeśli potrzebujesz indywidualnego produktu, napisz do nas:&nbsp;<a href="mailto:trajder.sklep@gmail.com">trajder.sklep@gmail.com</a></p>
+</section>
+
+
+
+
+
+
+
+
+{% set reviewsInitialVisible = 3 %}
+{% set reviewsRevealBatches = [5, 5, 10] %}
+
+{% set productReviews = [] %}
+
+{% include "sections/product-reviews.njk" %}
+{% include "scripts/product-reviews.njk" %}
+
+
+
+{# -------------------------------------------------------------------------------------- #}
+  
+
+{% set recommendedProducts = [
+        "dWT04",
+        
+        "dWT01",
+        "dWT03",
+        "dWTA01",
+        "dWTA02",
+        "dWS02",
+        "dWS01",
+        "dWTA03"
+] %}
+
+{% include "sections/recommended-products-pl.njk" %}
+
+
+
+
+{# -------------------------------------------------------------------------------------- #}
+
+
+
+
 
       <section id="presentation" class="gap-top-medium">
-        <h1>Prezentacja możliwości</h1>
-
-        <div class="row">
-          <div>
-            <div class="image-loading ratio4to3">
-              <img src="/assets/images/super-booster-2000/pipe1-w1120.jpg" alt="precyzyjne wycięcie pod kątem prostym"/>
-            </div>
-          </div>
-          <div>
-            <p>
-              W maszynce możemy wykrawać rury od 28 do 91mm, czego przykładem jest zdjęcie obok ;)
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <div class="image-loading ratio4to3">
-              <img src="/assets/images/super-booster-2000/pipe2-w1120.jpg" alt="cięcie pod kątem prostym"/>
-            </div>
-          </div>
-          <div>
-            <p>
-              przykład połączenia rury 91mm pod kątem prostym.
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <div class="image-loading ratio4to3">
-              <img src="/assets/images/super-booster-2000/pipe3-w1120.jpg" alt="prezenracja precyzyjnego wycięcia"/>
-            </div>
-          </div>
-          <div>
-            <p></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <div class="image-loading ratio4to3">
-              <img src="/assets/images/super-booster-2000/pipe4-w1120.jpg" alt="precyzyjne cięcie rybie usta pod kątem 45 stopni"/>
-            </div>
-          </div>
-          <div>
-            <p></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <div class="image-loading ratio4to3">
-              <img src="/assets/images/super-booster-2000/pipe5-w1120.jpg" alt="cięcie pod kątem 45 stopni za pomocą wykrawarki do rur"/>
-            </div>
-          </div>
-          <div>
-            <p></p>
-          </div>
-        </div>
-
-        <p class="gap-top">
-          Poniżej przedstawiam Tobie film z pokazem możliwości mojej maszynki. Film nie został jeszcze zaktualizowany i przedstawiony jest na nim stary model maszynki. Nowsza wersja została ulepszona, ale zasada pracy oraz montażu jest identyczna więc pozwoliłem sobie na tymczasowe dodanie filmu 😉
-        </p>
-
         <div class="yt-video">
           <div>
             <iframe src="https://www.youtube-nocookie.com/embed/OaNSVxAPvso?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" title="Super Booster 2000 - prezentacja"></iframe>
           </div>
         </div>
-      </section>
 
-    </article>
+        <p>
+  <br>
+  <i>Nota prawna:
+    <br>
+    <br>
+    Bezpieczeństwo i odpowiedzialność:
+    <br>
+    Produkt jest zestawem DIY do samodzielnego montażu. Oznacza to, że kupujący otrzymuje komplet elementów przeznaczonych do złożenia przyrządu we własnym zakresie. Montaż, regulacja, dobór osprzętu, sposób zamocowania materiału oraz późniejsze użytkowanie odbywają się na odpowiedzialność kupującego.
+    <br>
+    <br>
+    Zestaw został zaprojektowany i przygotowany z należytą starannością, jednak jego prawidłowe oraz bezpieczne działanie zależy od poprawnego montażu, właściwego dokręcenia połączeń, kontroli elementów przed użyciem oraz stosowania zgodnie z przeznaczeniem. Właściciel serwisu patryktrajder.com nie ponosi odpowiedzialności za szkody osobowe, rzeczowe lub majątkowe powstałe w wyniku nieprawidłowego montażu, niewłaściwego użytkowania, modyfikacji konstrukcji, użycia nieodpowiednich narzędzi, braku kontroli technicznej lub nieprzestrzegania zasad BHP.
+    <br>
+    <br>
+    Ryzyko wykonawcze i użytkowe:
+    <br>
+    Praca z przyrządem wymaga podstawowych umiejętności technicznych, doświadczenia warsztatowego oraz zachowania szczególnej ostrożności. Kupujący zobowiązany jest do samodzielnej oceny, czy posiada odpowiednie umiejętności, narzędzia i warunki do bezpiecznego złożenia oraz użytkowania zestawu.
+    <br>
+    <br>
+    Przed każdym użyciem należy sprawdzić poprawność montażu, stan połączeń, stabilność mocowania, ustawienie kąta, prawidłowe zablokowanie elementów oraz pewne zamocowanie obrabianego materiału. Wszelkie działania podejmowane są przez użytkownika na własne ryzyko i odpowiedzialność.
+    <br>
+    <br>
+    Modyfikacje i zastosowanie:
+    <br>
+    Zabrania się użytkowania zestawu w sposób niezgodny z jego przeznaczeniem, przeciążania konstrukcji, stosowania uszkodzonych elementów oraz wprowadzania zmian konstrukcyjnych bez własnej odpowiedzialności za ich skutki. Jakiekolwiek przeróbki, modyfikacje, nieoryginalne części lub użycie zestawu w innych warunkach niż przewidziane mogą wpłynąć na bezpieczeństwo pracy.
+    <br>
+    <br>
+    BHP:
+    <br>
+    Podczas pracy należy stosować odpowiednie środki ochrony osobistej, w szczególności okulary ochronne, rękawice robocze, ochronę słuchu oraz odzież roboczą. Należy również przestrzegać instrukcji obsługi używanych elektronarzędzi, otwornic, wiertarek, wiertarek stołowych oraz innych urządzeń współpracujących z zestawem.
+    <br>
+    <br>
+    Prawa autorskie:
+    <br>
+    Konstrukcja, dokumentacja, zdjęcia, opisy oraz materiały udostępnione w ramach produktu stanowią własność intelektualną serwisu patryktrajder.com i są chronione prawem autorskim. Zabrania się ich kopiowania, powielania, modyfikowania, udostępniania oraz dalszej odsprzedaży w całości lub w części bez pisemnej zgody właściciela.
+  </i>
+</p>
+
+         </section>
+
+
+
+
+
+<div class="youtube-popup" id="youtube-popup" aria-hidden="true">
+  <div class="youtube-popup__overlay" data-youtube-close></div>
+
+  <div class="youtube-popup__content" role="dialog" aria-modal="true" aria-label="Film YouTube">
+   <button class="youtube-popup__close" type="button" data-youtube-close aria-label="Zamknij film">
+  <svg class="icon youtube-popup__close-icon" aria-hidden="true">
+    <use xlink:href="#icon-close"></use>
+  </svg>
+</button>
+
+    <div class="youtube-popup__video" id="youtube-popup-video"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
-function updateDeliveryCost() {
-  const select = document.getElementById('delivery-country');
-  const resultDiv = document.getElementById('delivery-result');
-  const buyBtn = document.getElementById('buy-now-btn');
-  const label = document.getElementById('delivery-label');
-  const selectedValue = select.value;
+/**
+ * Konfiguracja wariantów dostawy + przyszłych zestawów.
+ *
+ * productPrice = cena samego produktu
+ * shippingPrice = koszt dostawy dla wybranej grupy
+ * soloUrl = link Easytools dla samego produktu
+ * bundleUrl = link Easytools dla produktu z dodatkiem / zestawem
+ *
+ * Jeśli kiedyś odkomentujesz checkbox #addon-checkbox, cena zacznie doliczać addonPrice,
+ * a przycisk automatycznie przełączy link z soloUrl na bundleUrl.
+ */
+const productPrice = 1029;
+const addonPrice = 50;
 
-  // Resetujemy ostrzeżenie do normy
-  label.style.color = '#707070'; 
+const tableVariants = {
+  g1: {
+    shippingPrice: 0,
+    shippingText: 'gratis',
+    soloUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-4?lang=pl',
+    bundleUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-adapter?lang=pl'
+  },
+  g2: {
+    shippingPrice: 49,
+    shippingText: '49 zł',
+    soloUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-2?lang=pl',
+    bundleUrl: ''
+  },
+  g3: {
+    shippingPrice: 139,
+    shippingText: '139 zł',
+    soloUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-3?lang=pl',
+    bundleUrl: ''
+  }
+};
+
+function formatPrice(value) {
+  return value.toLocaleString('pl-PL', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }) + ' zł';
+}
+
+/**
+ * Aktualizacja ceny i linku Easytools po wyborze kraju dostawy
+ * oraz po zaznaczeniu przyszłego checkboxa z pakietem.
+ */
+function updateTableLink() {
+  const selectBox = document.getElementById('table-config');
+  const addonCheckbox = document.getElementById('addon-checkbox');
+  const buyBtn = document.getElementById('buy-table-btn');
+  const label = document.getElementById('config-label');
+  const summaryProductPrice = document.getElementById('summary-product-price');
+  const summaryAddonRow = document.getElementById('summary-addon-row');
+  const summaryAddonPrice = document.getElementById('summary-addon-price');
+  const summaryShippingPrice = document.getElementById('summary-shipping-price');
+  const summaryShippingLabel = document.getElementById('summary-shipping-label');
+  const summaryTotalPrice = document.getElementById('summary-total-price');
+
+  if (!selectBox || !buyBtn || !label) return;
+
+  const selectedVariant = tableVariants[selectBox.value];
+  const isAddon = addonCheckbox ? addonCheckbox.checked : false;
+
+  if (!selectedVariant) {
+    buyBtn.href = 'javascript:void(0)';
+    return;
+  }
+
+  const finalPrice = productPrice + selectedVariant.shippingPrice + (isAddon ? addonPrice : 0);
+  const finalUrl = isAddon ? selectedVariant.bundleUrl : selectedVariant.soloUrl;
+
+  if (summaryProductPrice) {
+    summaryProductPrice.innerText = formatPrice(productPrice);
+  }
+
+  if (summaryAddonRow) {
+    summaryAddonRow.style.display = isAddon ? 'flex' : 'none';
+  }
+
+  if (summaryAddonPrice) {
+    summaryAddonPrice.innerText = formatPrice(addonPrice);
+  }
+
+  if (summaryShippingPrice) {
+    summaryShippingPrice.innerText = formatPrice(selectedVariant.shippingPrice);
+  }
+
+  if (summaryShippingLabel) {
+    summaryShippingLabel.style.display = selectedVariant.shippingPrice === 0 ? 'inline' : 'none';
+  }
+
+  if (summaryTotalPrice) {
+    summaryTotalPrice.innerText = formatPrice(finalPrice);
+  }
+
+  // Jeśli nie wpiszesz jeszcze linku Easytools dla wybranego wariantu,
+  // przycisk zostanie zablokowany zamiast prowadzić do złego produktu.
+  buyBtn.href = finalUrl || 'javascript:void(0)';
+
+  label.style.color = '#707070';
   label.style.fontWeight = '400';
-  label.innerHTML = 'Wybierz kraj i sposób dostawy:';
+  label.innerHTML = 'Wybierz kraj dostawy';
 
-  const deliveryCosts = {
-    'pl': 'Koszt dostawy: <strong style="color: #007cf0;">30,00 zł</strong>',
-    'pl2': 'Koszt dostawy: <strong style="color: #007cf0;">20,00 zł</strong>',
-    'de': 'Koszt dostawy: <strong style="color: #007cf0;">75,00 zł</strong>',
-  };
+  selectBox.style.borderColor = '#c5c4c4';
+  selectBox.style.boxShadow = 'none';
 
-  const easyCartLinks = {
-    'pl': 'https://app.easycart.pl/twoj-link-pl-przedplata',
-    'pl2': 'https://app.easycart.pl/twoj-link-pl-pobranie',
-    'de': 'https://app.easycart.pl/twoj-link-de',
-  };
-
-  if (deliveryCosts[selectedValue]) {
-    resultDiv.innerHTML = deliveryCosts[selectedValue];
-    resultDiv.style.display = 'block'; 
-    buyBtn.href = easyCartLinks[selectedValue]; 
-    buyBtn.classList.remove('disabled-btn');    
-  } else {
-    resultDiv.style.display = 'none'; 
-    buyBtn.href = 'javascript:void(0)'; // Przywracamy bezpieczny pusty link
-    buyBtn.classList.add('disabled-btn');    
+  // DROPDOWN KRAJU DOSTAWY - zdejmij błąd z nowego dropdowna po poprawnym wyborze
+  const customSelect = document.getElementById('custom-country-select');
+  if (customSelect) {
+    customSelect.classList.remove('is-error');
   }
 }
 
-function handleDisabledClick() {
-  const buyBtn = document.getElementById('buy-now-btn');
-  const label = document.getElementById('delivery-label');
-  
-  // Jeśli przycisk ma klasę disabled, blokujemy akcję i zmieniamy napis
-  if (buyBtn.classList.contains('disabled-btn')) {
+/**
+ * Obsługa kliknięcia w przycisk, gdy klient nie wybrał kraju dostawy
+ * albo gdy w przyszłości zaznaczony będzie pakiet bez uzupełnionego linku Easytools.
+ */
+function handleTableDisabledClick() {
+  const selectBox = document.getElementById('table-config');
+  const addonCheckbox = document.getElementById('addon-checkbox');
+  const label = document.getElementById('config-label');
+
+  if (!selectBox || !label) return true;
+
+  const selectedVariant = tableVariants[selectBox.value];
+  const isAddon = addonCheckbox ? addonCheckbox.checked : false;
+
+  if (!selectedVariant) {
     label.style.color = 'red';
     label.style.fontWeight = 'bold';
-    if (!label.innerHTML.includes('❗')) {
-      label.innerHTML = 'Wybierz kraj i sposób dostawy:';
+    label.innerHTML = 'Wybierz kraj dostawy:';
+
+    selectBox.style.borderColor = 'red';
+    selectBox.style.boxShadow = '0 0 5px rgba(255, 0, 0, 0.4)';
+
+    // DROPDOWN KRAJU DOSTAWY - pokaż błąd na nowym dropdownie zamiast na ukrytym select
+    const customSelect = document.getElementById('custom-country-select');
+    const customInput = document.getElementById('custom-country-input');
+
+    if (customSelect && customInput) {
+      customSelect.classList.add('is-error');
+      customInput.focus({ preventScroll: true });
+      customSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      setTimeout(() => customInput.focus(), 500);
+    } else {
+      selectBox.focus({ preventScroll: true });
+      selectBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      setTimeout(() => selectBox.focus(), 500);
     }
+
+    return false;
   }
+
+  const finalUrl = isAddon ? selectedVariant.bundleUrl : selectedVariant.soloUrl;
+
+  if (!finalUrl) {
+    label.style.color = 'red';
+    label.style.fontWeight = 'bold';
+    label.innerHTML = isAddon
+      ? 'Brakuje linku Easytools dla wybranego zestawu.'
+      : 'Brakuje linku Easytools dla wybranego kraju dostawy.';
+    return false;
+  }
+
+  return true;
 }
 
-// Funkcja maila (zostaje bez zmian)
+/**
+ * DROPDOWN KRAJU DOSTAWY
+ * Nowy ładny dropdown ustawia wartość w ukrytym select #table-config.
+ * Dzięki temu obecna logika ceny i linków Easytools nadal działa przez updateTableLink().
+ */
+function initCustomCountrySelect() {
+  const nativeSelect = document.getElementById('table-config');
+  const customSelect = document.getElementById('custom-country-select');
+  const input = document.getElementById('custom-country-input');
+  const dropdown = document.getElementById('custom-country-dropdown');
+  const arrow = customSelect ? customSelect.querySelector('.custom-country-select__arrow') : null;
+
+  if (!nativeSelect || !customSelect || !input || !dropdown) return;
+
+  const nativeOptions = Array.from(nativeSelect.options);
+
+  const options = nativeOptions
+    .filter(function(option) {
+      return !option.disabled && option.value !== 'none';
+    })
+    .map(function(option, index) {
+      return {
+        value: option.value,
+        text: option.textContent.trim(),
+        nativeIndex: nativeOptions.indexOf(option),
+        id: index
+      };
+    });
+
+  let selectedOption = options.find(function(option) {
+    return nativeSelect.options[option.nativeIndex].selected;
+  }) || options[0];
+
+  function setSelected(option) {
+    selectedOption = option;
+
+    nativeSelect.selectedIndex = option.nativeIndex;
+    input.value = option.text;
+
+    customSelect.classList.remove('is-open');
+    customSelect.classList.remove('is-error');
+
+    renderOptions(input.value);
+    updateTableLink();
+  }
+
+  function renderOptions(searchText) {
+    const query = searchText.toLowerCase().trim();
+
+    const filteredOptions = options.filter(function(option) {
+      return option.text.toLowerCase().includes(query);
+    });
+
+    dropdown.innerHTML = '';
+
+    if (!filteredOptions.length) {
+      const empty = document.createElement('div');
+      empty.className = 'custom-country-select__empty';
+      empty.textContent = 'Brak wyników';
+      dropdown.appendChild(empty);
+      return;
+    }
+
+    filteredOptions.forEach(function(option) {
+      const optionEl = document.createElement('div');
+      optionEl.className = 'custom-country-select__option';
+      optionEl.textContent = option.text;
+
+      if (selectedOption && option.nativeIndex === selectedOption.nativeIndex) {
+        optionEl.classList.add('is-selected');
+      }
+
+      optionEl.addEventListener('mousedown', function(event) {
+        event.preventDefault();
+        setSelected(option);
+      });
+
+      dropdown.appendChild(optionEl);
+    });
+  }
+
+  function openDropdown() {
+    customSelect.classList.add('is-open');
+    customSelect.classList.remove('is-error');
+    input.focus();
+    input.select();
+    renderOptions('');
+  }
+
+  function closeDropdown() {
+    customSelect.classList.remove('is-open');
+
+    if (selectedOption) {
+      input.value = selectedOption.text;
+    }
+  }
+
+  input.value = selectedOption.text;
+  renderOptions('');
+
+  input.addEventListener('focus', function() {
+    openDropdown();
+  });
+
+ if (arrow) {
+  arrow.addEventListener('mousedown', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (customSelect.classList.contains('is-open')) {
+      closeDropdown();
+      input.blur();
+    } else {
+      openDropdown();
+    }
+  });
+}
+
+  input.addEventListener('input', function() {
+    customSelect.classList.add('is-open');
+    customSelect.classList.remove('is-error');
+    renderOptions(input.value);
+  });
+
+  input.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeDropdown();
+      input.blur();
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!customSelect.contains(event.target)) {
+      closeDropdown();
+    }
+  });
+}
+
+/**
+ * Kopiowanie adresu e-mail
+ */
 function copyEmail(element) {
   navigator.clipboard.writeText('sklep@trajder.com').then(function() {
     const numberSpan = element.querySelector('.number');
     numberSpan.innerHTML = '<span style="color: #00a650;">Skopiowano! ✓</span>';
+
     setTimeout(function() {
       numberSpan.innerHTML = 'sklep@trajder.com';
     }, 2000);
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  initCustomCountrySelect();
+  updateTableLink();
+});
 </script>
 
 
-
-
-
+    </article>
   </main>
 {% endblock %}
