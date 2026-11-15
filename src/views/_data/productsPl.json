@@ -156,6 +156,18 @@
   },
 
 
+    "por01": {
+    "badge": "PDF + DXF",
+    "badgeClass": "product-badge--pdf-dxf",
+    "url": "/products/por01",
+    "image": "/assets/images/por01/card.jpg",
+    "alt": "Plany DXF/PDF: Mobilny regał na organizery warsztatowe – POR01",
+    "title": "Plany DXF/PDF: Mobilny regał na organizery warsztatowe – POR01",
+    "price": "79",
+    "cents": "00"
+  },
+
+
    "wtl02": {
     "badge": "Gotowy produkt",
     "badgeClass": "product-badge--physical",
