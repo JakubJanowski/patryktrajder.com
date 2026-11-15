@@ -6,8 +6,8 @@
     "image": "/assets/images/super-booster-2000/thumb-w320.0.jpg",
     "alt": "Super Booster 2000",
     "title": "<strong>Wykrawarka do rur i profili</strong>&nbsp;(Tube Notcher) – Otwornica TN01",
-    "price": "889",
-    "cents": "01"
+    "price": "1029",
+    "cents": "00"
   },
 
   "dWT04": {
@@ -129,5 +129,77 @@
     "title": "Plany DXF/PDF: Wózek na butle tlen-acetylen",
     "price": "49",
     "cents": "00"
+  },
+
+
+  "wtl01": {
+    "badge": "Gotowy produkt",
+    "badgeClass": "product-badge--physical",
+    "url": "/products/oxy-acetylene-cart/",
+    "image": "/assets/images/wtl01/card2.png",
+    "alt": "Plany DXF/PDF: Wózek na butle tlen-acetylen | Oxy-Acetylene Cart",
+    "title": "4/6 x Noga do stołu spawalniczego - z stopką | TRAJDER",
+    "price": "cena od 890",
+    "cents": "00"
+  },
+
+
+    "dmp01": {
+    "badge": "PDF + DXF",
+    "badgeClass": "product-badge--pdf-dxf",
+    "url": "/products/WeldingTable_Mounting-Pin-dmp01",
+    "image": "/assets/images/dMP01/cart.jpg",
+    "alt": "Plany PDF/JPG: Trzpień szybkomocujący do stołu spawalniczego – dMP01",
+    "title": "Plany PDF/JPG: Trzpień szybkomocujący do stołu spawalniczego – dMP01",
+    "price": "47",
+    "cents": "00"
+  },
+
+
+   "wtl02": {
+    "badge": "Gotowy produkt",
+    "badgeClass": "product-badge--physical",
+    "url": "/products/welding-table-legs01/",
+    "image": "/assets/images/wtl01/card3.png",
+    "alt": "Plany DXF/PDF: Wózek na butle tlen-acetylen | Oxy-Acetylene Cart",
+    "title": "4/6 x Noga do stołu spawalniczego - z kołem | TRAJDER",
+    "price": "Cena od 1390",
+    "cents": "00"
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

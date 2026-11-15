@@ -8,6 +8,7 @@ import HoldOnClick from "./scripts/hold-on-click";
 import LanguageDropdown from "./scripts/language-dropdown";
 import Slider from "./scripts/slider";
 import YoutubePopup from "./scripts/youtube-popup";
+import "./scripts/purchase-panel";
 
 const banners = document.getElementsByClassName("banner");
 for (let i = 0; i < banners.length; i++) new Banner(banners[i] as HTMLElement);

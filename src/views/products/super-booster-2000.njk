@@ -169,408 +169,6 @@
 
 
 
-<style>
-  .purchase-panel {
-    max-width: 400px;
-  }
-
-  .purchase-panel__title {
-    margin-bottom: 6px;
-  }
-
-  .purchase-panel__reviews {
-    margin: 0 0 14px 0;
-  }
-
-  .price-summary-card {
-    max-width: 400px;
-    margin: 0 0 24px 0;
-    padding: 14px 16px 16px;
-    border: 1px solid #dbe5f1;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
-    box-sizing: border-box;
-  }
-
-  .price-summary-card__row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    margin-bottom: 12px;
-    color: #1f2937;
-    font-size: 16px;
-    line-height: 1.25;
-  }
-
-  .price-summary-card__left {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-  }
-
-  .price-summary-card__icon {
-    width: 22px;
-    height: 22px;
-    flex: 0 0 auto;
-    display: inline-block;
-    background: #64748b;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-  }
-
-  .price-summary-card__icon--label {
-    background: #707070;
-    -webkit-mask-image: url('/assets/icons/label.png');
-    mask-image: url('/assets/icons/label.png');
-  }
-
-
-
-.price-summary-card__icon--addon {
-  background: #707070;
-  -webkit-mask-image: url('/assets/icons/dodatek.png');
-  mask-image: url('/assets/icons/dodatek.png');
-}
-
-
-
-  .price-summary-card__icon--delivery {
-    background: #007bff;
-    -webkit-mask-image: url('/assets/icons/delivery.svg');
-    mask-image: url('/assets/icons/delivery.svg');
-  }
-
-  .price-summary-card__value {
-    margin-left: auto;
-    white-space: nowrap;
-    font-weight: 700;
-    color: #707070;
-  }
-
-  .price-summary-card__value--shipping {
-    color: #008f2f;
-  }
-
-  .price-summary-card__divider {
-    height: 1px;
-    margin: 4px 0 13px;
-    background: #d8dee8;
-  }
-
-  .price-summary-card__total {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 14px;
-    color: #007cf0;
-    font-weight: 800;
-    line-height: 1.2;
-  }
-
-  .price-summary-card__total-label {
-    font-size: 16px;
-  }
-
-  .price-summary-card__total-value {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 4px;
-    margin-left: auto;
-    white-space: nowrap;
-    font-size: 26px;
-    letter-spacing: -0.02em;
-  }
-
-  .price-summary-card__tax {
-    color: #707070;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0;
-  }
-
-  .purchase-shipping-select {
-    max-width: 400px;
-    margin-top: 12px;
-  }
-
-  .purchase-shipping-select__label {
-    margin: 0 0 16px;
-    color: #707070;
-    font-size: 1.18rem;
-    line-height: 1.3;
-  }
-
-  .purchase-shipping-select select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #c5c4c4;
-    border-radius: 4px;
-    background: #fefdfa;
-    color: #333;
-    outline: none;
-    box-sizing: border-box;
-  }
-
-  .purchase-shipping-select__note {
-    margin-top: 10px;
-    font-size: 0.85rem;
-    color: #666;
-    line-height: 1.45;
-  }
-
-  /* DROPDOWN KRAJU DOSTAWY - ukrywa stary select, ale zostawia go dla logiki Easytools */
-  .purchase-shipping-select__native {
-    display: none;
-  }
-
-  /* DROPDOWN KRAJU DOSTAWY - własny wygląd pola wyboru */
-  .custom-country-select {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 6px;
-    font-size: 16px;
-  }
-
-  .custom-country-select__control {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 42px;
-    border: 1px solid #c5c4c4;
-    border-radius: 8px;
-    background: #ffffff;
-    box-sizing: border-box;
-    transition: border-color 0.18s ease, box-shadow 0.18s ease;
-  }
-
-  .custom-country-select.is-open .custom-country-select__control {
-    border-color: #007cf0;
-    box-shadow: 0 0 0 1px rgba(0, 124, 240, 0.15);
-  }
-
-  .custom-country-select.is-error .custom-country-select__control {
-    border-color: red;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
-  }
-
-  .custom-country-select__label {
-    position: absolute;
-    top: -9px;
-    left: 11px;
-    padding: 0 5px;
-    background: #ffffff;
-    color: #707070;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1;
-    pointer-events: none;
-  }
-
-  .custom-country-select.is-open .custom-country-select__label {
-    color: #007cf0;
-  }
-
-  .custom-country-select.is-error .custom-country-select__label {
-    color: red;
-  }
-
-  .custom-country-select__input {
-    width: 100%;
-    height: 40px;
-    padding: 10px 42px 10px 12px;
-    border: 0;
-    background: transparent;
-    color: #111827;
-    font-size: 16px;
-    outline: none;
-    box-sizing: border-box;
-  }
-
-.custom-country-select__arrow {
-  position: absolute;
-  right: 12px;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid #707070;
-  border-bottom: 2px solid #707070;
-  transform: rotate(45deg);
-  transition: transform 0.18s ease;
-  cursor: pointer;
-  pointer-events: auto;
-  z-index: 2;
-}
-
-  .custom-country-select.is-open .custom-country-select__arrow {
-    transform: rotate(225deg);
-    margin-top: 6px;
-  }
-
-  .custom-country-select__dropdown {
-    position: absolute;
-    z-index: 30;
-    top: calc(100% + 2px);
-    left: 0;
-    right: 0;
-    max-height: 260px;
-    overflow-y: auto;
-    border: 1px solid #c5c4c4;
-    border-radius: 0 0 8px 8px;
-    background: #ffffff;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-    display: none;
-  }
-
-  .custom-country-select.is-open .custom-country-select__dropdown {
-    display: block;
-  }
-
-  .custom-country-select__option {
-    padding: 8px 12px;
-    border-bottom: 1px solid #e5e7eb;
-    color: #111827;
-    font-size: 15px;
-    line-height: 1.35;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .custom-country-select__option:hover,
-  .custom-country-select__option.is-highlighted {
-    background: #eef6ff;
-  }
-
-  .custom-country-select__option.is-selected {
-    color: #007cf0;
-    font-weight: 700;
-  }
-
-  .custom-country-select__empty {
-    padding: 10px 12px;
-    color: #707070;
-    font-size: 14px;
-  }
-
-  .buy-box {
-    max-width: 400px;
-    margin-top: 24px;
-    margin-bottom: 12px;
-  }
-
-  .buy-box__button {
-    width: 100%;
-    min-height: 54px;
-    margin: 0;
-    padding: 0 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    box-sizing: border-box;
-  }
-
-  .purchase-panel .checkout-note {
-    max-width: 400px;
-    margin-top: 0;
-    text-align: center;
-  }
-
-  .purchase-panel .payment-icons {
-    max-width: 400px;
-    text-align: center;
-    margin-top: 24px;
-    opacity: 0.85;
-  }
-
-  .availability-item__shipping-logos {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-left: 8px;
-    vertical-align: middle;
-  }
-
-  .availability-item__shipping-logo {
-    display: block;
-    width: auto;
-    object-fit: contain;
-  }
-
-  .availability-item__shipping-logo--inpost {
-    height: 46px;
-  }
-
-  .availability-item__shipping-logo--dpd {
-    height: 20px;
-  }
-
-.product-availability-list {
-  max-width: 400px;
-  margin-top: 12px;
-  border-top: 1px solid #e5e7eb;
-}
-
-.product-availability-list .availability {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.product-availability-list .availability + .availability {
-  border-top: 1px solid #e5e7eb;
-}
-
-.product-availability-list .availability p {
-  margin: 0;
-}
-
-.product-availability-list .availability-item {
-  width: 100%;
-  padding: 2px 0;
-  border: 0;
-  line-height: 1.35;
-}
-
-.product-availability-list .availability-item--link {
-  border: 0;
-}
-
-  @media (max-width: 768px) {
-    .price-summary-card,
-    .purchase-shipping-select,
-    .buy-box,
-    .purchase-panel .checkout-note,
-    .purchase-panel .payment-icons,
-    .product-availability-list {
-      max-width: 100%;
-    }
-
-    .price-summary-card__total {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .price-summary-card__total-value {
-      margin-left: 0;
-      font-size: 24px;
-    }
-  }
-
-
-.addon-card {
-  margin: 18px 0 12px;
-}
-</style>
-
           <div class="purchase-panel">
 
 
@@ -1289,339 +887,117 @@ background-position: 50% center;"> {# jak ma skalowac sie zdjecie 0 idzie w praw
 
 
 
-
-
-
-
-
-
 <script>
-/**
- * Konfiguracja wariantów dostawy + przyszłych zestawów.
- *
- * productPrice = cena samego produktu
- * shippingPrice = koszt dostawy dla wybranej grupy
- * soloUrl = link Easytools dla samego produktu
- * bundleUrl = link Easytools dla produktu z dodatkiem / zestawem
- *
- * Jeśli kiedyś odkomentujesz checkbox #addon-checkbox, cena zacznie doliczać addonPrice,
- * a przycisk automatycznie przełączy link z soloUrl na bundleUrl.
- */
-const productPrice = 1029;
-const addonPrice = 50;
+window.purchasePanelConfig = {
+  language: 'pl',
+  currency: 'PLN',
+  defaultVariant: 'default',
+  defaultCountry: 'pl',
 
-const tableVariants = {
-  g1: {
-    shippingPrice: 0,
-    shippingText: 'gratis',
-    soloUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-4?lang=pl',
-    bundleUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-adapter?lang=pl'
+  variants: {
+    default: {
+      price: 1029,
+      addon: 50
+    }
   },
-  g2: {
-    shippingPrice: 49,
-    shippingText: '49 zł',
-    soloUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-2?lang=pl',
-    bundleUrl: ''
-  },
-  g3: {
-    shippingPrice: 139,
-    shippingText: '139 zł',
-    soloUrl: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-3?lang=pl',
-    bundleUrl: ''
+
+  delivery: {
+    pl: {
+      label: 'Polska - GRATIS',
+      shipping: 0,
+      links: {
+        default: {
+          solo: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-4?lang=pl',
+          addon: 'https://cart.easy.tools/checkout/patryktrajder/wykrawarka-do-rur-i-profili-tube-notcher-otwornica-tn01-adapter?lang=pl'
+       }
+      }
+    }
   }
 };
+</script> 
 
-function formatPrice(value) {
-  return value.toLocaleString('pl-PL', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  }) + ' zł';
-}
-
-/**
- * Aktualizacja ceny i linku Easytools po wyborze kraju dostawy
- * oraz po zaznaczeniu przyszłego checkboxa z pakietem.
- */
-function updateTableLink() {
-  const selectBox = document.getElementById('table-config');
-  const addonCheckbox = document.getElementById('addon-checkbox');
-  const buyBtn = document.getElementById('buy-table-btn');
-  const label = document.getElementById('config-label');
-  const summaryProductPrice = document.getElementById('summary-product-price');
-  const summaryAddonRow = document.getElementById('summary-addon-row');
-  const summaryAddonPrice = document.getElementById('summary-addon-price');
-  const summaryShippingPrice = document.getElementById('summary-shipping-price');
-  const summaryShippingLabel = document.getElementById('summary-shipping-label');
-  const summaryTotalPrice = document.getElementById('summary-total-price');
-
-  if (!selectBox || !buyBtn || !label) return;
-
-  const selectedVariant = tableVariants[selectBox.value];
-  const isAddon = addonCheckbox ? addonCheckbox.checked : false;
-
-  if (!selectedVariant) {
-    buyBtn.href = 'javascript:void(0)';
-    return;
-  }
-
-  const finalPrice = productPrice + selectedVariant.shippingPrice + (isAddon ? addonPrice : 0);
-  const finalUrl = isAddon ? selectedVariant.bundleUrl : selectedVariant.soloUrl;
-
-  if (summaryProductPrice) {
-    summaryProductPrice.innerText = formatPrice(productPrice);
-  }
-
-  if (summaryAddonRow) {
-    summaryAddonRow.style.display = isAddon ? 'flex' : 'none';
-  }
-
-  if (summaryAddonPrice) {
-    summaryAddonPrice.innerText = formatPrice(addonPrice);
-  }
-
-  if (summaryShippingPrice) {
-    summaryShippingPrice.innerText = formatPrice(selectedVariant.shippingPrice);
-  }
-
-  if (summaryShippingLabel) {
-    summaryShippingLabel.style.display = selectedVariant.shippingPrice === 0 ? 'inline' : 'none';
-  }
-
-  if (summaryTotalPrice) {
-    summaryTotalPrice.innerText = formatPrice(finalPrice);
-  }
-
-  // Jeśli nie wpiszesz jeszcze linku Easytools dla wybranego wariantu,
-  // przycisk zostanie zablokowany zamiast prowadzić do złego produktu.
-  buyBtn.href = finalUrl || 'javascript:void(0)';
-
-  label.style.color = '#707070';
-  label.style.fontWeight = '400';
-  label.innerHTML = 'Wybierz kraj dostawy';
-
-  selectBox.style.borderColor = '#c5c4c4';
-  selectBox.style.boxShadow = 'none';
-
-  // DROPDOWN KRAJU DOSTAWY - zdejmij błąd z nowego dropdowna po poprawnym wyborze
-  const customSelect = document.getElementById('custom-country-select');
-  if (customSelect) {
-    customSelect.classList.remove('is-error');
-  }
-}
-
-/**
- * Obsługa kliknięcia w przycisk, gdy klient nie wybrał kraju dostawy
- * albo gdy w przyszłości zaznaczony będzie pakiet bez uzupełnionego linku Easytools.
- */
-function handleTableDisabledClick() {
-  const selectBox = document.getElementById('table-config');
-  const addonCheckbox = document.getElementById('addon-checkbox');
-  const label = document.getElementById('config-label');
-
-  if (!selectBox || !label) return true;
-
-  const selectedVariant = tableVariants[selectBox.value];
-  const isAddon = addonCheckbox ? addonCheckbox.checked : false;
-
-  if (!selectedVariant) {
-    label.style.color = 'red';
-    label.style.fontWeight = 'bold';
-    label.innerHTML = 'Wybierz kraj dostawy:';
-
-    selectBox.style.borderColor = 'red';
-    selectBox.style.boxShadow = '0 0 5px rgba(255, 0, 0, 0.4)';
-
-    // DROPDOWN KRAJU DOSTAWY - pokaż błąd na nowym dropdownie zamiast na ukrytym select
-    const customSelect = document.getElementById('custom-country-select');
-    const customInput = document.getElementById('custom-country-input');
-
-    if (customSelect && customInput) {
-      customSelect.classList.add('is-error');
-      customInput.focus({ preventScroll: true });
-      customSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      setTimeout(() => customInput.focus(), 500);
-    } else {
-      selectBox.focus({ preventScroll: true });
-      selectBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      setTimeout(() => selectBox.focus(), 500);
-    }
-
-    return false;
-  }
-
-  const finalUrl = isAddon ? selectedVariant.bundleUrl : selectedVariant.soloUrl;
-
-  if (!finalUrl) {
-    label.style.color = 'red';
-    label.style.fontWeight = 'bold';
-    label.innerHTML = isAddon
-      ? 'Brakuje linku Easytools dla wybranego zestawu.'
-      : 'Brakuje linku Easytools dla wybranego kraju dostawy.';
-    return false;
-  }
-
-  return true;
-}
-
-/**
- * DROPDOWN KRAJU DOSTAWY
- * Nowy ładny dropdown ustawia wartość w ukrytym select #table-config.
- * Dzięki temu obecna logika ceny i linków Easytools nadal działa przez updateTableLink().
- */
-function initCustomCountrySelect() {
-  const nativeSelect = document.getElementById('table-config');
-  const customSelect = document.getElementById('custom-country-select');
-  const input = document.getElementById('custom-country-input');
-  const dropdown = document.getElementById('custom-country-dropdown');
-  const arrow = customSelect ? customSelect.querySelector('.custom-country-select__arrow') : null;
-
-  if (!nativeSelect || !customSelect || !input || !dropdown) return;
-
-  const nativeOptions = Array.from(nativeSelect.options);
-
-  const options = nativeOptions
-    .filter(function(option) {
-      return !option.disabled && option.value !== 'none';
-    })
-    .map(function(option, index) {
-      return {
-        value: option.value,
-        text: option.textContent.trim(),
-        nativeIndex: nativeOptions.indexOf(option),
-        id: index
-      };
-    });
-
-  let selectedOption = options.find(function(option) {
-    return nativeSelect.options[option.nativeIndex].selected;
-  }) || options[0];
-
-  function setSelected(option) {
-    selectedOption = option;
-
-    nativeSelect.selectedIndex = option.nativeIndex;
-    input.value = option.text;
-
-    customSelect.classList.remove('is-open');
-    customSelect.classList.remove('is-error');
-
-    renderOptions(input.value);
-    updateTableLink();
-  }
-
-  function renderOptions(searchText) {
-    const query = searchText.toLowerCase().trim();
-
-    const filteredOptions = options.filter(function(option) {
-      return option.text.toLowerCase().includes(query);
-    });
-
-    dropdown.innerHTML = '';
-
-    if (!filteredOptions.length) {
-      const empty = document.createElement('div');
-      empty.className = 'custom-country-select__empty';
-      empty.textContent = 'Brak wyników';
-      dropdown.appendChild(empty);
-      return;
-    }
-
-    filteredOptions.forEach(function(option) {
-      const optionEl = document.createElement('div');
-      optionEl.className = 'custom-country-select__option';
-      optionEl.textContent = option.text;
-
-      if (selectedOption && option.nativeIndex === selectedOption.nativeIndex) {
-        optionEl.classList.add('is-selected');
+    {# de: {
+      label: 'Niemcy - 49 zł',
+      shipping: 49,
+      links: {
+        default: {
+          solo: '',
+          addon: ''
+        }
       }
-
-      optionEl.addEventListener('mousedown', function(event) {
-        event.preventDefault();
-        setSelected(option);
-      });
-
-      dropdown.appendChild(optionEl);
-    });
-  }
-
-  function openDropdown() {
-    customSelect.classList.add('is-open');
-    customSelect.classList.remove('is-error');
-    input.focus();
-    input.select();
-    renderOptions('');
-  }
-
-  function closeDropdown() {
-    customSelect.classList.remove('is-open');
-
-    if (selectedOption) {
-      input.value = selectedOption.text;
+    },
+    cz: {
+      label: 'Czechy - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    sk: {
+      label: 'Słowacja - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    at: {
+      label: 'Austria - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    nl: {
+      label: 'Holandia - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    be: {
+      label: 'Belgia - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    fr: {
+      label: 'Francja - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    it: {
+      label: 'Włochy - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    es: {
+      label: 'Hiszpania - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    pt: {
+      label: 'Portugalia - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    hu: {
+      label: 'Węgry - 49 zł',
+      shipping: 49,
+      links: { default: { solo: '', addon: '' } }
+    },
+    dk: {
+      label: 'Dania - 139 zł',
+      shipping: 139,
+      links: { default: { solo: '', addon: '' } }
+    },
+    se: {
+      label: 'Szwecja - 139 zł',
+      shipping: 139,
+      links: { default: { solo: '', addon: '' } }
+    },
+    fi: {
+      label: 'Finlandia - 139 zł',
+      shipping: 139,
+      links: { default: { solo: '', addon: '' } }
+    },
+    ie: {
+      label: 'Irlandia - 139 zł',
+      shipping: 139,
+      links: { default: { solo: '', addon: '' } }
     }
   }
-
-  input.value = selectedOption.text;
-  renderOptions('');
-
-  input.addEventListener('focus', function() {
-    openDropdown();
-  });
-
- if (arrow) {
-  arrow.addEventListener('mousedown', function(event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    if (customSelect.classList.contains('is-open')) {
-      closeDropdown();
-      input.blur();
-    } else {
-      openDropdown();
-    }
-  });
-}
-
-  input.addEventListener('input', function() {
-    customSelect.classList.add('is-open');
-    customSelect.classList.remove('is-error');
-    renderOptions(input.value);
-  });
-
-  input.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      closeDropdown();
-      input.blur();
-    }
-  });
-
-  document.addEventListener('click', function(event) {
-    if (!customSelect.contains(event.target)) {
-      closeDropdown();
-    }
-  });
-}
-
-/**
- * Kopiowanie adresu e-mail
- */
-function copyEmail(element) {
-  navigator.clipboard.writeText('sklep@trajder.com').then(function() {
-    const numberSpan = element.querySelector('.number');
-    numberSpan.innerHTML = '<span style="color: #00a650;">Skopiowano! ✓</span>';
-
-    setTimeout(function() {
-      numberSpan.innerHTML = 'sklep@trajder.com';
-    }, 2000);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  initCustomCountrySelect();
-  updateTableLink();
-});
-</script>
+}; #}
 
 
     </article>
