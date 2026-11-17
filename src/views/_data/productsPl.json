@@ -168,6 +168,18 @@
   },
 
 
+    "ddh01": {
+    "badge": "PDF + DXF",
+    "badgeClass": "product-badge--pdf-dxf",
+    "url": "/products/ddh01",
+    "image": "/assets/images/ddh01/card.png",
+    "alt": "Plany DXF/PDF: Drewniana buda dla psa – dDH01",
+    "title": "Plany DXF/PDF: Drewniana buda dla psa – dDH01",
+    "price": "39",
+    "cents": "00"
+  },
+
+
    "wtl02": {
     "badge": "Gotowy produkt",
     "badgeClass": "product-badge--physical",
